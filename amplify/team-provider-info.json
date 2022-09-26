@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactartplatform-dev-164307-authRole",
+      "UnauthRoleArn": "arn:aws:iam::063606457877:role/amplify-reactartplatform-dev-164307-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::063606457877:role/amplify-reactartplatform-dev-164307-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-reactartplatform-dev-164307-deployment",
+      "UnauthRoleName": "amplify-reactartplatform-dev-164307-unauthRole",
+      "StackName": "amplify-reactartplatform-dev-164307",
+      "StackId": "arn:aws:cloudformation:us-west-1:063606457877:stack/amplify-reactartplatform-dev-164307/f9df02d0-3df4-11ed-9e80-0232e9fba41d",
+      "AmplifyAppId": "d25htcp6kb1jrh"
+    }
+  }
+}
