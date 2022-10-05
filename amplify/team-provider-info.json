@@ -10,6 +10,11 @@
       "StackName": "amplify-reactartwebsite-staging-231705",
       "StackId": "arn:aws:cloudformation:us-west-1:063606457877:stack/amplify-reactartwebsite-staging-231705/55fba040-3df1-11ed-bf0c-064bc604bcc9",
       "AmplifyAppId": "d3npwq8prx9udw"
+    },
+    "categories": {
+      "auth": {
+        "reactartwebsite": {}
+      }
     }
   }
 }
