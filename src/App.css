@@ -1,3 +1,7 @@
+body, html{
+  font-family: 'Arimo', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -42,4 +46,87 @@
   font-size: 100px;
   -webkit-text-stroke-width: 8px;
   -webkit-text-stroke-color: black;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  height: 5rem;
+  border-bottom: 2px solid black;
+  z-index: 0;
+}
+
+.navbar *{
+  list-style: none;
+  text-decoration: none; /* no underline */
+  color: black;
+}
+
+.navbarLeft{
+  display: flex;
+  flex-direction: row;
+}
+
+.navbarLeft * {
+  margin-left: 10%;
+}
+
+/* CSS */
+.loginButton {
+  align-items: center;
+  background-color: white;
+  border: 2px solid #111;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  height: 36px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.loginButton:after {
+  background-color: #111;
+  content: "";
+  display: block;
+  height: 36px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.loginButton:hover:after {
+  transform: translate(0, 0);
+}
+
+.loginButton:active {
+  background-color: rgb(139, 139, 139);
+  outline: 0;
+}
+
+.loginButton:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .loginButton {
+    padding: 0 40px;
+  }
 }

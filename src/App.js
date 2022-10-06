@@ -5,41 +5,35 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Routes, Route, Link } from "react-router-dom";
+import Home from './components/Pages/Home';
+import Gallery from './components/Pages/Gallery';
+import ChallengePage from './components/Pages/ChallengePage';
+import About from './components/Pages/About';
+import Login from './components/Pages/Login';
+import Navbar from './components/Navbar';
 
 function App() {
-  const [opposite, setOpposite] = useState(true);
-  const [title, setTitle] = useState("Victory Royale");
 
-  useEffect(()=> {
-    console.log(title)
-    // toast("Wow so easy!");
-  }, [title])
+  function onClick(){
 
-
-  function changeTitle(){
-    setOpposite(!opposite)
-    if(opposite === true){
-      setTitle("Victory Royale")
-    }
-    if(opposite === false){
-      setTitle("Bortnite")
-    }
   }
 
   return (
     <>
     <div className="App">
     <ToastContainer />
-      <header className="App-header">
-      <h1 className="title" onClick={()=> changeTitle()}>{title}</h1>
-        
-        { title === "Victory Royale" &&
-        <img src="https://pngimg.com/uploads/fortnite/fortnite_PNG97.png" className="App-logo" alt="logo" />
-        }
-        
+      <Navbar/>
+      <Button variant="dark" onClick={onClick()}>Dark</Button>
 
-      </header>
-      <Button variant="dark">Dark</Button>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="gallery" element={<Gallery/>} />
+        <Route path="challenges" element={<ChallengePage/>} />
+        <Route path="about" element={<About/>} />
+        <Route path="login" element={<Login/>} />
+      </Routes>
+
     </div>
     </>
   );
