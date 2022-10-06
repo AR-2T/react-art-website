@@ -12,16 +12,16 @@ function App() {
 
   useEffect(()=> {
     console.log(title)
-    toast("Wow so easy!");
+    // toast("Wow so easy!");
   }, [title])
 
 
   function changeTitle(){
     setOpposite(!opposite)
-    if(opposite == true){
+    if(opposite === true){
       setTitle("Victory Royale")
     }
-    if(opposite == false){
+    if(opposite === false){
       setTitle("Bortnite")
     }
   }
@@ -33,9 +33,10 @@ function App() {
       <header className="App-header">
       <h1 className="title" onClick={()=> changeTitle()}>{title}</h1>
         
+        { title === "Victory Royale" &&
         <img src="https://pngimg.com/uploads/fortnite/fortnite_PNG97.png" className="App-logo" alt="logo" />
-        <p>
-        </p>
+        }
+        
 
       </header>
       <Button variant="dark">Dark</Button>
