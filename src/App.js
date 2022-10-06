@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
@@ -24,7 +23,6 @@ function App() {
     <div className="App">
     <ToastContainer />
       <Navbar/>
-      {/* <Button variant="dark" onClick={onClick()}>Dark</Button> */}
 
       <Routes>
         <Route path="/" element={<Home/>} />
