@@ -24,7 +24,7 @@ function App() {
     <div className="App">
     <ToastContainer />
       <Navbar/>
-      <Button variant="dark" onClick={onClick()}>Dark</Button>
+      {/* <Button variant="dark" onClick={onClick()}>Dark</Button> */}
 
       <Routes>
         <Route path="/" element={<Home/>} />
