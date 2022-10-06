@@ -1,0 +1,11 @@
+.galleryPage{
+    background-color: #bbdded;
+    background-image: linear-gradient(315deg, #bbdded 0%, #9599f9 100%);
+  }
+
+.strokeGalleryText{
+    color: rgb(255, 255, 255);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+}

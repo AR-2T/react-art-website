@@ -14,7 +14,7 @@ function Home() {
 
       <div className="flex flex-col py-24 px-24 w-[50%]">
         <div className="text-6xl font-bold text-black-400 text-start">
-        Don't know<br/>
+        Don't know
         <p className='strokeText'>what to make?</p>
         </div>
 
