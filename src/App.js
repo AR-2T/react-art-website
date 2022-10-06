@@ -38,7 +38,7 @@ function App() {
         </p>
 
       </header>
-      <Button variant="primary">Primary</Button>{' '}
+      <Button variant="dark">Dark</Button>
     </div>
     </>
   );
