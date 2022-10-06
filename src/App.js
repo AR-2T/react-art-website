@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
@@ -36,6 +38,7 @@ function App() {
         </p>
 
       </header>
+      <Button variant="primary">Primary</Button>{' '}
     </div>
     </>
   );
