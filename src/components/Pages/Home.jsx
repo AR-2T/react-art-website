@@ -9,7 +9,7 @@ function Home() {
     <>
       {/* Home */}
 
-    <div className="space-y-100">
+    <div className="space-y-100 homePage h-screen">
       <div className='flex flex-row justify-between'>
 
       <div className="flex flex-col py-24 px-24 w-[50%]">

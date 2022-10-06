@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 function Navbar() {
   return (
     <>
-    <ul className='navbar'>
+    <ul className='navbar shadow-lg'>
         <div className='navbarLeft'>
          <p className='text-2xl font-bold'>ideART</p> 
         <li><Link to="/">Home</Link></li>
