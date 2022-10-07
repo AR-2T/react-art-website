@@ -1,6 +1,7 @@
 .galleryPage{
-    background-color: #bbdded;
-    background-image: linear-gradient(315deg, #bbdded 0%, #9599f9 100%);
+    position: absolute;
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    z-index: -100;
   }
 
 .strokeGalleryText{
@@ -8,4 +9,13 @@
     -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.glass{
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+  border: 1px solid rgba( 0, 0, 0, 0.3 );
 }

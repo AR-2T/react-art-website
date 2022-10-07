@@ -5,61 +5,55 @@ function Gallery() {
   return (
     <>
 
-    <div className="space-y-100 galleryPage h-screen">
-
+    <div className="space-y-100 min-h-screen galleryPage w-full">
 
       {/* Downloaded Code Lol Have Fun With This Shit */}
-      <div class="bg-gray-50 min-h-screen flex items-center justify-center px-16">
-        <div class="relative w-full max-w-lg">
-          <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-          <div class="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-          <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-          <div class="m-8 relative space-y-4">
-            <div class="p-5 bg-white rounded-lg flex items-center justify-between space-x-8">
-              <div class="flex-1">
-                <div class="h-4 w-48 bg-gray-300 rounded"></div>
-              </div>
-              <div>
-                <div class="w-24 h-6 rounded-lg bg-purple-300"></div>
-              </div>
-            </div>
-            <div class="p-5 bg-white rounded-lg flex items-center justify-between space-x-8">
-              <div class="flex-1">
-                <div class="h-4 w-56 bg-gray-300 rounded"></div>
-              </div>
-              <div>
-                <div class="w-20 h-6 rounded-lg bg-yellow-300"></div>
-              </div>
-            </div>
-            <div class="p-5 bg-white rounded-lg flex items-center justify-between space-x-8">
-              <div class="flex-1">
-                <div class="h-4 w-44 bg-gray-300 rounded"></div>
-              </div>
-              <div>
-                <div class="w-28 h-6 rounded-lg bg-pink-300"></div>
-              </div>
-            </div>
+
+          <div class="relative w-full z-[-1] flex items-center justify-start px-16 max-w-2xl">
+              <div class="absolute top-4 -left-4 w-[28rem] h-[28rem] bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-70  animate-blob"></div>
+              <div class="absolute top-4 -right-20 w-[28rem] h-[28rem] bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-70  animate-blob animation-delay-2000"></div>
+              <div class="absolute -bottom-32 -right-20 w-[28rem] h-[28rem] bg-blue-400 rounded-full mix-blend-multiply filter blur-xl  opacity-70  animate-blob animation-delay-4000"></div>
+              <div class="absolute -bottom-32 left-20 w-[28rem] h-[28rem] bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-70  animate-blob animation-delay-6000"></div>
           </div>
-        </div>
-      </div>
-
-
-
-      {/* My Code Don't Touch Bitch */}
-      <div className="flex flex-col py-24 px-24 w-[50%]">
-        
-        <div className="text-5xl font-bold drop-shadow-xl text-white text-start">
-          The<br/>
-          <p className='text-7xl strokeGalleryText'>Gallery</p>
-        </div>
-
-        <div className="text-base text-white italic text-start">
-          <br/>A collection of user-published designs, creatvite pieces, and more.
-        </div>
-      </div>
-
       
+        <section className="flex flex-row">
+          {/* My Code Don't Touch Bitch */}
+          <div class="relative my-12 mx-12 space-y-4 glass w-[50%]">
+              <div className="flex flex-row py-12 px-12">        
+                <div className="text-5xl font-bold drop-shadow-xl text-white text-start">
+                  The<br/>
+                  <p className='text-7xl strokeGalleryText'>Gallery</p>
+                </div>
+
+                <div className="pl-12 text-base text-white italic text-start">
+                  A collection of user-published <br/> designs, creatvity pieces, and more.
+                </div>
+              </div>
+          </div>
+
+          <div class="relative my-12 mr-12 space-y-4 glass w-[50%] ">
+              <div className="flex flex-col py-12 px-12 items-start">        
+
+                <div className="text-xl text-white text-start mb-6">
+                  Search the gallery and find a specific piece.
+                </div>
+
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control rounded-l-full border-2 border-black active:shadow-white" placeholder="Search anything..."/>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary rounded-r-full bg-black border-2 border-black active:bg-black/50" type="button">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+          </div>
+        </section>
     </div>
+
     </>
   )
 }
