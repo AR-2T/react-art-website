@@ -43,7 +43,7 @@ function About() {
           {/* Ryan's Information */}
           <dgroup>
             <div className = "text-2xl font-bold">Ryan Yan</div>
-            <div className = "font-italic"></div>
+            <div className = "font-italic">Ryan enjoys eating Cheez-It crackers and playing Terraria with friends.</div>
           </dgroup>
 
         </div>
