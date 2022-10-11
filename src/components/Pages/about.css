@@ -1,75 +1,83 @@
-.aboutPage {
-    background-color: #222222;
-    /* background-color: #4158D0; */
-    /* background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
-}
-
-.glass2{
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    backdrop-filter: blur( 20px );
-    -webkit-backdrop-filter: blur( 20px );
-    border-radius: 10px;
-    border: 0px solid rgba(255, 0, 0, 0);
-  }
-
-.strokeAboutText{
-    color: rgb(255, 255, 255);
-    -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-}
-
-.red {
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+* {
     margin: 0;
-  }
-
-.section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100px;
-    padding: 50px 75px 100px;
-  }
-
-  .custom-shape-divider-bottom-1665272885 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
-.custom-shape-divider-bottom-1665272885 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 50px;
-}
-
-.custom-shape-divider-bottom-1665272885 .shape-fill {
-    fill: #000000;
-}
-
-.spacer {
-    aspect-ratio: 960/200;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.layer1 {
-    background-image: url('../../assets/layeredWave1.svg');
+.container {
     text-align: center;
-    color: white;
-    font-size: 6vw;
-    font-weight: bold;
-    width: 100%;
-    padding-top: 20px;
+    background: #ffffff;
+    padding: 50px;
+}
+
+.header {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
     margin: auto;
-    text-shadow: 6px 6px 6px #00000076;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.sub-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 48px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.teams {
+    margin: 10px;
+    padding: 22px;
+    max-width: 30%;
+    cursor: pointer;
+    transition: 0.4s;
+    box-sizing: border-box;
+}
+
+.teams:hover {
+    background: #ddd;
+    border-radius: 12px;
+}
+
+.image {
+    background-image: url(../../assets/Circle-Icon-Profile.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    
+}
+
+.name {
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.desig {
+    font-style: italic;
+    color: #888;
+}
+
+.about {
+    margin: 20px 0;
+    font-weight: lighter;
+    color: #4e4e4e;
+}
+
+.social-links {
+    margin: 14px;
+}
+
+.social-links a {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    transition: .4s;
+}
+
+.social-links a hover {
+    transform: scale(1.5);
 }
