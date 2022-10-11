@@ -2,6 +2,17 @@ import React from 'react'
 import '../App.css';
 import {Link} from "react-router-dom"
 
+import { Auth } from 'aws-amplify';
+
+async function signOut() {
+  
+  try {
+      await Auth.signOut();
+  } catch (error) {
+      console.log('error signing out: ', error);
+  }
+}
+
 function Navbar() {
   return (
     <>
@@ -15,6 +26,7 @@ function Navbar() {
 
         </div>
         <Link to="login"><button className='loginButton'>Log In</button></Link>
+        <button onClick={signOut}>Sign out</button>
     </ul> 
     </>
   )
