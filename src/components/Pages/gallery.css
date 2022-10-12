@@ -1,7 +1,6 @@
 .galleryPage{
     position: absolute;
     background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
-    z-index: -100;
   }
 
 .strokeGalleryText{

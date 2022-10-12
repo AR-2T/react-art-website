@@ -5,8 +5,8 @@ function Gallery() {
   return (
     <>
 
-    <div className="space-y-100 min-h-screen galleryPage w-full">
-
+    <div className="space-y-100 min-h-screen w-full">
+      <div className="galleryPage min-h-screen w-full z-[-2]"></div>
       {/* Downloaded Code Lol Have Fun With This Shit */}
 
           <div class="relative w-full z-[-1] flex items-center justify-start px-16 max-w-2xl">
@@ -39,9 +39,9 @@ function Gallery() {
                 </div>
 
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control rounded-l-full border-2 border-black active:shadow-white" placeholder="Search anything..."/>
+                  <input type="text" class="form-control rounded-l-full border-2 border-black active:!shadow-white" placeholder="Search anything..."/>
                   <div class="input-group-append">
-                    <button class="btn btn-outline-secondary rounded-r-full bg-black border-2 border-black active:bg-black/50" type="button">
+                    <button class="btn btn-outline-secondary rounded-r-full bg-black border-2 border-black active:!bg-black/50" type="button">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                       </svg>

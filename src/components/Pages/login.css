@@ -1,0 +1,83 @@
+@import "@aws-amplify/ui-react/styles.css";
+:root, [data-amplify-theme] {
+  --amplify-colors-background-secondary: lightgray;
+  --amplify-colors-background-tertiary: white;
+  --amplify-colors-font-primary: black;
+  --amplify-colors-brand-primary-80: black;
+  --amplify-colors-font-secondary: #333;
+
+  --amplify-radii-small: 16px;
+  --amplify-radii-medium: 16px;
+  --amplify-radii-large: 16px;
+  --amplify-space-small: 1rem;
+  --amplify-space-medium: 1.5rem;
+  --amplify-space-large: 1rem;
+  --amplify-border-widths-small: 2px;
+
+  --amplify-colors-border-primary: var(--amplify-colors-neutral-100);
+  --amplify-colors-border-secondary: var(--amplify-colors-neutral-20);
+  --amplify-colors-border-tertiary: var(--amplify-colors-neutral-10);
+
+  --amplify-components-tabs-item-border-color: var(--amplify-colors-neutral-60);
+
+  --amplify-colors-brand-primary-10: black;
+  --amplify-colors-brand-primary-20: black;
+  --amplify-colors-brand-primary-40: black;
+  --amplify-colors-brand-primary-60: black;
+  --amplify-colors-brand-primary-80: rgb(45, 45, 45);
+  --amplify-colors-brand-primary-90: black;
+  --amplify-colors-brand-primary-100: black;
+}
+
+.amplify-button[data-variation='primary'] {
+  align-items: center;
+  background-color: black;
+  border-radius: 16px;
+  border: 2px solid #111;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  height: 36px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.amplify-button[data-variation='primary']:hover {
+  background-color: gray;
+  color: white;
+}
+
+.amplify-button[data-variation='primary']:active {
+  background-color: #333;
+  color: white;
+}
+
+.amplify-input {
+  text-align: start;
+}
+
+.loginBackground{
+  border: none;
+}
+
+.amplify-field__show-password:hover {
+  color:white;
+}
+
+.amplify-field__show-password:focus {
+  color:white;
+}
+
+.amplify-button--small:hover {
+  background-color: white;
+}

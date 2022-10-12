@@ -1,8 +1,9 @@
 import React from 'react'
 import '../App.css';
 import {Link} from "react-router-dom"
-
 import { Auth } from 'aws-amplify';
+import { useAuthenticator } from "@aws-amplify/ui-react";
+
 
 async function signOut() {
   
@@ -14,6 +15,9 @@ async function signOut() {
 }
 
 function Navbar() {
+  const { user } = useAuthenticator();
+
+
   return (
     <>
     <ul className='navbar shadow-lg'>
@@ -25,8 +29,9 @@ function Navbar() {
         <li><Link to="about">About</Link></li>
 
         </div>
-        <Link to="login"><button className='loginButton'>Log In</button></Link>
-        <button onClick={signOut}>Sign out</button>
+        {!user && <Link to="login"><button className='loginButton'>Log In</button></Link>}
+        
+        {user && <button className='loginButton' onClick={signOut}>Sign out</button>}
     </ul> 
     </>
   )

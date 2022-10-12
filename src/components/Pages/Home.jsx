@@ -24,7 +24,7 @@ function Home() {
         </div>
 
         <div className="text-start pt-8">
-          <Button className="bg-black text-white hover:border-[2px] hover:text-black hover:bg-transparent active:bg-[#3f3d56] active:text-white" variant="dark"> Generate an idea</Button>
+          <Button className="bg-black text-white hover:!border-[2px] hover:!text-black hover:!bg-transparent active:!bg-[#3f3d56] active:!text-white" variant="dark"> Generate an idea</Button>
         </div>
       </div>
 

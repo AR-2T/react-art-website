@@ -1,6 +1,7 @@
+import '@aws-amplify/ui-react/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import logo from './logo.svg';
-import './App.css';
 import React, { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,6 +12,12 @@ import ChallengePage from './components/Pages/ChallengePage';
 import About from './components/Pages/About';
 import Login from './components/Pages/Login';
 import Navbar from './components/Navbar';
+import Profile from './components/Pages/Profile';
+import './App.css';
+
+import { Amplify } from 'aws-amplify';
+import awsExports from './aws-exports';
+Amplify.configure(awsExports);
 
 function App() {
 
@@ -30,6 +37,7 @@ function App() {
         <Route path="challenges" element={<ChallengePage/>} />
         <Route path="about" element={<About/>} />
         <Route path="login" element={<Login/>} />
+        <Route path="profile" element={<Profile/>} />
       </Routes>
 
     </div>

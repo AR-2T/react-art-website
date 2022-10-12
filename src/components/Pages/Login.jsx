@@ -1,26 +1,104 @@
-import { Amplify } from 'aws-amplify';
-import { withAuthenticator } from '@aws-amplify/ui-react';
-import '@aws-amplify/ui-react/styles.css';
-import {ReactComponent as BannerArt} from '../../assets/profile_pic.svg';
+import {
+  Authenticator,
+  Flex,
+  Grid,
+  Image,
+  useTheme,
+  View,
+  Text,
+  Link,
+  Heading,
+  useAuthenticator
+} from "@aws-amplify/ui-react";
+import { useNavigate } from "react-router-dom";
+import "./login.css"
+import {ReactComponent as BannerArt } from '../../assets/painting.svg';
 
-import awsExports from '../../aws-exports';
-Amplify.configure(awsExports);
 
-function Login({ signOut, user }) {
-  console.log(user)
+function Header() {
   return (
-    <>
-      <div className='flex flex-row justify-between'>
-      <BannerArt className='justify-center scale-[40%] h-[50%] w-[50%] pt-8'/>
-      <div className="flex flex-col py-60 px-20 w-[50%]">
-        <div className="text-8xl font-bold text-black-400 text-start">
-        Hello, {user.attributes.preferred_username}<br/>
-        </div>
-      </div>
-
-      </div>
-    </>
-  )
+    <Flex justifyContent="center">
+      
+    </Flex>
+  );
 }
-export default withAuthenticator(Login);
-//export default Login
+
+function Footer() {
+  const { tokens } = useTheme();
+
+  return (
+    <Flex justifyContent="center" padding={tokens.space.medium}>
+      <Text>&copy; AR²T All Rights Reserved</Text>
+    </Flex>
+  );
+}
+
+function SignInFooter() {
+  const { toResetPassword } = useAuthenticator();
+  const { tokens } = useTheme();
+
+  return (
+    <Flex justifyContent="center" padding={`0 0 ${tokens.space.medium}`}>
+      <Link onClick={toResetPassword}>Forgot your password?</Link>
+    </Flex>
+  );
+}
+
+function SignInHeader() {
+  const { tokens } = useTheme();
+
+  return (
+    <Heading level={4} padding={`${tokens.space.xl} ${tokens.space.xl} 0`}>
+      Welcome back! 
+    </Heading>
+  );
+}
+
+function SignUpHeader() {
+  const { tokens } = useTheme();
+
+  return (
+    <Heading level={4} padding={`${tokens.space.xl} ${tokens.space.xl} 0`}>
+      Create a new account
+    </Heading>
+  );
+}
+
+const components = {
+  Header,
+  SignIn: {
+    Header: SignInHeader,
+    Footer: SignInFooter
+  },
+  SignUp: {
+    Header: SignUpHeader,
+  },
+  Footer
+};
+
+export default function Login() { 
+  const { user } = useAuthenticator();
+  const { tokens } = useTheme();
+  const navigate = useNavigate();
+
+  if (user) {
+    navigate("/profile");
+  }
+
+  return (
+    <div className="">
+    <Grid templateColumns={{ base: "1fr 0", medium: "1fr 1fr" }}>
+      <Flex className="loginBackground"
+        backgroundColor={tokens.colors.background.tertiary}
+        justifyContent="center"
+      >
+        <Authenticator components={components}>
+        </Authenticator>
+      </Flex>
+      <View height="100vh" >
+        <BannerArt className="w-full h-full bg-cover" />
+      </View>
+    </Grid>
+    </div>
+  );
+}
