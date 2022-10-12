@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
     <>
-    <ul className='navbar shadow-lg'>
+    <ul className='navbar shadow-md'>
         <div className='navbarLeft'>
          <p className='text-2xl font-bold'>ideART</p> 
         <li><Link to="/">Home</Link></li>
