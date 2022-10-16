@@ -21,7 +21,7 @@
 .sub-container {
     max-width: 1200px;
     margin: auto;
-    padding: 48px 0;
+    padding: 25px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -29,16 +29,20 @@
 
 .teams {
     margin: 10px;
-    padding: 22px;
-    max-width: 30%;
+    padding: 25px;
+    max-width: 23%;
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.25s;
     box-sizing: border-box;
+    border-color: #000000;
+    border-width: 2px;
 }
 
 .teams:hover {
-    background: #ddd;
-    border-radius: 12px;
+    /* background: #dedede; */
+    /* border-radius: 12px; */
+    transform: scale(1.05);
+    /* border-width: 3px; */
 }
 
 .image {
@@ -50,7 +54,7 @@
 }
 
 .name {
-    padding: 12px;
+    padding-top: 24px;
     font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
@@ -58,26 +62,29 @@
 
 .desig {
     font-style: italic;
+    font-size: 85%;
     color: #888;
 }
 
 .about {
-    margin: 20px 0;
+    margin: 15px 0;
     font-weight: lighter;
+    font-size: 75%;
     color: #4e4e4e;
 }
 
 .social-links {
-    margin: 14px;
+    margin: 0px;
 }
 
 .social-links a {
     display: inline-block;
     height: 30px;
     width: 30px;
-    transition: .4s;
+    transition: .25s;
 }
 
-.social-links a hover {
+.social-links a:hover {
+    color: #48dc34;
     transform: scale(1.5);
 }
