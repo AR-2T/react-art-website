@@ -19,7 +19,7 @@
 }
 
 .sub-container {
-    max-width: 1200px;
+    max-width: 1250px;
     margin: auto;
     padding: 25px 0;
     display: flex;
@@ -35,14 +35,13 @@
     transition: 0.25s;
     box-sizing: border-box;
     border-color: #000000;
-    border-width: 2px;
+    border-width: 2px; 
 }
 
 .teams:hover {
-    /* background: #dedede; */
-    /* border-radius: 12px; */
     transform: scale(1.05);
-    /* border-width: 3px; */
+    box-shadow: 0em 0em 1em #acacac;
+    border-radius: 1em;
 }
 
 .image {

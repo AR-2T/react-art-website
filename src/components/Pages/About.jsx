@@ -64,7 +64,7 @@ function About() {
         </div>
 
         <div class="teams">
-          <img src="https://yt3.ggpht.com/a/AGF-l78nJgEy0nGSXPHAa4Tk_btDrIgsFRWkJJoNLw=s900-mo-c-c0xffffffff-rj-k-no" height="50px " alt="" />
+          <img src="https://cdn.discordapp.com/attachments/818960742551519252/1029542003496718358/ryan_mushroom.png" height="50px " alt="" />
           <div class="name">Ryan Yan</div>
           <div class="desig">Developer</div>
           <div class="about">[Enter personal information here]</div>
