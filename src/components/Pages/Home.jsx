@@ -6,11 +6,11 @@ import {ReactComponent as BannerArt} from '../../assets/person_thinking.svg';
 function Home() {
   const [randomIdea, generateIdea] = useState(null);
   const [filter,setFilter] = useState(null);
+  const people = ["George Washington", "Abraham Lincoln", "Grant MacDonald"];
+  const places = ["Paris", "New York", "Japan"];
+  const objects = ["Pen", "Pineapple", "Apple"];
+  const everything = [].concat(people, places, objects);
   const getRandomIdea = () => {
-    let people = ["George Washington", "Abraham Lincoln", "Grant MacDonald"]
-    let places = ["Paris", "New York", "Japan"]
-    let objects = ["Pen", "Pineapple", "Apple"]
-    let everything = [].concat(people, places, objects)
     switch(filter) {
       case "Person":
         generateIdea(people[Math.floor(Math.random() * people.length)])
@@ -52,10 +52,16 @@ function Home() {
                  <option value={"Person"}>Person</option>
                 <option value={"Place"}>Place</option>
                 <option value={"Object"}>Object</option>
-             </select>           
+             </select>          
        </div>
-          <p>{randomIdea}</p>
+          <p data-testid="idea">{randomIdea}</p>
         </div>
+        <div className="hidden">
+        <span data-testid="sum1">{everything.length}</span>
+    <span data-testid="sum2">{people.length + places.length + objects.length}</span>
+    <span data-testid="filter">{filter}</span>
+        </div>
+        
       </div>
 
       <BannerArt className='justify-center scale-[70%] h-[50%] w-[50%] pt-8'/>
