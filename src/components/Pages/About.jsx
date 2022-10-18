@@ -9,6 +9,25 @@ function About() {
 
     <div class="container">
       <div class="header">
+        <h1>Mission Statement</h1>
+      </div>
+
+      <div class="sub-container">
+        <div class="statement">
+          Prepare for trouble!<br />
+          And make it double!<br />
+          To protect the world from devastation!<br />
+          To unite all peoples within our nation!<br />
+          To denounce the evils of truth and love!<br />
+          To extend our reach to the stars above!<br />
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="container">
+      <div class="header">
         <h1>Our Team</h1>
       </div>
 
