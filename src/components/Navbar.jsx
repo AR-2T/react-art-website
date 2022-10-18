@@ -14,9 +14,7 @@ async function signOut() {
 }
 
 function Navbar() {
-  const { authStatus  } = useAuthenticator((context) => [context.authStatus ]);
-
-  console.log(authStatus);
+  const { authStatus } = useAuthenticator((context) => [context.authStatus ]);
 
   return (
     <>
@@ -29,7 +27,8 @@ function Navbar() {
         <li><Link to="about">About</Link></li>
 
         </div>
-          {authStatus !== 'authenticated' ? <Link to="login"><button className='loginButton'>Log In</button></Link> : <button className='loginButton' onClick={signOut}>Sign out</button>}
+          {authStatus !== 'authenticated' ? <Link to="login"><button className='loginButton' data-testid="loginButton" >Log In</button></Link> :
+           <button className='loginButton' onClick={signOut} data-testid="signOutButton">Sign out</button>}
     </ul> 
     </>
   )
