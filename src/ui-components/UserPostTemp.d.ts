@@ -4,9 +4,10 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
-export { default as TempPost } from "./TempPost";
-export { default as EditProfile } from "./EditProfile";
-export { default as TempPostCollection } from "./TempPostCollection";
-export { default as UserPostTemp } from "./UserPostTemp";
-export { default as CreatePosts } from "./CreatePosts";
-export { default as studioTheme } from "./studioTheme";
+import React from "react";
+import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
+import { FlexProps } from "@aws-amplify/ui-react";
+export declare type UserPostTempProps = React.PropsWithChildren<Partial<FlexProps> & {
+    overrides?: EscapeHatchProps | undefined | null;
+}>;
+export default function UserPostTemp(props: UserPostTempProps): React.ReactElement;
