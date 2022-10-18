@@ -5,16 +5,16 @@ import { useNavigate } from "react-router-dom";
 import { UserPostTemp, TempPostCollection} from "../../ui-components"
 
 function Profile() {
-    const { user } = useAuthenticator();
+    const { route } = useAuthenticator(context => [context.route]);
     const navigate = useNavigate();
 
-    if (!user) {
+    if (route !== 'authenticated' ) {
         navigate("/login");
       }
 
     return (
         <>
-        {user ? 
+        {route === 'authenticated' ? 
           // <div className='flex flex-row justify-between'>
             
           //   <BannerArt className='justify-center scale-[40%] h-[50%] w-[50%] pt-8'/>

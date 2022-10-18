@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../App.css';
 import {Link} from "react-router-dom"
 import { Auth } from 'aws-amplify';
@@ -6,7 +6,6 @@ import { useAuthenticator } from "@aws-amplify/ui-react";
 
 
 async function signOut() {
-  
   try {
       await Auth.signOut();
   } catch (error) {
@@ -15,8 +14,9 @@ async function signOut() {
 }
 
 function Navbar() {
-  const { user } = useAuthenticator();
+  const { authStatus  } = useAuthenticator((context) => [context.authStatus ]);
 
+  console.log(authStatus);
 
   return (
     <>
@@ -29,9 +29,7 @@ function Navbar() {
         <li><Link to="about">About</Link></li>
 
         </div>
-        {!user && <Link to="login"><button className='loginButton'>Log In</button></Link>}
-        
-        {user && <button className='loginButton' onClick={signOut}>Sign out</button>}
+          {authStatus !== 'authenticated' ? <Link to="login"><button className='loginButton'>Log In</button></Link> : <button className='loginButton' onClick={signOut}>Sign out</button>}
     </ul> 
     </>
   )
