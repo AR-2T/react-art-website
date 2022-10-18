@@ -13,6 +13,7 @@ import About from './components/Pages/About';
 import Login from './components/Pages/Login';
 import Navbar from './components/Navbar';
 import Profile from './components/Pages/Profile';
+import CreatePost from './components/Pages/CreatePost';
 import './App.css';
 
 import { Amplify } from 'aws-amplify';
@@ -38,6 +39,7 @@ function App() {
         <Route path="about" element={<About/>} />
         <Route path="login" element={<Login/>} />
         <Route path="profile" element={<Profile/>} />
+        <Route path="create-post" element={<CreatePost/>} />
       </Routes>
 
     </div>
