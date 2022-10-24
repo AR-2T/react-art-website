@@ -1,94 +1,257 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;0,800;1,500&display=swap');
+
+.aboutPage {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+/* .aboutPage{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+} */
+
+*{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    box-sizing: border-box;
 }
 
-.container {
-    text-align: center;
-    background: #ffffff;
-    padding-top: 50px;
+html{
+    font-size: 10px;
 }
 
-.header {
-    color: rgb(0, 0, 0);
-    font-size: 50px;
-    margin: auto;
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.heading{
     text-transform: uppercase;
-    font-weight: bold;
+    /* letter-spacing: 3px; */
+    padding-top: 5rem;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: bold;
+    font-size: 5rem;
 }
 
-.sub-container {
-    max-width: 1250px;
-    margin: auto;
-    padding: 25px 0;
+.heading:after{
+    content: "";
+    width: 15rem;
+    height: .6rem;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+}
+
+.heading:hover:after{
+    width: 30rem;
+    transition: .5s;
+}
+
+.sub-container{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    padding-top: 4rem;
 }
 
-.statement {
-    font-weight: lighter;
+.subtext {
+    color: #ffffff;
+    font-size: 2rem;
+    animation: fadeIn 2s;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.card{
+    width: 32rem;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    /* border-width: 2px;
+    border-color: #000; */
+    border-radius: 1rem;
+}
+
+.card .card-img-full {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.card:hover .card-img-full {
+    display: inline;
+}
+
+.card:hover{
+    transform: scale(1.075);
+    background-color: #ffffff;
+}
+
+.card:hover .profile-img{
+    width: 15rem;
+    height: 15rem;
+    border: 1.5rem solid #ffffff;
+}
+
+.card .card-img, .card .card-img-full{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    border-radius: 1rem;
+}
+
+.profile-img{
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -8rem;
+    z-index: 3;
+    border: 1.5rem solid #f0f0f0;
+}
+
+.card h1{
+    color: #2f2f2f;
+    margin-top: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: bold;
+    font-size: 2.5rem;
+}
+
+.job-title{
+    color: rgb(75, 75, 75);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.75rem;
+}
+
+.about{
+    margin: 1.5rem 0;
+    padding: 0 2rem 0 2rem;
+    font-style: italic;
+    text-align: center;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+
+.social-links{
+    width: 75%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(0,0,0,1);
+}
+
+.social-links i{
+    font-size: 3rem;
+}
+
+.fa-facebook-square{
+    color: #1877f2;
+}
+
+.fa-twitter-square{
+    color: #55acee;
+}
+
+.fa-instagram{
+    background: rgb(131,58,180);
+    background: linear-gradient(207deg, rgba(131,58,180,1) 0%, rgba(145,40,108,1) 12%, rgba(193,53,132,1) 26%, rgba(225,48,108,1) 41%, rgba(253,29,29,1) 55%, rgba(245,96,64,1) 71%, rgba(252,175,69,1) 87%, rgba(255,220,128,1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.fa-github-square{
     color: #000000;
 }
 
-.teams {
-    margin: 10px;
-    padding: 25px;
-    max-width: 23%;
-    cursor: pointer;
-    transition: 0.25s;
-    box-sizing: border-box;
-    border-color: #000000;
-    border-width: 2px; 
+.fa-linkedin-square{
+    color: #0077b5;
 }
 
-.teams:hover {
-    transform: scale(1.05);
-    box-shadow: 0em 0em 1em #acacac;
-    border-radius: 1em;
-}
 
-.image {
-    background-image: url(../../assets/Circle-Icon-Profile.svg);
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    
-}
-
-.name {
-    padding-top: 24px;
-    font-weight: bold;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-.desig {
-    font-style: italic;
-    font-size: 85%;
-    color: #888;
-}
-
-.about {
-    margin: 15px 0;
-    font-weight: lighter;
-    font-size: 75%;
-    color: #4e4e4e;
-}
-
-.social-links {
-    margin: 0px;
-}
-
-.social-links a {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    transition: .25s;
-}
-
-.social-links a:hover {
-    color: #48dc34;
+.fa-facebook-square:hover,
+.fa-twitter-square:hover,
+.fa-instagram:hover,
+.fa-github-square:hover,
+.fa-linkedin-square:hover{
+    transition: .35s;
     transform: scale(1.5);
+}
+
+@media screen and (min-width: 700px){
+    .sub-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        margin: 2rem;
+        transition: transform .35s;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+    .card:nth-child(1){
+        animation: fadeIn 1s .25s backwards;
+    }
+
+    .card:nth-child(2){
+        animation: fadeIn 1s .75s backwards;
+    }
+
+    .card:nth-child(3){
+        animation: fadeIn 1s 1.25s backwards;
+    }
+
+    .card:nth-child(4){
+        animation: fadeIn 1s 1.75s backwards;
+    }
+
+
 }

@@ -9,30 +9,22 @@ import React from "react";
 import {
   getOverrideProps,
   useDataStoreCreateAction,
-  useDataStoreUpdateAction,
   useStateMutationAction,
 } from "@aws-amplify/ui-react/internal";
 import { UserPosts } from "../models";
 import { schema } from "../models/schema";
-import { Button, Flex, Image, Text, TextField } from "@aws-amplify/ui-react";
+import { Button, Flex, TextField } from "@aws-amplify/ui-react";
 export default function CreatePosts(props) {
   const { posts, overrides, ...rest } = props;
   const [textFieldTwoValue, setTextFieldTwoValue] = useStateMutationAction("");
   const [textFieldOneValue, setTextFieldOneValue] = useStateMutationAction("");
   const [textFieldThreeValue, setTextFieldThreeValue] =
     useStateMutationAction("");
-  const uploadImageOnClick = useDataStoreUpdateAction({
-    fields: {},
-    id: posts?.image,
-    model: UserPosts,
-    schema: schema,
-  });
   const buttonOnClick = useDataStoreCreateAction({
     fields: {
       author: textFieldTwoValue,
       title: textFieldOneValue,
       description: textFieldThreeValue,
-      image: textFieldTwoValue,
     },
     model: UserPosts,
     schema: schema,
@@ -67,47 +59,6 @@ export default function CreatePosts(props) {
           padding="24px 24px 24px 24px"
           {...getOverrideProps(overrides, "Content")}
         >
-          <Flex
-            gap="16px"
-            alignItems="center"
-            shrink="0"
-            alignSelf="stretch"
-            objectFit="cover"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Profile")}
-          >
-            <Image
-              width="96px"
-              height="96px"
-              shrink="0"
-              position="relative"
-              borderRadius="160px"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "image")}
-            ></Image>
-            <Text
-              fontFamily="Inter"
-              fontSize="16px"
-              fontWeight="400"
-              color="rgba(13,26,38,1)"
-              lineHeight="22px"
-              textAlign="left"
-              display="flex"
-              direction="column"
-              justifyContent="flex-start"
-              textDecoration="underline"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="Upload New Image"
-              onClick={() => {
-                uploadImageOnClick();
-              }}
-              {...getOverrideProps(overrides, "Upload Image")}
-            ></Text>
-          </Flex>
           <Flex
             gap="16px"
             direction="column"
