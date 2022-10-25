@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;0,800;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .aboutPage {
       background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -44,10 +45,10 @@ a{
     text-align: center;
     color: #ffffff;
     position: relative;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 800;
     font-style: bold;
-    font-size: 5rem;
+    font-size: 6rem;
 }
 
 .heading:after{
@@ -75,18 +76,18 @@ a{
     padding-top: 4rem;
 }
 
-.subtext {
+.subtext{
     color: #ffffff;
-    font-size: 2rem;
     animation: fadeIn 2s;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     font-style: italic;
+    font-size: 2rem;
 }
 
 .card{
     width: 32rem;
-    background-color: #f0f0f0;
+    background-color: #eeeeee;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,14 +98,14 @@ a{
     border-radius: 1rem;
 }
 
-.card .card-img-full {
+.card .card-img-full{
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
 }
-.card:hover .card-img-full {
+.card:hover .card-img-full{
     display: inline;
 }
 
@@ -134,13 +135,13 @@ a{
     border-radius: 50%;
     margin-top: -8rem;
     z-index: 3;
-    border: 1.5rem solid #f0f0f0;
+    border: 1.5rem solid #eeeeee;
 }
 
 .card h1{
     color: #2f2f2f;
     margin-top: 1rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 800;
     font-style: bold;
     font-size: 2.5rem;
@@ -148,9 +149,9 @@ a{
 
 .job-title{
     color: rgb(75, 75, 75);
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: bold;
     font-size: 1.75rem;
 }
 
@@ -160,7 +161,7 @@ a{
     font-style: italic;
     text-align: center;
     color: #333;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.3rem;
@@ -174,7 +175,7 @@ a{
     justify-content: space-evenly;
     padding: 2rem 0;
     margin-top: 1.5rem;
-    border-top: 1px solid rgba(0,0,0,1);
+    border-top: 1px solid rgb(115, 115, 115);
 }
 
 .social-links i{

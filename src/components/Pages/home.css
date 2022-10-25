@@ -1,4 +1,81 @@
-.homePage{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* .homePage{
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 18%, rgba(254,255,204,1) 32%, rgba(209,255,206,1) 44%, rgba(194,232,255,1) 58%, rgba(252,231,255,1) 69%, rgba(255,255,255,1) 80%);
-  }
+} */
+
+.homePage{
+  background: linear-gradient(-45deg, #ffb600, #5bdef0, #d495ff, #ff723e);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.headingHome{
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-style: bold;
+    font-size: 10rem;
+    line-height: 90%;
+    /* letter-spacing: -3px; */
+}
+
+.headingHome .strokeHome{
+  -webkit-text-stroke: 0.2rem rgb(255, 255, 255);
+  -webkit-text-fill-color: transparent;
+}
+
+.subHeadingHome{
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3rem;
+  line-height: 100%;
+  width: 75%;
+}
+
+.bodyTextHome{
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 95%;
+}
+
+.form-select{
+  color: #323232;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5rem;
+
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.form-select option{
+  padding: 1rem;
+  color: #323232;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+}
+
+.generateIdeaButton{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+}
