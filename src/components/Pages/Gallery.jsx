@@ -6,7 +6,7 @@ function Gallery() {
     <>
 
     <div className="space-y-100 min-h-screen w-full">
-      <div className="galleryPage min-h-screen w-full"></div>
+      <div className="galleryPage min-h-screen w-full z-[-2]"></div>
       {/* Downloaded Code Lol Have Fun With This Shit */}
 
           <div class="relative w-full z-[-1] flex items-center justify-start px-16 max-w-2xl">
