@@ -1,3 +1,16 @@
+enum FilterType {
+  PEOPLE
+  PLACES
+  OBJECTS
+  IDEAS
+}
+
+type ArtIdea @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  idea: String!
+  filter: FilterType!
+}
+
 type UserPosts @model @auth(rules: [{allow: public}]) {
   id: ID!
   author: String
