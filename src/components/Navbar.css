@@ -8,21 +8,12 @@
   height: 4rem;
   background: white;
   z-index: 100;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
   position: sticky;
   top: 0
 
 }
-
-/* .navbar {
-  font-weight: 600;
-  font-style: bold;
-  font-size: 1rem;
-  color: black;
-  text-align: center;
-  border-bottom: 3px solid black;
-} */
 
 .navbar * {
   list-style: none;
@@ -30,9 +21,9 @@
   align-items: center;
 }
 
-.navbar a{
+.navbar li{
   padding: 0.5rem;
-
+  text-align: center;
 }
   
 .navbarLeft {
@@ -50,13 +41,6 @@
     font-size: 1.5rem;
     text-align: center;
 }
-
-.navbar a:hover {
-  width: 100%;
-  background-color: aliceblue;
-  border-radius: 8px;
-}
-
 
 .loginButton {
   align-items: center;

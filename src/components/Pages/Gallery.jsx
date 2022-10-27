@@ -1,5 +1,7 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import './gallery.css'
+import { DataStore, Predicates } from '@aws-amplify/datastore';
+import { UserPosts } from '../../models';
 
 function UserPost ({author, title, description, image}) {
 
@@ -15,13 +17,39 @@ function UserPost ({author, title, description, image}) {
 }
 
 function Gallery() {
-  let userPosts = [];
+  const [userPosts, setUserPosts] = useState([])
+  const [query, setQuery] = useState("")
 
-  var userPost = {author:"Aaron", title:"Pusheen", description:"", image:"https://yt3.ggpht.com/a/AATXAJxrTC4-9nXsfeE2fZnDBK5_7zreHmPoaa6Fww=s900-c-k-c0xffffffff-no-rj-mo"};
-  var userPost2 = {author:"Ryan", title:"Kirby", description:"", image:"https://kirby.nintendo.com/assets/img/intro/kirby-star2.png"};
+  async function fetchPosts() {
+    const models = await DataStore.query(UserPosts, Predicates.ALL, {
+      page: 0,
+      limit: 16
+    });
+    if(models !== undefined) setUserPosts(models);
+    console.log(models);
+  }
 
-  userPosts.push(userPost);
-  userPosts.push(userPost2);
+  async function queryPosts() {
+    const query2 = query[0].toUpperCase() + query.slice(1); // Case insensitive query
+
+    const models = await DataStore.query(UserPosts,(c) =>
+    c.or((c) => c.author('contains', query).title('contains', query).description('contains', query).author('contains', query2).title('contains', query2).description('contains', query2))
+    );
+
+    if(models !== undefined){
+      setUserPosts(models);
+    } 
+    else{
+      fetchPosts();
+    }
+
+    console.log(models);
+  }
+
+  useEffect(()=> {
+    fetchPosts()
+  }, [])
+
 
   return (
     <>
@@ -57,9 +85,9 @@ function Gallery() {
                   </div>
 
                   <div class="input-group mb-3">
-                    <input type="text" class="form-control rounded-l-full shadow-md border-none" placeholder="Search anything..."/>
+                    <input type="text" class="form-control rounded-l-full shadow-md border-black border-[2px]" placeholder="Search anything..." onChange={event => setQuery(event.target.value)}/>
                     <div class="input-group-append">
-                      <button class="btn rounded-r-full active:!bg-black/50 shadow-md bg-white hover:!bg-[gray] border-none" type="button">
+                      <button class="btn rounded-r-full active:!bg-black/50 shadow-md bg-white hover:!bg-[gray] border-black border-[2px]" type="button" onClick={queryPosts}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="w-6 h-6">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
@@ -71,7 +99,11 @@ function Gallery() {
             </div>
 
             <div class="relative mx-12 space-y-4 glass">
-              <div className="flex flex-col py-12 px-12 items-start">        
+              <div className="flex flex-col py-12 px-12 items-center"> 
+              {
+                userPosts.length === 0 ? 
+                <div> No results found.</div>           
+                :
                 <div className='grid grid-cols-4 gap-4'>
                   {
                     userPosts.map((userPost, index)=>(
@@ -79,6 +111,8 @@ function Gallery() {
                     )) 
                   }
                 </div>
+              }       
+
               </div>
             </div>
             
