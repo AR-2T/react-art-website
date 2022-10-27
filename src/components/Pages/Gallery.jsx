@@ -30,20 +30,21 @@ function Gallery() {
   }
 
   async function queryPosts() {
-    const query2 = query[0].toUpperCase() + query.slice(1); // Case insensitive query
+    if(query[0] !== undefined){ //Only query when search input has text
+      const query2 = query[0].toUpperCase() + query.slice(1); // Case insensitive query
 
-    const models = await DataStore.query(UserPosts,(c) =>
-    c.or((c) => c.author('contains', query).title('contains', query).description('contains', query).author('contains', query2).title('contains', query2).description('contains', query2))
-    );
+      const models = await DataStore.query(UserPosts,(c) =>
+      c.or((c) => c.author('beginsWith', query).title('beginsWith', query).description('beginsWith', query).author('beginsWith', query2).title('beginsWith', query2).description('beginsWith', query2))
+      );
 
-    if(models !== undefined){
-      setUserPosts(models);
-    } 
+      if(models !== undefined){
+        setUserPosts(models);
+      } 
+      console.log(models);
+    }
     else{
       fetchPosts();
     }
-
-    console.log(models);
   }
 
   useEffect(()=> {
