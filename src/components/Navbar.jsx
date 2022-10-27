@@ -1,22 +1,25 @@
 import React, {useState} from 'react'
-import '../App.css';
 import './Navbar.css';
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import { Auth } from 'aws-amplify';
 import { useAuthenticator } from "@aws-amplify/ui-react";
 
-
-async function signOut() {
-  try {
-      await Auth.signOut();
-  } catch (error) {
-      console.log('error signing out: ', error);
-  }
-}
-
 function Navbar() {
   const { authStatus } = useAuthenticator((context) => [context.authStatus ]);
+  const navigate = useNavigate();
 
+  async function signOut() {
+    try {
+        await Auth.signOut();
+    } catch (error) {
+        console.log('error signing out: ', error);
+    }
+  }
+  
+  function profileLink(){
+    navigate("/profile");
+  }
+  
   return (
     <>
     <ul className='navbar shadow-md'>
@@ -28,7 +31,15 @@ function Navbar() {
           <li><Link to="about">About</Link></li>
         </div>
           {authStatus !== 'authenticated' ? <Link to="login"><button className='loginButton' data-testid="loginButton" >Log In</button></Link> :
-           <button className='loginButton' onClick={signOut} data-testid="signOutButton">Sign out</button>}
+            <div className='dropdown'>
+              <button onClick={profileLink} className='loginButton' data-testid="signOutButton">Profile</button>
+
+              <div class="dropdown-content">
+                 <li><Link to="/user-settings"><i class="fa fa-gear"></i>Settings</Link></li>
+                 <li><button onClick={signOut}><i class="fa fa-sign-out"></i>Sign Out</button></li>
+              </div>
+            </div>
+           }
     </ul> 
     </>
   )

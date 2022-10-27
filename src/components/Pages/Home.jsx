@@ -57,7 +57,7 @@ function Home() {
       <section className="sectionContainer flex flex-row">
         <section className="sectionContainer  w-[50%]">
           <h1 className="titleHome text-start mt-[5vmax] mx-[5vmax]">
-            Don't know
+            <p>Don't know</p>
             <h1 className="strokeHome">what to make?</h1>
           </h1>
           <h2 className="subTitleHome text-start mt-[3vmax] ml-[5vmax] mr-[10vmax]">

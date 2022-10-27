@@ -9,7 +9,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
     font-style: bold;
-    font-size: 8vmax;
+    font-size: 5.5vmax;
     line-height: 90%;
     /* letter-spacing: -3px; */
 
@@ -30,15 +30,14 @@
 
 .subTitleHome {
     font-size: 2vmax;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
     color: #ffffff;
-    line-height: 95%;
 }
 
 .bodyTextHome {
     font-size: 1.5vmax;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
     color: #ffffff;
 }
