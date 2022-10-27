@@ -77,11 +77,12 @@ const components = {
 };
 
 export default function Login() { 
-  const { user } = useAuthenticator();
   const { tokens } = useTheme();
   const navigate = useNavigate();
+  const { authStatus } = useAuthenticator((context) => [context.authStatus ]);
 
-  if (user) {
+
+  if (authStatus === "authenticated") {
     navigate("/profile");
   }
 
