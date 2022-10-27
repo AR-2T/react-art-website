@@ -1,7 +1,21 @@
 import { ModelInit, MutableModel } from "@aws-amplify/datastore";
 
+type ArtIdeaMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
 type UserPostsMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+export declare class ArtIdea {
+  readonly id: string;
+  readonly idea?: string | null;
+  readonly filter?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<ArtIdea, ArtIdeaMetaData>);
+  static copyOf(source: ArtIdea, mutator: (draft: MutableModel<ArtIdea, ArtIdeaMetaData>) => MutableModel<ArtIdea, ArtIdeaMetaData> | void): ArtIdea;
 }
 
 export declare class UserPosts {

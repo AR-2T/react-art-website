@@ -1,3 +1,9 @@
+type ArtIdea @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  idea: String
+  filter: String
+}
+
 type UserPosts @model @auth(rules: [{allow: public}]) {
   id: ID!
   author: String
