@@ -6,9 +6,9 @@ import {ReactComponent as BannerArt} from '../../assets/person_thinking.svg';
 function Home() {
   const [randomIdea, generateIdea] = useState(null);
   const [filter,setFilter] = useState(null);
-  const people = ["George Washington", "Abraham Lincoln", "Grant MacDonald", "Aaron Do"];
-  const places = ["Paris", "New York", "Japan", "Los Angeles", "Miami", "Dubai", "London"];
-  const objects = ["Pen", "Pineapple", "Apple"];
+  const people = ["George Washington", "Abraham Lincoln", "Grant MacDonald", "Albert Einstein", "Helen Keller", "Vincent Van Gogh", "Taylor Swift", "Ariana Grande", "Billie Eilish", "The Beatles", "The Weeknd"];
+  const places = ["Paris", "New York", "Japan", "Los Angeles", "Miami", "Dubai", "London", "Maui", "Rome", "Turls & Caicos", "Tokyo", "Grand Canyon", "Yosemite", "Rio de Janeiro"];
+  const objects = ["Pen", "Pineapple", "Apple", "Cellphone", "Helmet", "Dollar", "Quarter", "Penny", "Shirt", "Dress", "CD", "Laptop", "Tablet", "Pencil", "Glasses", "Fork", "Spoon", "Toothbrush", "Sweater"];
   const everything = [].concat(people, places, objects);
   const getRandomIdea = () => {
     switch(filter) {
@@ -27,56 +27,56 @@ function Home() {
   }
   return (
     <>
-      {/* Home */}
-
-    <div className="homePage min-h-screen">
-      <div className='flex flex-row justify-between'>
-
-        <div className="flex flex-col py-24 px-24 w-[60%]">
-          <div className="headingHome text-start">
+    
+    <div className="homePageBackdrop min-h-screen">
+      <section className="sectionContainer flex flex-row">
+        <section className="sectionContainer  w-[50%]">
+          <h1 className="titleHome text-start mt-[5vmax] mx-[5vmax]">
             Don't know
-            <p className="strokeHome">what to make?</p>
-          </div>
-
-          <div className="subHeadingHome text-start pt-14">
+            <h1 className="strokeHome">what to make?</h1>
+          </h1>
+          <h2 className="subTitleHome text-start mt-[3vmax] ml-[5vmax] mr-[10vmax]">
             Quickly gain ideas with ideART's randomly generated topics and start creating again.
-          </div>
+          </h2>
 
-          <div className="form-group">
-            <div className="bodyTextHome text-start pt-20 pb-3 font-bold">
+          <div className="selectGroup">
+            <div className="bodyTextHome text-start mt-[4vmax] mb-[0.5vmax] ml-[5vmax]">
               Topic Selection
             </div>
 
             <div className="flex flex-row">
-              <select className='form-select mr-5 w-[40%]' value={filter} onChange={(evt)=>setFilter(evt.target.value)}>
+              <select className='form-select ml-[5vmax] w-[40%]' value={filter} onChange={(evt)=>setFilter(evt.target.value)}>
                 <option value={"Everything"}>Everything</option>
                 <option value={"Person"}>Person</option>
                 <option value={"Place"}>Place</option>
                 <option value={"Object"}>Object</option>
               </select>
 
-              <Button onClick={() => getRandomIdea()} className="generateIdeaButton ml-5 w-[25%] bg-zinc-800 text-white border-transparent">Generate an idea</Button>
+              <Button onClick={() => getRandomIdea()} className="generateIdeaButton ml-[1vmax] w-[30%] bg-[#3F3D56] border-transparent">Generate an idea</Button>
               {/* <Button onClick={() => getRandomIdea()} className="ml-5 w-[40%] bg-black text-white hover:border-[2px] hover:text-black hover:bg-transparent active:bg-[#3f3d56] active:text-white" variant="dark"> Generate an idea</Button> */}
             </div>
 
-            <p data-testid="idea">{randomIdea}</p>
-
+            <div className="selectedTopic mt-[1vmax] mb-[6vmax] ml-[5vmax] w-[72%]">
+              {randomIdea}
+            </div>
           </div>
 
-          <div className="hidden">
-            <span data-testid="sum1">{everything.length}</span>
-            <span data-testid="sum2">{people.length + places.length + objects.length}</span>
-            <span data-testid="filter">{filter}</span>
-          </div>
-          
-        </div>
+        </section>
 
+        <section className="sectionContainer w-[50%]">
+          <BannerArt className="justify-center scale-[100%] h-[100%] w-[100%] pr-[5vmax]"/>
+        </section>
 
-        <div className="flex flex-col py-24 px-24 w-[40%]">
-          <BannerArt className='justify-center scale-[100%] h-[100%] w-[100%] pt-32'/>
-        </div>
+      </section>
 
-      </div>
+      <section className="sectionContainer p-4 bg-[#000000] bg-opacity-25">
+        <h1 className="headerTitle lg:pt-12 md:pt-8 sm:pt-4">
+          What is ideArt?
+        </h1>
+        <p className="headerSubText px-16 lg:pb-12 md:pb-8 sm:pb-4">
+        IdeArt is a community-driven service that seeks to provide members with a self-sustaining flow of inspiration and new ideas.
+        </p>
+      </section>
     </div>
 
     </>

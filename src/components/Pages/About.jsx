@@ -9,57 +9,49 @@ function About() {
   return (
     <>
 
-    <div className="aboutPage min-h-screen">
-
-      {/* About Us Info */}
-      <div className="container">
-
-        {/* Header */}
-        <h1 className="heading">
+    <div className="aboutPageBackdrop min-h-screen">
+      <section className="sectionContainer p-4">
+        <h1 className="headerTitle lg:pt-12 md:pt-8 sm:pt-4">
           About Us
         </h1>
+        <p className="headerSubText px-16 lg:pb-12 md:pb-8 sm:pb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quo, aperiam nemo eligendi, esse non ipsam nesciunt iusto beatae quia ad libero, dolorum provident. Blanditiis incidunt ipsum soluta natus maiores.
+        </p>
+      </section>
 
-        <div className="sub-container">
+      <section className="sectionContainer p-4 bg-[#000000] bg-opacity-25">
+        <h1 className="headerTitle lg:pt-12 md:pt-8 sm:pt-4">
+          Mission Statement
+        </h1>
+        <p className="headerSubText px-16 lg:pb-12 md:pb-8 sm:pb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quo, aperiam nemo eligendi, esse non ipsam nesciunt iusto beatae quia ad libero, dolorum provident. Blanditiis incidunt ipsum soluta natus maiores.
+        </p>
+      </section>
 
-          <div className="subtext">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, error <br />
-            doloribus. Corporis, impedit nostrum. Est vel quo ipsa asperiores, quam ullam <br />
-            ratione, quas quidem dolorum voluptatibus pariatur ut molestias labore.
-          </div>
-          
-        </div>
-
-      </div>
-
-      {/* Team Members' About Us */}
-      <div className="container">
-        
-        {/* Header */}
-        <h1 className="heading">
+      <section className="sectionContainer p-4 bg-[#000000] bg-opacity-50">
+        <h1 className="headerTitle lg:pt-12 md:pt-8 sm:pt-4">
           Our Team
         </h1>
 
-        {/* About Us Cards Container */}
-        <div className="sub-container">
-
-          {/* Aaron's About Us Card */}
+        <div className="cardContainer">
+          {/* Aaron's Card */}
           <div className="card">
-            <img src={require('../../assets/DSIrelia.jpg')} alt="Main Card" class="card-img"/>
-            <img src={require('../../assets/DSIreliaFull.jpg')} alt="Hover Card" class="card-img-full"/>
-            <img src={defaultPFP} alt="profile image" class="profile-img"/>
-            <h1>
+            <img src={require('../../assets/DSIrelia.jpg')} alt="Main Card" class="cardImg"/>
+            <img src={require('../../assets/DSIreliaFull.jpg')} alt="Hover Card" class="cardImgFull"/>
+            <img src={require('../../assets/AaronPFP.jpg')} alt="Profile Image" class="profileImg"/>
+            <h2 className="name">
               Aaron Do
-            </h1>
-            <p className="job-title">
+            </h2>
+            <h3 className="jobTitle">
               Developer
-            </p>
+            </h3>
             <p className="about">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Ipsa perspiciatis voluptas, maiores doloremque aperiam consectetur debitis
               nemo accusantium officia voluptatibus necessitatibus adipisci ex quo explicabo,
               ratione animi asperiores tempore delectus?
             </p>
-            <ul className="social-links">
+            <ul className="socialLinks">
               <li><a href="#"><i className="fa fa-facebook-square"></i></a></li>
               <li><a href="#"><i className="fa fa-twitter-square"></i></a></li>
               <li><a href="https://www.instagram.com/bigpusheen/"><i className="fa fa-instagram"></i></a></li>
@@ -68,24 +60,24 @@ function About() {
             </ul>
           </div>
 
-          {/* Robert's About Us Card */}
+          {/* Rob's Card */}
           <div className="card">
-          <img src={require('../../assets/ArcanaHecarim.jpg')} alt="Main Card" class="card-img"/>
-            <img src={require('../../assets/ArcanaHecarimFull.jpg')} alt="Hover Card" class="card-img-full"/>
-            <img src={defaultPFP} alt="profile image" class="profile-img"/>
-            <h1>
+            <img src={require('../../assets/ArcanaHecarim.jpg')} alt="Main Card" class="cardImg"/>
+            <img src={require('../../assets/ArcanaHecarimFull.jpg')} alt="Hover Card" class="cardImgFull"/>
+            <img src={require('../../assets/RobPFP.jpg')} alt="Profile Image" class="profileImg"/>
+            <h2 className="name">
               Robert Balatbat
-            </h1>
-            <p className="job-title">
+            </h2>
+            <h3 className="jobTitle">
               Developer
-            </p>
+            </h3>
             <p className="about">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Ipsa perspiciatis voluptas, maiores doloremque aperiam consectetur debitis
               nemo accusantium officia voluptatibus necessitatibus adipisci ex quo explicabo,
               ratione animi asperiores tempore delectus?
             </p>
-            <ul className="social-links">
+            <ul className="socialLinks">
               <li><a href="#"><i className="fa fa-facebook-square"></i></a></li>
               <li><a href="#"><i className="fa fa-twitter-square"></i></a></li>
               <li><a href="https://www.instagram.com/robjgb/"><i className="fa fa-instagram"></i></a></li>
@@ -94,50 +86,50 @@ function About() {
             </ul>
           </div>
 
-          {/* Theo's About Us Card */}
+          {/* Theo's Card */}
           <div className="card">
-            <img src={require('../../assets/BALux.jpg')} alt="Main Card" class="card-img"/>
-            <img src={require('../../assets/BALuxFull.jpg')} alt="Hover Card" class="card-img-full"/>
-            <img src={require('../../assets/Theo.jpg')} alt="profile image" class="profile-img"/>
-            <h1>
+            <img src={require('../../assets/BALux.jpg')} alt="Main Card" class="cardImg"/>
+            <img src={require('../../assets/BALuxFull.jpg')}  alt="Hover Card" class="cardImgFull"/>
+            <img src={require('../../assets/Theo.jpg')} alt="Profile Image" class="profileImg"/>
+            <h2 className="name">
               Theodore Tran
-            </h1>
-            <p className="job-title">
+            </h2>
+            <h3 className="jobTitle">
               Developer
-            </p>
+            </h3>
             <p className="about">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Ipsa perspiciatis voluptas, maiores doloremque aperiam consectetur debitis
               nemo accusantium officia voluptatibus necessitatibus adipisci ex quo explicabo,
               ratione animi asperiores tempore delectus?
             </p>
-            <ul className="social-links">
+            <ul className="socialLinks">
               <li><a href="#"><i className="fa fa-facebook-square"></i></a></li>
-              <li><a href="https://twitter.com/_theoshi_"><i className="fa fa-twitter-square"></i></a></li>
-              <li><a href="https://www.instagram.com/_theoshi_"><i className="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i className="fa fa-twitter-square"></i></a></li>
+              <li><a href="https://www.instagram.com/_theoshi_/"><i className="fa fa-instagram"></i></a></li>
               <li><a href="#"><i className="fa fa-github-square"></i></a></li>
               <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
             </ul>
           </div>
 
-          {/* Ryan's About Us Card */}
+          {/* Ryan's Card */}
           <div className="card">
-            <img src={require('../../assets/CosmicVarus.jpg')} alt="Main Card" class="card-img"/>
-            <img src={require('../../assets/CosmicVarusFull.jpg')} alt="Hover Card" class="card-img-full"/>
-            <img src={defaultPFP} alt="profile image" class="profile-img"/>
-            <h1>
+            <img src={require('../../assets/CosmicVarus.jpg')} alt="Main Card" class="cardImg"/>
+            <img src={require('../../assets/CosmicVarusFull.jpg')}  alt="Hover Card" class="cardImgFull"/>
+            <img src={require('../../assets/RyanPFP.jpg')} alt="Profile Image" class="profileImg"/>
+            <h2 className="name">
               Ryan Yan
-            </h1>
-            <p className="job-title">
+            </h2>
+            <h3 className="jobTitle">
               Developer
-            </p>
+            </h3>
             <p className="about">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Ipsa perspiciatis voluptas, maiores doloremque aperiam consectetur debitis
               nemo accusantium officia voluptatibus necessitatibus adipisci ex quo explicabo,
               ratione animi asperiores tempore delectus?
             </p>
-            <ul class="social-links">
+            <ul className="socialLinks">
               <li><a href="#"><i className="fa fa-facebook-square"></i></a></li>
               <li><a href="#"><i className="fa fa-twitter-square"></i></a></li>
               <li><a href="https://www.instagram.com/doozykiddo/"><i className="fa fa-instagram"></i></a></li>
@@ -147,29 +139,7 @@ function About() {
           </div>
 
         </div>
-
-      </div>
-
-      {/* Mission Statement */}
-      <div className="container">
-
-        {/* Header */}
-        <h1 className="heading">
-          Mission Statement
-        </h1>
-
-        <div className="sub-container">
-
-          <div className="subtext pb-32">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, error <br />
-            doloribus. Corporis, impedit nostrum. Est vel quo ipsa asperiores, quam ullam <br />
-            ratione, quas quidem dolorum voluptatibus pariatur ut molestias labore.
-          </div>
-          
-        </div>
-
-      </div>
-
+      </section>
     </div>
 
     </>
