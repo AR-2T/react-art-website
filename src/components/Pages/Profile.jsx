@@ -29,6 +29,7 @@ function Profile() {
           <div> 
             <UserPostTemp width='100%' marginBottom='10px'/>
             <TempPostCollection />
+            
           </div>: null
         } 
       </>

@@ -19,7 +19,7 @@ const s3 = new aws.S3({
 })
 
 export async function generateUploadURL() {
-  //Generates random URL
+  //Generates random URL using a random set of bytes and hex values
   const rawBytes = await randomBytes(16)
   const imageName = rawBytes.toString('hex')
 
