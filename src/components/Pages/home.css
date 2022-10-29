@@ -11,6 +11,7 @@
     font-style: bold;
     font-size: 5.5vmax;
     line-height: 90%;
+    user-select: none;
     /* letter-spacing: -3px; */
 
     /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);

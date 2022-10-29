@@ -10,25 +10,25 @@ function About() {
     <>
 
     <div className="aboutPageBackdrop min-h-screen">
-      <section className="sectionContainer p-4">
-        <h1 className="headerTitle lg:pt-12 md:pt-8 sm:pt-4">
+      <section className="sectionContainer p-4 bg-[#97CBDC]">
+        <h1 className="headerTitle lg:pt-12 md:pt-8 sm:pt-4 translate-y-[-1vmax]">
           About Us
         </h1>
-        <p className="headerSubText px-16 lg:pb-12 md:pb-8 sm:pb-4">
+        <p className="headerSubText px-[4vmax] lg:pb-12 md:pb-8 sm:pb-4 translate-y-[-1vmax]">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quo, aperiam nemo eligendi, esse non ipsam nesciunt iusto beatae quia ad libero, dolorum provident. Blanditiis incidunt ipsum soluta natus maiores.
         </p>
       </section>
 
-      <section className="sectionContainer p-4 bg-[#000000] bg-opacity-25">
+      <section className="sectionContainerClipped p-4 bg-[#018ABD] translate-y-[-3.5vmax]">
         <h1 className="headerTitle lg:pt-12 md:pt-8 sm:pt-4">
           Mission Statement
         </h1>
-        <p className="headerSubText px-16 lg:pb-12 md:pb-8 sm:pb-4">
+        <p className="headerSubText px-[4vmax] lg:pb-12 md:pb-8 sm:pb-4">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quo, aperiam nemo eligendi, esse non ipsam nesciunt iusto beatae quia ad libero, dolorum provident. Blanditiis incidunt ipsum soluta natus maiores.
         </p>
       </section>
 
-      <section className="sectionContainer p-4 bg-[#000000] bg-opacity-50">
+      <section className="sectionContainer p-4 bg-[#004581] translate-y-[-3.5vmax]">
         <h1 className="headerTitle lg:pt-12 md:pt-8 sm:pt-4">
           Our Team
         </h1>
@@ -47,9 +47,7 @@ function About() {
             </h3>
             <p className="about">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Ipsa perspiciatis voluptas, maiores doloremque aperiam consectetur debitis
-              nemo accusantium officia voluptatibus necessitatibus adipisci ex quo explicabo,
-              ratione animi asperiores tempore delectus?
+              
             </p>
             <ul className="socialLinks">
               <li><a href="#"><i className="fa fa-facebook-square"></i></a></li>
@@ -73,9 +71,7 @@ function About() {
             </h3>
             <p className="about">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Ipsa perspiciatis voluptas, maiores doloremque aperiam consectetur debitis
-              nemo accusantium officia voluptatibus necessitatibus adipisci ex quo explicabo,
-              ratione animi asperiores tempore delectus?
+
             </p>
             <ul className="socialLinks">
               <li><a href="#"><i className="fa fa-facebook-square"></i></a></li>
@@ -99,9 +95,7 @@ function About() {
             </h3>
             <p className="about">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Ipsa perspiciatis voluptas, maiores doloremque aperiam consectetur debitis
-              nemo accusantium officia voluptatibus necessitatibus adipisci ex quo explicabo,
-              ratione animi asperiores tempore delectus?
+
             </p>
             <ul className="socialLinks">
               <li><a href="#"><i className="fa fa-facebook-square"></i></a></li>
@@ -125,9 +119,7 @@ function About() {
             </h3>
             <p className="about">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Ipsa perspiciatis voluptas, maiores doloremque aperiam consectetur debitis
-              nemo accusantium officia voluptatibus necessitatibus adipisci ex quo explicabo,
-              ratione animi asperiores tempore delectus?
+
             </p>
             <ul className="socialLinks">
               <li><a href="#"><i className="fa fa-facebook-square"></i></a></li>
