@@ -156,7 +156,8 @@ export const schema = {
                 "PEOPLE",
                 "PLACES",
                 "OBJECTS",
-                "IDEAS"
+                "IDEAS",
+                "ANIMALS"
             ]
         }
     },

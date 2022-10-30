@@ -6,7 +6,8 @@ const FilterType = {
   "PEOPLE": "PEOPLE",
   "PLACES": "PLACES",
   "OBJECTS": "OBJECTS",
-  "IDEAS": "IDEAS"
+  "IDEAS": "IDEAS",
+  "ANIMALS": "ANIMALS"
 };
 
 const { ArtIdea, UserPosts } = initSchema(schema);

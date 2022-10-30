@@ -72,6 +72,15 @@ body, html{
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
 }
 
+.pageFooter {
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.15);
+  color: white;
+  text-align: center;
+  position: fixed;
+}
+
 .headerTitle {
   text-transform: uppercase;
   font-size: 4vmax;
@@ -126,4 +135,68 @@ body, html{
   background-repeat: no-repeat;
   margin: -2px -6px;
   padding:  8px  18px;
+}
+
+
+/* NEW EDITS */
+.sectionBlock {
+  min-height: 0vh;
+  box-sizing: border-box;
+  transition: 0.25s linear;
+}
+
+.container {
+  box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1vmax);
+}
+
+.button {
+  padding: 0.25vmax 0.75vmax;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Text Sizing */
+.heading {
+  font-weight: 800;
+  font-style: bold;
+}
+
+.subHeading {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.subHeading2 {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.subHeading3 {
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@media screen and (min-width: 1001px) {
+  .sectionBlock {
+    margin: 0 12vmax 0 12vmax;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sectionBlock {
+    margin: 0 6vmax 0 6vmax;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  .sectionBlock {
+    margin: 0;
+  }
 }

@@ -55,7 +55,7 @@ function Home() {
     
     <div className="homePageBackdrop min-h-screen">
       <section className="sectionContainer flex flex-row">
-        <section className="sectionContainer  w-[50%]">
+        <section className="sectionContainer w-[50%]">
           <h1 className="titleHome text-start mt-[5vmax] mx-[5vmax]">
             <p>Don't know</p>
             <h1 className="strokeHome">what to make?</h1>

@@ -46,6 +46,7 @@ function Navbar() {
       <section className="navBarLeft w-[75%]">
         <p className="websiteName">ideART</p> 
         <li><Link to="/">Home</Link></li>
+        <li><Link to="testpage">TestPage</Link></li>
         <li><Link to="gallery">Gallery</Link></li>
         <li><Link to="challenges">Challenges</Link></li>
         <li><Link to="about">About</Link></li>
