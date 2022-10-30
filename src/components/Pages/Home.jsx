@@ -67,8 +67,14 @@ function Home() {
             Quickly gain ideas with ideART's randomly generated topics and start creating again.
           </h2>
 
-          <button className="button text-[1.25vmax] text-[#FFFFFF] bg-[#2d2d2d] rounded-[50vmax]">
-            Start Now<i className="fa fa-arrow-right pl-[0.5vmax]"></i>
+          <button className="button text-[1.25vmax] text-[#FFFFFF] bg-[#2d2d2d] rounded-[50vmax] startButton">
+            Start Now
+            <svg class="HoverArrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" fill='white'>
+                <g fill-rule="evenodd">         
+                    <path class="HoverArrow__linePath" d="M0 5h7" ></path>
+                    <path class="HoverArrow__tipPath" d="M1 1l4 4-4 4"></path>
+                </g>
+              </svg>
           </button>
         </section>
         

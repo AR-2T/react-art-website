@@ -42,9 +42,12 @@ function Navbar() {
            }
     </ul> */}
 
-    <div className="navBar shadow-lg">
-      <section className="navBarLeft w-[75%]">
+    <div className="navBar">
+      <section className="navBarLogo">
         <p className="websiteName">ideART</p> 
+      </section>
+
+      <section className="navBarLeft">
         <li><Link to="/">Home</Link></li>
         <li><Link to="testpage">TestPage</Link></li>
         <li><Link to="gallery">Gallery</Link></li>
@@ -52,9 +55,20 @@ function Navbar() {
         <li><Link to="about">About</Link></li>
       </section>
 
-      <section className="navBarRight w-[25%]">
+      <section className="navBarRight">
         {
-          authStatus !== 'authenticated' ? <Link to="login"><button className='loginButton' data-testid="loginButton" >Log In</button></Link> :
+          authStatus !== 'authenticated' ? 
+          <Link to="login">
+            <button className='loginButton' data-testid="loginButton" >
+              Sign In          
+              <svg class="HoverArrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" fill='white'>
+                <g fill-rule="evenodd">         
+                    <path class="HoverArrow__linePath" d="M0 5h7" ></path>
+                    <path class="HoverArrow__tipPath" d="M1 1l4 4-4 4"></path>
+                </g>
+              </svg>
+            </button>
+          </Link> :
           <div className='dropdown'>
             <button onClick={profileLink} className='loginButton' data-testid="signOutButton">Profile</button>
 

@@ -15,3 +15,15 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+ 
+.startButton:hover .HoverArrow__linePath {
+    opacity: 1;
+    transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
+  }
+  
+.startButton:hover .HoverArrow__tipPath {
+    transform: var(--arrowHoverOffset);
+    transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
+  }
+  

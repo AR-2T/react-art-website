@@ -125,14 +125,42 @@
   -webkit-text-stroke-color: white;
 }
 
-.highlight {
-  background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=000000);
-  background-size: auto;
-  background-repeat: no-repeat;
-  margin: -2px -6px;
-  padding:  8px  18px;
+mark {
+  background: linear-gradient(-45deg, #ee76526b, #e73c7e71, #23a5d567, #23d5ab59);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+
+  display: inline-block;
+  line-height: 0em;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  padding-top: 0.01em;
+  padding-bottom: 0.6em;
+  border-radius: 4px;
+
 }
 
+.HoverArrow {
+  --arrowSpacing: 5px;
+  --arrowHoverTransition: 150ms cubic-bezier(0.215,0.61,0.355,1);
+  --arrowHoverOffset: translateX(3px);
+  --arrowTipTransform: none;
+  --arrowLineOpacity: 0;
+  stroke-width: 2px;
+  fill: none;
+  stroke: currentColor;
+  margin-left: 0.5vmax;
+}
+
+.HoverArrow__linePath {
+  opacity: var(--arrowLineOpacity);
+  transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
+}
+
+.HoverArrow__tipPath {
+  transform: var(--arrowTipTransform);
+  transition: transform var(--hoverTransition,var(--arrowHoverTransition));
+}
 
 /* NEW EDITS */
 * {
