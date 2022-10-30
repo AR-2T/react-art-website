@@ -22,34 +22,69 @@ function ChallengePage() {
         </section>
       </section>
 
-      <section className="sectionBlock px-[2vmax]">
+      <section className="sectionBlock px-[2vmax] pb-[2vmax]">
         <section className="container p-[1vmax] bg-[#FFFFFF] rounded-[0.75vmax] flex flex-col items-center">
-          <div className="grid grid-cols-4 gap-[1vmax] w-[100%]">
-            <div className="challengeContainer items-center">
-              <h1 className="subHeading2 text-[#FFFFFF] text-[1vmax] p-[1vmax]">
+          <div className="gridSystem w-[100%]">
+            <div className="challengeContainer">
+              <img src={require('../../assets/HNHecarimFull.jpg')} class="challContainerImg"/>
+              {/* <h1 className="subHeading2 z-[1] text-[#FFFFFF] text-[1vmax] bg-black p-[1vmax] relative">
                 Challenge Name
-              </h1>
+              </h1> */}
+              <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
+                Challenge Prompt
+              </div>
             </div>
-            <div className="challengeContainer items-center">
-              <h1 className="subHeading2 text-[#FFFFFF] text-[1vmax] p-[1vmax]">
+
+            <div className="challengeContainer">
+              <img src={require('../../assets/BALuxFull.jpg')} class="challContainerImg"/>
+              {/* <h1 className="subHeading2 z-[1] text-[#FFFFFF] text-[1vmax] bg-black p-[1vmax] relative">
                 Challenge Name
-              </h1>
+              </h1> */}
+              <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
+                Challenge Prompt
+              </div>
             </div>
-            <div className="challengeContainer items-center">
-              <h1 className="subHeading2 text-[#FFFFFF] text-[1vmax] p-[1vmax]">
+
+            <div className="challengeContainer">
+              <img src={require('../../assets/DSIreliaFull.jpg')} class="challContainerImg"/>
+              {/* <h1 className="subHeading2 z-[1] text-[#FFFFFF] text-[1vmax] bg-black p-[1vmax] relative">
                 Challenge Name
-              </h1>
+              </h1> */}
+              <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
+                Challenge Prompt
+              </div>
             </div>
-            <div className="challengeContainer items-center">
-              <h1 className="subHeading2 text-[#FFFFFF] text-[1vmax] p-[1vmax]">
+
+            <div className="challengeContainer">
+              <img src={require('../../assets/CosmicVarusFull.jpg')} class="challContainerImg"/>
+              {/* <h1 className="subHeading2 z-[1] text-[#FFFFFF] text-[1vmax] bg-black p-[1vmax] relative">
                 Challenge Name
-              </h1>
+              </h1> */}
+              <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
+                Challenge Prompt
+              </div>
             </div>
-            <div className="challengeContainer items-center">
-              <h1 className="subHeading2 text-[#FFFFFF] text-[1vmax] p-[1vmax]">
+
+            <div className="challengeContainer">
+              <img src={require('../../assets/SGSamira.jpg')} class="challContainerImg"/>
+              {/* <h1 className="subHeading2 z-[1] text-[#FFFFFF] text-[1vmax] bg-black p-[1vmax] relative">
                 Challenge Name
-              </h1>
+              </h1> */}
+              <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
+                Challenge Prompt
+              </div>
             </div>
+
+            <div className="challengeContainer">
+              <img src={require('../../assets/BAWukong.jpg')} class="challContainerImg"/>
+              {/* <h1 className="subHeading2 z-[1] text-[#FFFFFF] text-[1vmax] bg-black p-[1vmax] relative">
+                Challenge Name
+              </h1> */}
+              <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
+                Challenge Prompt
+              </div>
+            </div>
+
           </div>
         </section>
       </section>

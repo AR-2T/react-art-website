@@ -79,7 +79,7 @@ function Home() {
 
     {/* Info blocks */}
       <section className="sectionBlock p-[2vmax] relative">  
-        <section className="container bg-[#FFFFFF]/50 rounded-[0.75vmax] p-[2vmax] z-[1] relative">
+        <section className="container bg-[#FFFFFF]/50 rounded-[0.75vmax] p-[2vmax] z-[1] relative hover:scale-105">
           <h1 className="subHeading text-[#2d2d2d] text-[2vmax] text-start mb-[0.5vmax]">
             What is ideArt?
           </h1>
@@ -98,7 +98,7 @@ function Home() {
           </div>
         </section>
 
-        <section className="container bg-[#FFFFFF]/50 rounded-[0.75vmax] p-[2vmax] mt-[2vmax] z-[1] relative">
+        <section className="container bg-[#FFFFFF]/50 rounded-[0.75vmax] p-[2vmax] mt-[3vmax] z-[1] relative hover:scale-105">
           <h1 className="subHeading text-[#2d2d2d] text-[2vmax] text-start mb-[0.5vmax]">
             Learn More About Us
           </h1>
@@ -118,10 +118,10 @@ function Home() {
           </div>
         </section>
 
-        <div class="absolute top-[25%] right-[30%] w-[25vmax] h-[25vmax] bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-60  animate-blob"></div>
-        <div class="absolute top-[25%] left-[10%] w-[25vmax] h-[25vmax] bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-60  animate-blob"></div>
+        <div class="absolute top-[25%] right-[30%] w-[25vmax] h-[25vmax] bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-60  animate-blob animation-delay-2000"></div>
+        <div class="absolute top-[25%] left-[10%] w-[25vmax] h-[25vmax] bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-60  animate-blob animation-delay-5000"></div>
         <div class="absolute bottom-[0] right-[10%] w-[25vmax] h-[25vmax] bg-blue-400 rounded-full mix-blend-multiply filter blur-xl  opacity-60  animate-blob animation-delay-4000"></div>
-        <div class="absolute bottom-[0] left-[30%] w-[25vmax] h-[25vmax] bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-60  animate-blob animation-delay-8000"></div>
+        <div class="absolute bottom-[0] left-[30%] w-[25vmax] h-[25vmax] bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-60  animate-blob animation-delay-7000"></div>
       
       </section>
 

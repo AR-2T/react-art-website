@@ -135,6 +135,10 @@
 
 
 /* NEW EDITS */
+* {
+  transition: 0.15s linear;
+}
+
 .defaultBackground {
   background-image: linear-gradient(135deg, #ffffff 0%, #d1dced 100%);
 }
@@ -142,7 +146,6 @@
 .sectionBlock {
   min-height: 0vh;
   box-sizing: border-box;
-  transition: 0.25s linear;
 }
 
 .container {
@@ -197,6 +200,6 @@
 
 @media screen and (max-width: 550px) {
   .sectionBlock {
-    margin: 0;
+    margin: 0 2vmax 0 2vmax;
   }
 }
