@@ -1,82 +1,17 @@
-.homePageBackdrop {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-}
-
-.titleHome {
+.headingHome {
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
     font-style: bold;
-    font-size: 5.5vmax;
+    font-size: 6vmax;
     line-height: 90%;
     user-select: none;
-    /* letter-spacing: -3px; */
+    letter-spacing: -3px;
 
-    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 200% 200%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 10s ease infinite;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-}
-
-.titleHome .strokeHome {
-    /* background: #000000; */
-    -webkit-text-stroke: 0.2vmax rgb(255, 255, 255);
     -webkit-text-fill-color: transparent;
-    line-height: 90%;
-}
-
-.subTitleHome {
-    font-size: 2vmax;
-    font-weight: 500;
-    font-style: normal;
-    color: #ffffff;
-}
-
-.bodyTextHome {
-    font-size: 1.5vmax;
-    font-weight: 500;
-    font-style: normal;
-    color: #ffffff;
-}
-
-.form-select {
-    font-size: 1.25vmax;
-    font-weight: 500;
-    font-style: normal;
-    color: #3F3D56;
-
-    border-radius: 0.5vmax;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.generateIdeaButton {
-    font-size: 1.25vmax;
-    font-weight: 500;
-    font-style: normal;
-    color: #ffffff;
-}
-
-.generateIdeaButton:hover {
-    background-color: #FF6584;
-    border: transparent;
-}
-
-.selectedTopic {
-    font-size: 1.25vmax;
-    font-weight: 500;
-    font-style: normal;
-    color: #3F3D56;
-
-    min-height: 3.5vmax;
-    background-color: #ffffff;
-    border-radius: 0.5vmax;
-    padding: 0.75vmax;
 }

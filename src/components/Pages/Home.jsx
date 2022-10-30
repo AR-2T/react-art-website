@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './home.css'
 import Button from 'react-bootstrap/Button';
 import {ReactComponent as BannerArt} from '../../assets/person_thinking.svg';
+import bannerArt from '../../assets/People.png';
 
 function Home() {
   const [randomIdea, generateIdea] = useState(null);
@@ -53,18 +54,85 @@ function Home() {
   return (
     <>
     
-    <div className="homePageBackdrop min-h-screen">
-      <section className="sectionContainer flex flex-row">
-        <section className="sectionContainer w-[50%]">
-          <h1 className="titleHome text-start mt-[5vmax] mx-[5vmax]">
-            <p>Don't know</p>
-            <h1 className="strokeHome">what to make?</h1>
+    <div className="defaultBackground min-h-screen">
+    
+    {/* Top Header */}
+      <section className="sectionBlock px-[2vmax] py-[10vmax] flex flex-row justify-center">  
+        <section className="block1 w-[50%]">
+          <h1 className="headingHome text-start">
+            <p>Don't know <br/> what to make?</p>
           </h1>
-          <h2 className="subTitleHome text-start mt-[3vmax] ml-[5vmax] mr-[10vmax]">
+
+          <h2 className="subHeading2 text-[1.5vmax] text-[#2d2d2d] text-start py-[2vmax]">
             Quickly gain ideas with ideART's randomly generated topics and start creating again.
           </h2>
 
-          <div className="selectGroup">
+          <button className="button text-[1.25vmax] text-[#FFFFFF] bg-[#2d2d2d] rounded-[50vmax]">
+            Start Now<i className="fa fa-arrow-right pl-[0.5vmax]"></i>
+          </button>
+        </section>
+        
+        <section className="block2 w-[50%]">
+          <img src={bannerArt} alt="Front Artwork" class="justify-center scale-[125%]"/>
+        </section>
+      </section>
+
+    {/* Info blocks */}
+      <section className="sectionBlock p-[2vmax] relative">  
+        <section className="container bg-[#FFFFFF]/50 rounded-[0.75vmax] p-[2vmax] z-[1] relative">
+          <h1 className="subHeading text-[#2d2d2d] text-[2vmax] text-start mb-[0.5vmax]">
+            What is ideArt?
+          </h1>
+
+          <div className="evenLengthColumns">
+            <p className="bodyText text-[#2d2d2d] text-[1.1vmax] text-start mr-[2vmax] mt-[0.5vmax]">
+              ideArt is a community-driven service that seeks to provide users with a self-sustaining 
+              flow of inspiration and new ideas. With our randomly generated topics/prompts, users can 
+              reference and create art pieces based on the given inspo.
+            </p>
+
+            <p className="bodyText text-[#2d2d2d] text-[1.1vmax] text-start mt-[0.5vmax]">
+              We also are an online social network platform that exhibits, promotes, and shares artists' 
+              works to our art-centric community.
+            </p>
+          </div>
+        </section>
+
+        <section className="container bg-[#FFFFFF]/50 rounded-[0.75vmax] p-[2vmax] mt-[2vmax] z-[1] relative">
+          <h1 className="subHeading text-[#2d2d2d] text-[2vmax] text-start mb-[0.5vmax]">
+            Learn More About Us
+          </h1>
+
+          <div className="evenLengthColumns">
+            <p className="bodyText text-[#2d2d2d] text-[1.1vmax] text-start mr-[2vmax] mt-[0.5vmax]">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ut fuga enim soluta pariatur, laborum cumque quis quas ex illum!
+            </p>
+
+            <p className="bodyText text-[#2d2d2d] text-[1.1vmax] text-start mr-[2vmax] mt-[0.5vmax]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et corrupti illum amet sint quidem error.
+            </p>
+            
+            <p className="bodyText text-[#2d2d2d] text-[1.1vmax] text-start mt-[0.5vmax]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et corrupti illum amet sint quidem error.
+            </p>
+          </div>
+        </section>
+
+        <div class="absolute top-[25%] right-[30%] w-[25vmax] h-[25vmax] bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-60  animate-blob"></div>
+        <div class="absolute top-[25%] left-[10%] w-[25vmax] h-[25vmax] bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-60  animate-blob"></div>
+        <div class="absolute bottom-[0] right-[10%] w-[25vmax] h-[25vmax] bg-blue-400 rounded-full mix-blend-multiply filter blur-xl  opacity-60  animate-blob animation-delay-4000"></div>
+        <div class="absolute bottom-[0] left-[30%] w-[25vmax] h-[25vmax] bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-60  animate-blob animation-delay-8000"></div>
+      
+      </section>
+
+
+
+
+
+
+
+
+          {/* <div className="selectGroup">
             <div className="bodyTextHome text-start mt-[4vmax] mb-[0.5vmax] ml-[5vmax]">
               Topic Selection
             </div>
@@ -80,30 +148,13 @@ function Home() {
               </select>
 
               <Button onClick={() => getRandomIdea()} className="generateIdeaButton ml-[1vmax] w-[30%] bg-[#3F3D56] border-transparent">Generate an idea</Button>
-              {/* <Button onClick={() => getRandomIdea()} className="ml-5 w-[40%] bg-black text-white hover:border-[2px] hover:text-black hover:bg-transparent active:bg-[#3f3d56] active:text-white" variant="dark"> Generate an idea</Button> */}
             </div>
 
             <div className="selectedTopic mt-[1vmax] mb-[6vmax] ml-[5vmax] w-[72%]">
               {randomIdea}
             </div>
-          </div>
+          </div> */}
 
-        </section>
-
-        <section className="sectionContainer w-[50%]">
-          <BannerArt className="justify-center scale-[100%] h-[100%] w-[100%] pr-[5vmax]"/>
-        </section>
-
-      </section>
-
-      <section className="sectionContainer p-4 bg-[#000000] bg-opacity-25">
-        <h1 className="headerTitle lg:pt-12 md:pt-8 sm:pt-4">
-          What is ideArt?
-        </h1>
-        <p className="headerSubText px-16 lg:pb-12 md:pb-8 sm:pb-4">
-        IdeArt is a community-driven service that seeks to provide members with a self-sustaining flow of inspiration and new ideas.
-        </p>
-      </section>
     </div>
 
     </>

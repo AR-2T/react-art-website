@@ -15,12 +15,8 @@
   }
 }
 
-*{
+* {
   font-family: 'Poppins', sans-serif;
-}
-
-body, html{
-  font-family: 'Arimo', sans-serif;
 }
 
 .App {
@@ -139,6 +135,10 @@ body, html{
 
 
 /* NEW EDITS */
+.defaultBackground {
+  background-image: linear-gradient(135deg, #ffffff 0%, #d1dced 100%);
+}
+
 .sectionBlock {
   min-height: 0vh;
   box-sizing: border-box;
@@ -176,7 +176,7 @@ body, html{
   font-style: normal;
 }
 
-.subHeading3 {
+.bodyText {
   font-weight: 500;
   font-style: normal;
 }
