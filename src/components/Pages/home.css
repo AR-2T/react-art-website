@@ -1,29 +1,82 @@
 .headingHome {
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-style: bold;
-    font-size: 6vmax;
-    line-height: 90%;
-    user-select: none;
-    letter-spacing: -3px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-style: bold;
+  font-size: 6vmax;
+  line-height: 90%;
+  user-select: none;
+  letter-spacing: -3px;
 
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 200% 200%;
-    animation: gradient 10s ease infinite;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 200% 200%;
+  /* animation: gradient 10s ease infinite; */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
- 
 .startButton:hover .HoverArrow__linePath {
-    opacity: 1;
-    transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
-  }
+  opacity: 1;
+  transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
+}
   
 .startButton:hover .HoverArrow__tipPath {
-    transform: var(--arrowHoverOffset);
-    transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
+  transform: var(--arrowHoverOffset);
+  transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
+}
+
+.headingHome {
+  animation: 1s ease-out 0s 1 slideInFromLeftFade, gradient 5s ease infinite;
+}
+
+.subHeadingHome {
+  animation: 1.25s ease-out 0s 1 fadeIn;
+}
+
+.startButton {
+  animation: 2.25s ease-out 0s 1 fadeIn;
+}
+
+.blockHome2 {
+  animation: 1s ease-out 0s 1 slideInFromRightFade;
+}
+
+@keyframes fadeIn {
+  0% {
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
   }
-  
+  75% {
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideInFromLeftFade {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRightFade {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

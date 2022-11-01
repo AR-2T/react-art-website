@@ -1,108 +1,109 @@
-import React from 'react'
+import React, {useState} from 'react';
 import './testPage.css';
 
-import bannerArt from '../../assets/People.png';
-
 function TestPage() {
+  const [randomIdea, generateIdea] = useState(null);
+  const [filter,setFilter] = useState(null);
+  const people = ["George Washington", "Abraham Lincoln", "Grant MacDonald", "Albert Einstein", "Helen Keller",
+                  "Vincent Van Gogh", "Taylor Swift", "Ariana Grande", "Billie Eilish", "The Beatles", "The Weeknd",
+                  "Edwin Rodriguez", "Thanh Nguyen", "Tom Holland", "Zendaya", "Chris Evans", "Jennifer Lawrence",
+                  "Ryan Reynolds", "Blake Lively", "Paul Rudd", "Dwayne Johnson", "Barack Obama", "Diana, Princess of Wales"];
+  const places = ["Paris", "New York", "Japan", "Los Angeles", "Miami", "Dubai", "London", "Maui", "Rome",
+                  "Turls & Caicos", "Tokyo", "Grand Canyon", "Yosemite", "Rio de Janeiro", "Mexico", "Machu Picchu",
+                  "Australia", "Thailand", "Turkey", "Germany", "Taj Mahal", "Singapore", "Greece", "Switzerland",
+                  "Spain", "Niagara Falls", "Budapest", "India", "China", "Hong Kong", "Norway"];
+  const objects = ["Pen", "Pineapple", "Apple", "Cellphone", "Helmet", "Dollar", "Quarter", "Penny", "Shirt",
+                  "Dress", "CD", "Laptop", "Tablet", "Pencil", "Glasses", "Fork", "Spoon", "Toothbrush", "Sweater",
+                  "TV", "Tire Swing", "Cardboard Box", "USB Drive", "Scotch Tape", "Tissue Box", "Thermometer",
+                  "Blanket", "Sponge", "Doll", "Toy", "Teddy Bear", "Chair", "Couch", "Glow Sticks", "Flag",
+                  "Tooth Picks", "Rubber Band", "Leg Warmers", "Shovel", "Sharpie", "Purse", "Credit Card"];
+  const animals = ["Alligator", "Ant", "Armadillo", "Baboon", "Badger", "Bald Eagle", "Bee", "Cat", "Cow", "Coyote",
+                  "Crab", "Cricket", "Crocodile", "Deer", "Dinosaur", "Dog", "Dolphin", "Dragonfly", "Elephant",
+                  "Fish", "Flamingo", "Fox", "Goose", "Hare", "Hamster", "Husky", "Iguana", "Lobster", "Monkey",
+                  "Monkey", "Mule", "Owl", "Octopus", "Panda", "Parrot", "Pelican", "Penguin", "Pig", "Pigeon",
+                  "Porcupine", "Rabbit", "Rat", "Rattlesnake", "Rooster", "Seal", "Sheep", "Tiger", "Whale", "Wombat"];
+  const overwatch = ["Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Cassidy", "D.Va", "Doomfist", "Echo", "Genji",
+                    "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt",
+                    "Roadhog", "Sigma", "Soldier: 76", "Sombra", "Symmetra", "Torbjorn", "Tracer", "Widowmaker",
+                    "Winston", "Wrecking Ball", "Zarya", "Zenyatta"];
+  const everything = [].concat(people, places, objects, animals, overwatch);
+  const getRandomIdea = () => {
+    switch(filter) {
+      case "Person":
+        generateIdea(people[Math.floor(Math.random() * people.length)])
+        break
+      case "Place":
+        generateIdea(places[Math.floor(Math.random() * places.length)])
+        break
+      case "Object":
+        generateIdea(objects[Math.floor(Math.random() * objects.length)])
+        break
+      case "Animal":
+        generateIdea(animals[Math.floor(Math.random() * animals.length)])
+        break
+      case "Overwatch":
+        generateIdea(overwatch[Math.floor(Math.random() * overwatch.length)])
+        break
+      default:
+        generateIdea(everything[Math.floor(Math.random() * everything.length)])
+    }
+  }
   return (
     <>
 
-        <div className="testPageBackdrop min-h-screen">
+    <div className="defaultBackground min-h-screen">
 
-          <section className="sectionContainerS flex flex-row justify-center">
-            <section className="sectionContainerS2 my-[10vmax]">
-              <h1 className="titleHome2 text-start">
-                <p>Don't know <br/> what to make?</p>
-              </h1>
+      <section className="sectionBlock px-[2vmax] pt-[4vmax] pb-[2vmax]">  
+        <section className="container bg-[#FFFFFF] rounded-[0.75vmax] p-[2vmax]">
+          <h2 className="subHeading2 text-[#2d2d2d] text-[2vmax] text-start">
+            Topic&nbsp;
+            <span className="heading text-[2vmax]">
+              Generator
+            </span>
+          </h2>
 
-              <h2 className="subTitleHome2 text-start py-[2vmax]">
-                Quickly gain ideas with ideART's randomly generated topics and start creating again.
-              </h2>
+          <button className="button text-[0.9vmax] text-[#FFFFFF] bg-[#2d2d2d] rounded-full mt-[1vmax]">
+            Topic Name Here<i className="fa fa-caret-down pl-[0.5vmax]"></i>
+          </button>
 
-              <button className="redirectGen bg-[#404040]">
-                Start Now<i className="fa fa-arrow-right pl-[0.5vmax]"></i>
-              </button>
-            </section>
+          {/* <select className="button text-[0.9vmax] text-[#FFFFFF] bg-[#2d2d2d] rounded-full mt-[1vmax] appearance-none text-center" value={filter} onChange={(evt)=>setFilter(evt.target.value)}>
+            <option value={"Everything"}>Everything</option>
+            <option value={"Person"}>Person</option>
+            <option value={"Place"}>Place</option>
+            <option value={"Object"}>Object</option>
+            <option value={"Animal"}>Animal</option>
+            <option value={"Overwatch"}>Overwatch</option>
+          </select> */}
 
-            <section className="artContainer text-finish my-[10vmax]">
-              {/* <bannerArt className="justify-center scale-[100%] h-[100%] w-[100%]"/> */}
-              <img src={bannerArt} alt="Main Card" class="justify-center scale-[125%]"/>
-            </section>
-          </section>
+        </section>
+      </section>
 
-          {/* <section className="sectionContainerS flex flex-column justify-start mb-[10vmax]">
-            <section className="container p-[2vmax]">
-              <h1 className="subTitleHome2 font-bold text-start w-[100%]">
-                  What is ideArt?
-              </h1>
-              <section className="bodyContainer flex">
-                <p className="bodyTextHome2 text-start mt-[1vmax] mr-[1vmax]">
-                  ideArt is a community-driven service that seeks to provide users with a self-sustaining 
-                  flow of inspiration and new ideas. With our randomly generated topics/prompts, users can 
-                  reference and create art pieces based on the given inspo.
+    </div>
 
-                </p>
-                <p className="bodyTextHome2 text-start mt-[1vmax]">
-                  We also are an online social network platform that exhibits, promotes, and shares artists' 
-                  works to our art-centric community.
-                </p>
-              </section>
-            </section>
-          </section> */}
+              {/* <div className="selectGroup">
+            <div className="bodyTextHome text-start mt-[4vmax] mb-[0.5vmax] ml-[5vmax]">
+              Topic Selection
+            </div>
+
+            <div className="flex flex-row">
+              <select className='form-select ml-[5vmax] w-[40%]' value={filter} onChange={(evt)=>setFilter(evt.target.value)}>
+                <option value={"Everything"}>Everything</option>
+                <option value={"Person"}>Person</option>
+                <option value={"Place"}>Place</option>
+                <option value={"Object"}>Object</option>
+                <option value={"Animal"}>Animal</option>
+                <option value={"Overwatch"}>Overwatch</option>
+              </select>
+
+              <Button onClick={() => getRandomIdea()} className="generateIdeaButton ml-[1vmax] w-[30%] bg-[#3F3D56] border-transparent">Generate an idea</Button>
+            </div>
+
+            <div className="selectedTopic mt-[1vmax] mb-[6vmax] ml-[5vmax] w-[72%]">
+              {randomIdea}
+            </div>
+          </div> */}
 
 
-          <section className="sectionContainer relative">
-           
-            <section className="sectionContainerS relative z-[1] my-[3vmax]">
-              <section className="container p-[2vmax]">
-                <h1 className="subTitleHome2 font-bold text-[2vmax] text-start w-[100%] mb-[0.5vmax]">
-                  What is ideArt?
-                </h1>
-                <div className="evenLengthColumns">
-                  <p className="bodyTextHome2 text-start mr-[1vmax] my-[0.5vmax]">
-                    ideArt is a community-driven service that seeks to provide users with a self-sustaining 
-                    flow of inspiration and new ideas. With our randomly generated topics/prompts, users can 
-                    reference and create art pieces based on the given inspo.
-                  </p>
-                  <p className="bodyTextHome2 text-start my-[0.5vmax]">
-                    We also are an online social network platform that exhibits, promotes, and shares artists' 
-                    works to our art-centric community.
-                  </p>
-                </div>
-              </section>
-            </section>
-
-            <section className="sectionContainerS relative z-[1] mt-[3vmax]">
-              <section className="container p-[2vmax]">
-                <h1 className="subTitleHome2 font-bold text-[2vmax] text-start w-[100%] mb-[0.5vmax]">
-                  Learn More About Us
-                </h1>
-                <div className="evenLengthColumns">
-                  <section className="bodyTextHome2 text-start mr-[1vmax] my-[0.5vmax]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, totam.
-                  </section>
-                  <section className="bodyTextHome2 text-start mr-[1vmax] my-[0.5vmax]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis veniam, culpa expedita architecto aspernatur doloribus?
-                  </section>
-                  <section className="bodyTextHome2 text-start my-[0.5vmax]">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, error. Quas eaque suscipit dolor, consequuntur expedita ducimus cupiditate repudiandae harum.
-                  </section>
-                </div>
-              </section>
-            </section>
-
-            <div class="absolute top-[25%] right-[30%] w-[25vmax] h-[25vmax] bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-60  animate-blob"></div>
-            <div class="absolute top-[25%] left-[10%] w-[25vmax] h-[25vmax] bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-60  animate-blob"></div>
-            <div class="absolute bottom-[0] right-[10%] w-[25vmax] h-[25vmax] bg-blue-400 rounded-full mix-blend-multiply filter blur-xl  opacity-60  animate-blob animation-delay-4000"></div>
-            <div class="absolute bottom-[0] left-[30%] w-[25vmax] h-[25vmax] bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-60  animate-blob animation-delay-8000"></div>
-
-          </section>
-
-          {/* <section className="pageFooter">
-            <i className="fa fa-copyright pr-[0.1vmax]"></i> 2022 AR²T. All rights reserved.
-          </section> */}
-
-        </div>
     </>
   )
 }
