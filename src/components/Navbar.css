@@ -1,93 +1,114 @@
-.navbar{
-  display: absolute;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 5rem;
-  padding-right: 10rem;
-  width: 100%;
-  height: 4rem;
-  background: white;
-  z-index: 100;
-  font-weight: 500;
-  font-size: 1rem;
+
+.navBar {
   position: sticky;
-  top: 0
-
-}
-
-.navbar * {
-  list-style: none;
-  text-decoration: none;
-  align-items: center;
-}
-
-.navbar li{
-  padding: 0.5rem;
-  text-align: center;
-}
-  
-.navbarLeft {
+  width: 100%;
+  height: 4vmax;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: white;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
+  padding-left: 6.5vmax;
+  padding-right: 6.5vmax;
+
 }
-  
-.navbarLeft * {
-  margin-left: 6%;
+
+.navBar * {
+  /* background-color: #FFFFFF; */
+  z-index: 100;
+}
+
+.navBarLeft {
+  height: 100%;
+  /* background-color: #d12a2a; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.25vmax 1vmax;
+}
+
+.navBarRight {
+  height: 100%;
+  /* background-color: #a49d9d; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .websiteName {
-    font-weight: 800;
-    font-style: bold;
-    font-size: 1.5rem;
-    text-align: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 200% auto;
+  animation: gradient 7s ease infinite;
+  
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 800;
+  font-style: bold;
+  font-size: 2.5vmax;
+  text-align: center;
+  padding: 0 2vmax 0 1vmax;
+}
+
+.navBarLeft li {
+  list-style: none;
+  text-decoration: none;
+  padding: 0.5vmax;
+  margin: 0.75vmax;
+  text-align: center;
+
+  color: #2d2d2d;
+  font-weight: 600;
+  font-style: bold;
+  font-size: 1.25vmax;
+
+  transition: 0.35s;
+  transform: scale(1);
+
+  /* background-color: #9d7f7f;
+  border-color: #000000;
+  border-width: 1px; */
+}
+
+.navBarLeft li:hover {
+  font-weight: 700;
+
+  transition: 0.35s;
+  transform: scale(1.25);
 }
 
 .loginButton {
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-  border-radius: 16px;
-  border: 2px solid #111;
-  box-sizing: border-box;
-  color: black;
-  cursor: pointer;
   display: flex;
-  font-size: 16px;
-  height: 36px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
-  position: relative;
-  text-align: center;
+  flex-direction: row;
+  cursor: pointer;
+  align-items: center;
+  background-color: #2d2d2d;
+  border-radius: 1vmax;
+  margin-right: 2vmax;
   text-decoration: none;
   user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  z-index: 102;
+
+  color: white;
+  font-weight: 500;
+  font-style: bold;
+  font-size: 1.15vmax;
 }
 
-.loginButton:after {
-  background-color: rgb(0, 0, 0);
-  border: 2px solid black;
-  border-radius: 16px;
-  content: "";
-  display: block;
-  height: 36px;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  top: -2px;
-  transform: translate(4px, 4px);
-  transition: transform .25s ease-out;
-  z-index: -1;
-}
-
-.loginButton:hover:after {
-  transform: translate(0, 0);
+.loginButton:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
 }
 
 .loginButton:active {
-  background-color: rgba(139, 139, 139, 0);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: black;
   outline: 0;
 }
 
@@ -95,9 +116,20 @@
   outline: 0;
 }
 
+.loginButton:hover .HoverArrow__linePath {
+  opacity: 1;
+  transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
+}
+
+.loginButton:hover .HoverArrow__tipPath {
+  transform: var(--arrowHoverOffset);
+  transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
+}
+
+
 @media (min-width: 768px) {
   .loginButton {
-    padding: 0 40px;
+    padding: 3px 15px;
   }
 }
 
@@ -108,7 +140,6 @@
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  border: 2px solid black;
   display: none;
   position: absolute;
   background-color: white;

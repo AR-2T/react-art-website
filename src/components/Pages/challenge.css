@@ -1,0 +1,77 @@
+.challengeContainer {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background-color: #2d2d2d;
+    border-radius: 0.5vmax;
+    box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
+
+    transition: 0.25s;
+}
+
+.challContainerImg {
+    position: absolute;
+    top: 0;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 85%;
+    border-radius: 0.5vmax;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+.labelContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+
+    font-weight: 500;
+    font-style: normal;
+    text-align: right;
+    padding-right: 1vmax;
+
+    width: 90%;
+}
+
+.challengeContainer:hover {
+    transition: 0.25s;
+    transform: scale(1.05);
+}
+
+.gridSystem {
+    display: grid;
+    gap: 1vmax;
+}
+
+@media screen and (min-width: 1001px) {
+    .gridSystem {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .labelContainer {
+        font-size: 1.25vmax;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .gridSystem {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .labelContainer {
+        font-size: 1.5vmax;
+    }
+  }
+  
+  
+  @media screen and (max-width: 550px) {
+    .gridSystem {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .labelContainer {
+        font-size: 1.75vmax;
+    }
+  }

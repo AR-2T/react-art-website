@@ -1,42 +1,123 @@
-.aboutPageBackdrop {
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-}
-  
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.blockAbout1 .container:hover {
+    rotate: -5deg;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(2px);
+    border: 0.1vmax solid rgb(255, 255, 255);
 }
 
-.cardContainer {
+.blockAbout2 .container:hover {
+    rotate: 5deg;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(2px);
+    border: 0.1vmax solid rgb(255, 255, 255);
+}
+
+.blockAbout1, .blockAbout2 {
+    color: #2d2d2d;
+    background-color: #ffffff;
+    border-radius: 0.75vmax;
+}
+
+.blockAbout1:hover {
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite; */
+    color: #FFFFFF;
+    background-color: #2d2d2d;
+    transform: scale(1.05);
+    rotate: 5deg;
+}
+
+.blockAbout2:hover {
+    /* background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite; */
+    color: #FFFFFF;
+    background-color: #2d2d2d;
+    transform: scale(1.05);
+    rotate: -5deg;
+}
+
+.indivCard {
+    background-color: rgba(255,255,255, 1);
+    border-radius: 0.75vmax;
+    margin: 0 0.5vmax;
+
+    box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1vmax);
+}
+
+.indivCard:hover {
+    transform: scale(1.05);
+}
+
+.indivCard .cardImg {
+    width: 100%;
+    height: 12vmax;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    border-radius: 0.75vmax;
+}
+
+.profileImg {
+    width: 10vmax;
+    height: 10vmax;
+
+    object-fit: cover;
+    border-radius: 50%;
+    margin: -6vmax auto;
+    z-index: 3;
+    position: relative;
+    border: 1vmax solid #ffffff;
+}
+
+.socials {
+    list-style: none;
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 1.5vmax;
+    justify-content: space-evenly;
+    padding: 1vmax 0 0 0;
+    border-top: 1px solid #2d2d2d;
 }
 
-.card {
-    width: 22%;
-    background-color: #eeeeee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2vmax 1vmax;
-    border-radius: 1vmax;
+.socials i {
+    font-size: 2vmax;
 }
 
-.card .cardImgFull {
+.socials .fa-facebook-square:hover,
+.socials .fa-twitter-square:hover,
+.socials .fa-instagram:hover,
+.socials .fa-github-square:hover,
+.socials .fa-linkedin-square:hover {
+    transition: 0.35s;
+    transform: scale(1.5);
+}
+
+.gridSystemAbout {
+    display: grid;
+    row-gap: 1.5vmax;
+    column-gap: 0.5vmax;
+}
+
+@media screen and (min-width: 801px) {
+    .gridSystemAbout {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .indivCard .bodyText {
+        font-size: 0.95vmax;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .gridSystemAbout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .indivCard .bodyText {
+        font-size: 1.15vmax;
+    }
+}
+
+/* OLD CSS */
+/* .card .cardImgFull {
     display: none;
     position: absolute;
     top: 0;
@@ -49,99 +130,20 @@
 }
 
 .card:hover {
-    transition: 0.35s;
+    transition: 0.5s;
     transform: scale(1.075);
     background-color: #ffffff;
 }
 
 .card:hover .profileImg {
-    transition: 0.35s;
+    transition: 0.5s;
     border: 1.5vmax solid #ffffff;
 }
 
-.card .cardImg, .card .cardImgFull {
+.card .cardImgs, .card .cardImgFull {
     width: 100%;
     height: 15vmax;
     object-fit: cover;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
     border-radius: 1vmax;
-}
-
-.profileImg {
-    width: 12vmax;
-    height: 12vmax;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-top: -6vmax;
-    z-index: 3;
-    border: 1.5vmax solid #eeeeee;
-}
-
-.name {
-    color: #2f2f2f;
-    font-weight: 800;
-    font-style: bold;
-    font-size: 2vmax;
-}
-
-.jobTitle {
-    color: #494949;
-    font-weight: 600;
-    font-style: bold;
-    font-size: 1.35vmax;
-}
-
-.about {
-    font-size: 0.9vmax;
-    font-weight: 400;
-    font-style: italic;
-    color: #000000;
-    padding: 1vmax 1.5vmax 0 2vmax;
-}
-
-.socialLinks {
-    width: 75%;
-    height: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1vmax 0;
-    margin-top: 1vmax;
-    border-top: 1px solid rgb(115, 115, 115);
-}
-
-.socialLinks i {
-    font-size: 2vmax;
-}
-
-.fa-facebook-square {
-    color: #1877f2;
-}
-
-.fa-twitter-square {
-    color: #55acee;
-}
-
-.fa-instagram {
-    background: rgb(131,58,180);
-    background: linear-gradient(207deg, rgba(131,58,180,1) 0%, rgba(145,40,108,1) 12%, rgba(193,53,132,1) 26%, rgba(225,48,108,1) 41%, rgba(253,29,29,1) 55%, rgba(245,96,64,1) 71%, rgba(252,175,69,1) 87%, rgba(255,220,128,1) 100%);
-    background-clip: text;
-    color: transparent;
-}
-
-.fa-github-square {
-    color: #000000;
-}
-
-.fa-linkedin-square {
-    color: #0077b5;
-}
-
-.fa-facebook-square:hover,
-.fa-twitter-square:hover,
-.fa-instagram:hover,
-.fa-github-square:hover,
-.fa-linkedin-square:hover {
-    transition: 0.35s;
-    transform: scale(1.5);
-}
+} */

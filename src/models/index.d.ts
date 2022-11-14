@@ -4,7 +4,8 @@ export enum FilterType {
   PEOPLE = "PEOPLE",
   PLACES = "PLACES",
   OBJECTS = "OBJECTS",
-  IDEAS = "IDEAS"
+  IDEAS = "IDEAS",
+  ANIMALS = "ANIMALS"
 }
 
 type ArtIdeaMetaData = {

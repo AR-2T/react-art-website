@@ -1,45 +1,19 @@
 .galleryPage{
     position: absolute;
-    background: linear-gradient(-45deg, #e5a490, #8ba4d4, #759182);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;}
+  }
 
 .strokeGalleryText{
-    color: black;
-    -webkit-text-fill-color: rgba(255, 255, 255, 1); /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: black;
+  color: white;
+  -webkit-text-fill-color: rgba(255, 255, 255, 1); /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: white;
 }
 
 .glass{
   background: rgba(255, 255, 255, 1);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.25 );
+  box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
   backdrop-filter: blur( 20px );
   -webkit-backdrop-filter: blur( 20px );
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.75vmax;
 }
 
-.userPost{
-  max-height: fit-content;
-  background-color: white;
-  box-shadow: 0 8px 32px 0 rgba(11, 13, 44, 0.15);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-.userPost img{
-  margin: 1rem;
-  height: 18rem;
-  width: 18rem;
-  object-fit: cover;
-}
-
-.userPost #postTitle{
-  font-weight: bold;
-  font-size: larger;
-}

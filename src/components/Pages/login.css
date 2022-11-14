@@ -14,7 +14,7 @@
   --amplify-space-large: 1rem;
   --amplify-border-widths-small: 2px;
 
-  --amplify-colors-border-primary: var(--amplify-colors-neutral-100);
+  --amplify-colors-border-primary: var(--amplify-colors-neutral-20);
   --amplify-colors-border-secondary: var(--amplify-colors-neutral-20);
   --amplify-colors-border-tertiary: var(--amplify-colors-neutral-10);
 
@@ -80,4 +80,12 @@
 
 .amplify-button--small:hover {
   background-color: white;
+}
+
+.data-amplify-container{
+  border:none;
+}
+
+.amplify-tabs-item {
+  border:none;
 }
