@@ -50,7 +50,7 @@ export default function CreatePosts(props) {
 
   async function onChange(e) {
     /***Make sure to implement a check so only one image is uploaded***/
-    
+    console.log(e.target.value);
     setFiles(e.target.files);
   }
 
