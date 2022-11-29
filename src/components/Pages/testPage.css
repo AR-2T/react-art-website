@@ -1,0 +1,79 @@
+.cardContainer {
+    background-color: rgba(255,255,255, 1);
+
+    border-radius: 0.75rem;
+    border: 1px solid #e0e0e0;
+
+    padding: 1.5rem;
+
+
+    /* box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1vmax); */
+}
+
+.headingHomeTemp {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-style: bold;
+    font-size: 5.5rem;
+    line-height: 90%;
+    user-select: none;
+    letter-spacing: -3px;
+  
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imageArtwork {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 125%;
+}
+
+
+/* Alter based on screen-size */
+@media screen and (min-width: 1101px) {
+    .homeSec1, .homeSec2 {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+    .homeSec3 {
+        grid-template-columns:
+        repeat(3, 1fr);
+    }
+    .ideArtInfo {
+        padding: 4rem 0;
+    }
+    .homeSec2 {
+        gap: 4rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .blockGridSystem {
+        grid-template-columns:
+            repeat(1, 1fr);
+    }
+    .imgDisplay {
+        display: none;
+    }
+    .ideArtInfo {
+        padding: 2rem 0rem;
+    }
+    .imgDisplay2 {
+        max-width: 35rem;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .homeSec2 {
+        gap: 2rem;
+    }
+}

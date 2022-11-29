@@ -13,6 +13,7 @@ import ChallengePage from './components/Pages/ChallengePage';
 import About from './components/Pages/About';
 import Login from './components/Pages/Login';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Profile from './components/Pages/Profile';
 import CreatePost from './components/Pages/CreatePost';
 import './App.css';
@@ -42,6 +43,7 @@ function App() {
         <Route path="profile" element={<Profile/>} />
         <Route path="create-post" element={<CreatePost/>} />
       </Routes>
+      <Footer/>
 
     </div>
     </>

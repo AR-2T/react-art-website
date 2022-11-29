@@ -12,16 +12,13 @@
     border: 0.1vmax solid rgb(255, 255, 255);
 }
 
-.blockAbout1, .blockAbout2 {
+/* .blockAbout1, .blockAbout2 {
     color: #2d2d2d;
     background-color: #ffffff;
     border-radius: 0.75vmax;
-}
+} */
 
-.blockAbout1:hover {
-    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 7s ease infinite; */
+/* .blockAbout1:hover {
     color: #FFFFFF;
     background-color: #2d2d2d;
     transform: scale(1.05);
@@ -29,22 +26,31 @@
 }
 
 .blockAbout2:hover {
-    /* background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 7s ease infinite; */
     color: #FFFFFF;
     background-color: #2d2d2d;
     transform: scale(1.05);
     rotate: -5deg;
-}
+} */
 
 .indivCard {
     background-color: rgba(255,255,255, 1);
     border-radius: 0.75vmax;
     margin: 0 0.5vmax;
 
-    box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1vmax);
+    border: 1px solid #e0e0e0;
+
+    /* box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1vmax); */
+}
+
+.testCard {
+    background-color: rgba(255,255,255, 1);
+    border-radius: 0.75vmax;
+
+    border: 1px solid #e0e0e0;
+
+    /* box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1vmax); */
 }
 
 .indivCard:hover {
@@ -56,7 +62,7 @@
     height: 12vmax;
     object-fit: cover;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-    border-radius: 0.75vmax;
+    border-radius: 0.7vmax;
 }
 
 .profileImg {
@@ -64,7 +70,7 @@
     height: 10vmax;
 
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 100%;
     margin: -6vmax auto;
     z-index: 3;
     position: relative;

@@ -14,7 +14,8 @@ function About() {
     {/* USED VMAX */}
     <section className="sectionBlock px-[2vmax] pt-[4vmax] pb-[2vmax] flex flex-row justify-center">  
       <section className="blockAbout1 w-[50%] mr-[2vmax]">
-        <section className="container rounded-[0.75vmax] p-[2vmax] z-[1] relative">
+        {/* <section className="container rounded-[0.75vmax] p-[2vmax] z-[1] relative"> */}
+        <section className="testCard p-[2vmax] z-[1] relative">
           <h1 className="subHeading text-[2vmax] text-start mb-[0.5vmax]">
             Our Story
           </h1>
@@ -28,7 +29,8 @@ function About() {
       </section>
         
       <section className="blockAbout2 w-[50%] ml-[2vmax]">
-      <section className="container rounded-[0.75vmax] p-[2vmax] z-[1] relative">
+        {/* <section className="container rounded-[0.75vmax] p-[2vmax] z-[1] relative"> */}
+        <section className="testCard p-[2vmax] z-[1] relative">
           <h1 className="subHeading text-[2vmax] text-start mb-[0.5vmax]">
             Mission Statement
           </h1>
@@ -134,10 +136,10 @@ function About() {
           </p>
           <ul className="socials mx-[1vmax] mb-[1vmax]">
             <li><a href="#"><i className="fa fa-facebook-square"></i></a></li>
-            <li><a href="#"><i className="fa fa-twitter-square"></i></a></li>
+            <li><a href="https://twitter.com/_theoshi_"><i className="fa fa-twitter-square"></i></a></li>
             <li><a href="https://www.instagram.com/_theoshi_/"><i className="fa fa-instagram"></i></a></li>
             <li><a href="#"><i className="fa fa-github-square"></i></a></li>
-            <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/theortran/"><i className="fa fa-linkedin-square"></i></a></li>
           </ul>
         </div>
 
@@ -167,7 +169,8 @@ function About() {
 
     <section className="sectionBlock p-[2vmax] relative">  
 
-      <section className="container bg-[#FFFFFF] rounded-[0.75vmax] p-[2vmax] z-[1] relative hover:scale-105">
+      {/* <section className="container bg-[#FFFFFF] rounded-[0.75vmax] p-[2vmax] z-[1] relative hover:scale-105"> */}
+      <section className="testCard p-[2vmax] z-[1] relative">
         <h1 className="subHeading text-[#2d2d2d] text-[2vmax] text-start mb-[0.5vmax]">
           Contact Us
         </h1>

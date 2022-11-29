@@ -27,7 +27,7 @@
 }
 
 .headingHome {
-  animation: 1s ease-out 0s 1 slideInFromLeftFade, gradient 5s ease infinite;
+  animation: 1s ease-out 0s 1 slideInFromLeftFade, gradient 8s ease infinite;
 }
 
 .subHeadingHome {
