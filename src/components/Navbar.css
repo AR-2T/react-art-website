@@ -5,15 +5,14 @@
   height: 4vmax;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   background: white;
   top: 0;
   z-index: 100;
   box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
-  padding-left: 6.5vmax;
-  padding-right: 6.5vmax;
-
+  padding-left: 14vmax;
+  padding-right: 14vmax;
 }
 
 .navBar * {
@@ -21,21 +20,19 @@
   z-index: 100;
 }
 
-.navBarLeft {
+.navBarMiddle {
   height: 100%;
   /* background-color: #d12a2a; */
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0.25vmax 1vmax;
 }
 
-.navBarRight {
+.navBarRight{
   height: 100%;
-  /* background-color: #a49d9d; */
+  /* background-color: #d12a2a; */
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
 }
 
@@ -53,10 +50,9 @@
   font-style: bold;
   font-size: 2.5vmax;
   text-align: center;
-  /* padding: 0 2vmax 0 1vmax; */
 }
 
-.navBarLeft li {
+.navBarMiddle li {
   list-style: none;
   text-decoration: none;
   padding: 0.5vmax;
@@ -90,7 +86,6 @@
   align-items: center;
   background-color: #2d2d2d;
   border-radius: 1vmax;
-  margin-right: 2vmax;
   text-decoration: none;
   user-select: none;
   z-index: 102;
@@ -126,11 +121,96 @@
   transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
 }
 
+.navBarMenu{
+  display: none;
+}
 
 @media (min-width: 768px) {
   .loginButton {
     padding: 3px 15px;
   }
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 8vh;  
+    padding-left: 4vmax;
+    padding-right: 4vmax;
+    transition: 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+  }
+
+  .mobileNavBar{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mobileNavBar * {
+    font-size: 4vmax;
+  }
+
+  .navBarMenu{
+    display: block;
+  }
+
+  .loginButton {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+  }
+  
+  .loginButton:hover {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+  }
+
+  .navBarMiddle{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .navBarMiddle *{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    width: 100%;
+    font-size: 6vmax;
+    font-weight: 600;
+    font-style: bold;
+  }
+
+  .navBarRight{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .navBarRight *{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    width: 100%;
+    font-size: 6vmax;
+    font-weight: 600;
+    font-style: bold;
+  }
+
+  .websiteName{
+    display: flex;
+  }
+  
 }
 
 .dropdown {

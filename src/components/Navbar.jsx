@@ -1,12 +1,46 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './Navbar.css';
-import {Link, useNavigate} from "react-router-dom"
+import {Link, useNavigate, useLocation} from "react-router-dom"
 import { Auth } from 'aws-amplify';
 import { useAuthenticator } from "@aws-amplify/ui-react";
 
 function Navbar() {
   const { authStatus } = useAuthenticator((context) => [context.authStatus ]);
   const navigate = useNavigate();
+  const location = useLocation();
+  const [menu, setMenu] = useState(false);
+  const [logoStyle, setLogoStyle] = useState({});
+  const [menuStyle, setMenuStyle] = useState({});
+  const [navStyle, setNavStyle] = useState({});
+
+  useEffect(()=>{
+    if(menu == true){
+      setLogoStyle({display:"none"});
+      setNavStyle({minHeight:"100vh"});
+      setMenuStyle({display:"flex"});
+    }
+    if(menu == false){
+      setLogoStyle({});
+      setNavStyle({});
+      setMenuStyle({});
+    }
+
+    if (!window.matchMedia('screen and (max-width: 768px)').matches) {
+      setMenu(false);
+      setLogoStyle({});
+      setNavStyle({});
+      setMenuStyle({});
+    }
+
+  }, [menu])
+
+  useEffect(()=>{
+    setMenu(false);
+    setLogoStyle({});
+    setNavStyle({});
+    setMenuStyle({});
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, [location])
 
   async function signOut() {
     try {
@@ -19,69 +53,64 @@ function Navbar() {
   function profileLink(){
     navigate("/profile");
   }
+
+  function enableMenu(){
+    setMenu(!menu);
+  }
   
   return (
     <>
-    {/* <ul className='navbar shadow-md'>
-        <div className='navbarLeft'>
-          <p className='websiteName'>ideART</p> 
+    <nav className="navBar" style={navStyle}>
+      <div className='mobileNavBar'>
+        <section className="navBarLogo">
+          <p className="websiteName" style={logoStyle}>ideART</p> 
+        </section>
+
+        <button className='navBarMenu' onClick={enableMenu}>
+          {
+          menu ?
+            <i className='fa fa-close'></i>
+          :
+            <i className='fa fa-bars'></i>
+          }
+        </button>
+      </div>
+
+        <section className="navBarMiddle" style={menuStyle}>
           <li><Link to="/">Home</Link></li>
+          <li><Link to="testpage">TestPage</Link></li>
           <li><Link to="gallery">Gallery</Link></li>
           <li><Link to="challenges">Challenges</Link></li>
           <li><Link to="about">About</Link></li>
-        </div>
-          {authStatus !== 'authenticated' ? <Link to="login"><button className='loginButton' data-testid="loginButton" >Log In</button></Link> :
+        </section>
+
+        <section className="navBarRight" style={menuStyle}>
+          {
+            authStatus !== 'authenticated' ? 
+            <Link to="login">
+              <button className='loginButton' data-testid="loginButton" >
+                Sign In          
+                {!menu && <svg class="HoverArrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" fill='white'>
+                  <g fill-rule="evenodd">         
+                      <path class="HoverArrow__linePath" d="M0 5h7" ></path>
+                      <path class="HoverArrow__tipPath" d="M1 1l4 4-4 4"></path>
+                  </g>
+                </svg>
+                }
+              </button>
+            </Link> :
             <div className='dropdown'>
               <button onClick={profileLink} className='loginButton' data-testid="signOutButton">Profile</button>
 
               <div class="dropdown-content">
-                 <li><Link to="/user-settings"><i class="fa fa-gear"></i>Settings</Link></li>
-                 <li><button onClick={signOut}><i class="fa fa-sign-out"></i>Sign Out</button></li>
+                <li><Link to="/user-settings"><i class="fa fa-gear"></i>Settings</Link></li>
+                <li><button onClick={signOut}><i class="fa fa-sign-out"></i>Sign Out</button></li>
               </div>
+              
             </div>
-           }
-    </ul> */}
-
-    <div className="navBar">
-      <section className="navBarLogo">
-        <p className="websiteName">ideART</p> 
-      </section>
-
-      <section className="navBarLeft">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="testpage">TestPage</Link></li>
-        <li><Link to="gallery">Gallery</Link></li>
-        <li><Link to="challenges">Challenges</Link></li>
-        <li><Link to="about">About</Link></li>
-      </section>
-
-      <section className="navBarRight">
-        {
-          authStatus !== 'authenticated' ? 
-          <Link to="login">
-            <button className='loginButton' data-testid="loginButton" >
-              Sign In          
-              <svg class="HoverArrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" fill='white'>
-                <g fill-rule="evenodd">         
-                    <path class="HoverArrow__linePath" d="M0 5h7" ></path>
-                    <path class="HoverArrow__tipPath" d="M1 1l4 4-4 4"></path>
-                </g>
-              </svg>
-            </button>
-          </Link> :
-          <div className='dropdown'>
-            <button onClick={profileLink} className='loginButton' data-testid="signOutButton">Profile</button>
-
-            <div class="dropdown-content">
-              <li><Link to="/user-settings"><i class="fa fa-gear"></i>Settings</Link></li>
-              <li><button onClick={signOut}><i class="fa fa-sign-out"></i>Sign Out</button></li>
-            </div>
-          </div>
-        }
-      </section>
-
-
-    </div>
+          }
+        </section>
+    </nav>
     </>
   )
 }
