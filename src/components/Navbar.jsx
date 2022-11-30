@@ -25,7 +25,7 @@ function Navbar() {
       setMenuStyle({});
     }
 
-    if (!window.matchMedia('screen and (max-width: 768px)').matches) {
+    if (!window.matchMedia('screen and (max-width: 1000px)').matches) {
       setMenu(false);
       setLogoStyle({});
       setNavStyle({});

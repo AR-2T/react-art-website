@@ -244,19 +244,19 @@ mark {
 
 @media screen and (min-width: 1001px) {
   .sectionBlock {
-    margin: 0 12vmax 0 12vmax;
+    margin: 0 10rem 0 10rem;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .sectionBlock {
-    margin: 0 6vmax 0 6vmax;
+    margin: 0 5rem 0 5rem;
   }
 }
 
 @media screen and (max-width: 550px) {
   .sectionBlock {
-    margin: 0 2vmax 0 2vmax;
+    margin: 0 2rem 0 2rem;
   }
 }
 
@@ -272,10 +272,21 @@ mark {
 	}
 }
 
-/* Testing */
 .blockGridSystem {
   display: grid;
 
   width: min(100%);
   margin-inline: auto;
+}
+
+.cardContainer {
+  background-color: rgba(255,255,255, 1);
+
+  border-radius: 0.75rem;
+  border: 1px solid #e0e0e0;
+
+  padding: 1.5rem;
+
+  /* box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1vmax); */
 }

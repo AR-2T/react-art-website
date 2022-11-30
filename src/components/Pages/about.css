@@ -1,92 +1,37 @@
-.blockAbout1 .container:hover {
-    rotate: -5deg;
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(2px);
-    border: 0.1vmax solid rgb(255, 255, 255);
-}
-
-.blockAbout2 .container:hover {
-    rotate: 5deg;
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(2px);
-    border: 0.1vmax solid rgb(255, 255, 255);
-}
-
-/* .blockAbout1, .blockAbout2 {
-    color: #2d2d2d;
-    background-color: #ffffff;
-    border-radius: 0.75vmax;
-} */
-
-/* .blockAbout1:hover {
-    color: #FFFFFF;
-    background-color: #2d2d2d;
-    transform: scale(1.05);
-    rotate: 5deg;
-}
-
-.blockAbout2:hover {
-    color: #FFFFFF;
-    background-color: #2d2d2d;
-    transform: scale(1.05);
-    rotate: -5deg;
-} */
-
-.indivCard {
-    background-color: rgba(255,255,255, 1);
-    border-radius: 0.75vmax;
-    margin: 0 0.5vmax;
-
-    border: 1px solid #e0e0e0;
-
-    /* box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1vmax); */
-}
-
-.testCard {
-    background-color: rgba(255,255,255, 1);
-    border-radius: 0.75vmax;
-
-    border: 1px solid #e0e0e0;
-
-    /* box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1vmax); */
-}
-
-.indivCard:hover {
+.aboutCard:hover {
     transform: scale(1.05);
 }
 
-.indivCard .cardImg {
+.cardImg {
     width: 100%;
-    height: 12vmax;
+    height: 10rem;
     object-fit: cover;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-    border-radius: 0.7vmax;
+    border-radius: 0.75rem;
 }
 
 .profileImg {
-    width: 10vmax;
-    height: 10vmax;
+    width: 8rem;
+    height: 8remx;
 
     object-fit: cover;
     border-radius: 100%;
-    margin: -6vmax auto;
+    margin: -4rem auto;
     z-index: 3;
     position: relative;
-    border: 1vmax solid #ffffff;
+    border: 0.75rem solid #ffffff;
 }
 
 .socials {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    padding: 1vmax 0 0 0;
+    padding: 1rem 0 0 0;
     border-top: 1px solid #2d2d2d;
 }
 
 .socials i {
-    font-size: 2vmax;
+    font-size: 1.5rem;
 }
 
 .socials .fa-facebook-square:hover,
@@ -98,58 +43,49 @@
     transform: scale(1.5);
 }
 
-.gridSystemAbout {
-    display: grid;
-    row-gap: 1.5vmax;
-    column-gap: 0.5vmax;
-}
 
-@media screen and (min-width: 801px) {
-    .gridSystemAbout {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-    .indivCard .bodyText {
-        font-size: 0.95vmax;
-    }
-}
+/* Alter based on screen-size */
 
-@media screen and (max-width: 800px) {
-    .gridSystemAbout {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+@media screen and (min-width: 1201px) {
+    .aboutSec1 {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
-    .indivCard .bodyText {
-        font-size: 1.15vmax;
+    .aboutCardSec {
+        grid-template-columns:
+            repeat(4, 1fr);
     }
 }
 
-/* OLD CSS */
-/* .card .cardImgFull {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}
+@media screen and (max-width: 1200px) {
+    .aboutSec1 {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+    .aboutCardSec {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .blockGridSystem {
+        grid-template-columns:
+            repeat(1, 1fr);
+    }
+    .aboutCardSec {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+  }
 
-.card:hover .cardImgFull {
-    display: inline;
-}
-
-.card:hover {
-    transition: 0.5s;
-    transform: scale(1.075);
-    background-color: #ffffff;
-}
-
-.card:hover .profileImg {
-    transition: 0.5s;
-    border: 1.5vmax solid #ffffff;
-}
-
-.card .cardImgs, .card .cardImgFull {
-    width: 100%;
-    height: 15vmax;
-    object-fit: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-    border-radius: 1vmax;
-} */
+  @media screen and (max-width: 750px) {
+    .blockGridSystem {
+        grid-template-columns:
+            repeat(1, 1fr);
+    }
+    .aboutCardSec {
+        grid-template-columns:
+            repeat(1, 1fr);
+    }
+  }

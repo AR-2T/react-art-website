@@ -3,80 +3,64 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-style: bold;
-  font-size: 6vmax;
+  font-size: 5.5rem;
   line-height: 90%;
   user-select: none;
   letter-spacing: -3px;
 
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 200% 200%;
-  /* animation: gradient 10s ease infinite; */
+  animation: gradient 10s ease infinite;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.startButton:hover .HoverArrow__linePath {
-  opacity: 1;
-  transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
-}
-  
-.startButton:hover .HoverArrow__tipPath {
-  transform: var(--arrowHoverOffset);
-  transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
+.imageArtwork {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  max-width: 125%;
 }
 
-.headingHome {
-  animation: 1s ease-out 0s 1 slideInFromLeftFade, gradient 8s ease infinite;
-}
 
-.subHeadingHome {
-  animation: 1.25s ease-out 0s 1 fadeIn;
-}
-
-.startButton {
-  animation: 2.25s ease-out 0s 1 fadeIn;
-}
-
-.blockHome2 {
-  animation: 1s ease-out 0s 1 slideInFromRightFade;
-}
-
-@keyframes fadeIn {
-  0% {
-    user-select: none;
-    pointer-events: none;
-    opacity: 0;
+/* Alter based on screen-size */
+@media screen and (min-width: 1001px) {
+  .homeSec1, .homeSec2 {
+      grid-template-columns:
+          repeat(2, 1fr);
   }
-  75% {
-    user-select: none;
-    pointer-events: none;
-    opacity: 0;
+  .homeSec3 {
+      grid-template-columns:
+        repeat(3, 1fr);
   }
-  100% {
-    opacity: 1;
+  .ideArtInfo {
+      padding: 4rem 0;
+  }
+  .homeSec2 {
+      gap: 4rem;
   }
 }
 
-
-@keyframes slideInFromLeftFade {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
+@media screen and (max-width: 1000px) {
+  .blockGridSystem {
+      grid-template-columns:
+          repeat(1, 1fr);
   }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
+  .imgDisplay {
+      display: none;
   }
-}
-
-@keyframes slideInFromRightFade {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
+  .ideArtInfo {
+      padding: 2rem 0rem;
   }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
+  .imgDisplay2 {
+      max-width: 35rem;
+      justify-content: center;
+      margin: 0 auto;
+  }
+  .homeSec2 {
+      gap: 2rem;
   }
 }

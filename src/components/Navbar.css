@@ -2,7 +2,7 @@
 .navBar {
   position: sticky;
   width: 100%;
-  height: 4vmax;
+  height: 4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -11,8 +11,8 @@
   top: 0;
   z-index: 100;
   box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
-  padding-left: 14vmax;
-  padding-right: 14vmax;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .navBar * {
@@ -48,35 +48,25 @@
 
   font-weight: 800;
   font-style: bold;
-  font-size: 2.5vmax;
+  font-size: 2rem;
   text-align: center;
 }
 
 .navBarMiddle li {
   list-style: none;
   text-decoration: none;
-  padding: 0.5vmax;
-  margin: 0.75vmax;
+  padding: 0.5rem;
+  margin: 0.5rem;
   text-align: center;
 
   color: #2d2d2d;
   font-weight: 600;
   font-style: bold;
-  font-size: 1.25vmax;
-
-  transition: 0.35s;
-  transform: scale(1);
+  font-size: 1.15rem;
 
   /* background-color: #9d7f7f;
   border-color: #000000;
   border-width: 1px; */
-}
-
-.navBarLeft li:hover {
-  font-weight: 700;
-
-  transition: 0.35s;
-  transform: scale(1.25);
 }
 
 .loginButton {
@@ -85,7 +75,7 @@
   cursor: pointer;
   align-items: center;
   background-color: #2d2d2d;
-  border-radius: 1vmax;
+  border-radius: 1rem;
   text-decoration: none;
   user-select: none;
   z-index: 102;
@@ -93,7 +83,9 @@
   color: white;
   font-weight: 500;
   font-style: bold;
-  font-size: 1.15vmax;
+  font-size: 1rem;
+
+  padding: 3px 15px;
 }
 
 .loginButton:hover {
@@ -125,20 +117,23 @@
   display: none;
 }
 
-@media (min-width: 768px) {
-  .loginButton {
-    padding: 3px 15px;
-  }
+
+/* 1001
+1000
+550 */
+
+@media screen and (min-width: 1001px) {
+
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .navBar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 8vh;  
-    padding-left: 4vmax;
-    padding-right: 4vmax;
+    padding-left: 2rem;
+    padding-right: 2rem;
     transition: 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000); 
   }
 
@@ -150,7 +145,7 @@
   }
 
   .mobileNavBar * {
-    font-size: 4vmax;
+    font-size: 1.75rem;
   }
 
   .navBarMenu{
@@ -177,6 +172,7 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+    /* background-color: #23d5ab; */
   }
 
   .navBarMiddle *{
@@ -184,7 +180,7 @@
     flex-direction: column;
     justify-content: center;  
     width: 100%;
-    font-size: 6vmax;
+    font-size: 2rem;
     font-weight: 600;
     font-style: bold;
   }
@@ -195,6 +191,7 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+    /* background-color: #23d5ab; */
   }
 
   .navBarRight *{
@@ -209,9 +206,21 @@
 
   .websiteName{
     display: flex;
+    font-size: 2rem;
   }
-  
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .dropdown {
   position: relative;
