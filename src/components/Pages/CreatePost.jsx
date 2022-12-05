@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import { CreatePosts} from "../../ui-components"
 import { DataStore } from '@aws-amplify/datastore';
 import { UserPosts } from "../../models";
-import { Storage } from "aws-amplify";
+import { Storage, Auth } from "aws-amplify";
 import { toast } from 'react-toastify';
 import config from '../../aws-exports'
 import { v4 as uuidv4 } from 'uuid';
@@ -71,10 +71,11 @@ function CreatePost() {
   }
 
   async function saveData(url){
+    let user = await Auth.currentAuthenticatedUser(); 
     try {
       await DataStore.save(
         new UserPosts({
-          author: authorField,
+          author: user.attributes.preferred_username,
           title: titleField.current.value,
           description: descField.current.value,
           image: url
