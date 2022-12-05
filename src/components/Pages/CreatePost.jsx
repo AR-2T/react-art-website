@@ -13,9 +13,7 @@ function CreatePost() {
   const authorField = "PP";
   const titleField = useRef(null);
   const descField = useRef(null);
-  const [imageField, setImageField] = useState("");
-
-  const [files, setFiles] = useState([]);
+  const [file, setFile] = useState(null);
   const [filename, setFilename] = useState("Drop your file here.");
   var [isLoading, setIsLoading] = useState(false);
 
@@ -25,77 +23,65 @@ function CreatePost() {
 } = config
 
   async function onChange(e){
-    setFiles(e.target.files);
+    setFile(e.target.files[0]);
   }
-
-  async function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  async function uploadImage(){
+  
+  async function uploadImage(e){
+    e.preventDefault();
     setIsLoading(true);
-
-    await Promise.all(
-      [...files].map((file) => {
-        if(file.type === 'image/jpeg' || file.type ==='image/png'){
-          try{
-          const extension = file.name.split(".")[1];
-          const name = file.name.split(".")[0];
-          const key = `images/${uuidv4()}${name}.${extension}`;
-          const url = (`https://${bucket}.s3.${region}.amazonaws.com/public/${key}`);
-
-          //Puts the image file into s3 bucket
-          Storage.put(key, file, {
+    if(file !== null){
+      if(file.type === 'image/jpeg' || file.type ==='image/png'){
+        const extension = file.name.split(".")[1];
+        const name = file.name.split(".")[0];
+        const key = `images/${uuidv4()}${name}.${extension}`;
+        const url = (`https://${bucket}.s3.${region}.amazonaws.com/public/${key}`);
+        //Puts the image file into s3 bucket
+        try{
+          await Storage.put(key, file, {
             level: 'public',
             contentType: file.type
-          }).then(result => {
-            setIsLoading(false);
-            toast.success('Successfully uploaded: ' + file.name, {
-              position: "top-center",
-            })
-          })            
-          .then(() =>{    //Do this if file is sucessfully uploaded
-            //Implement Button on click function
-            const image = Storage.get(key, { level: 'public' })
-            .then(() =>{
-              console.log(image);
-              setImageField(image); 
-            })
-            .then(() =>{
-              saveData();
-            })
-          })}
-          catch(e){
-              console.log('Upload Failed for ' + file.name + " due to: " + e );
-              setIsLoading(false);
-              toast.error('Upload Failed for ' + file.name + " due to: " + e, {
-                position: "top-center",
-                }); 
-            }
-        }
-        
-        else{
-          toast.error('File type not supported for: ' + file.name + ' Please use PNG/JPEG.', {
-            position: "top-center",
-            }); 
+          })
           setIsLoading(false);
-        }  
-      })
-    );
+          toast.success('Successfully uploaded: ' + file.name, {
+            position: "top-center",
+          })     
+          saveData(url);
+        }
+        catch(e){
+            console.log('Upload Failed for ' + file.name + " due to: " + e );
+            setIsLoading(false);
+            toast.error('Upload Failed for ' + file.name + " due to: " + e, {
+              position: "top-center",
+              }); 
+        }
+      }
+      else{
+        toast.error('File type not supported for: ' + file.name + ' Please use PNG/JPEG.', {
+          position: "top-center",
+          }); 
+        setIsLoading(false);
+      }  
+    }
+    else{
+      toast.error('File is empty', {
+        position: "top-center",
+        }); 
+      setIsLoading(false);
+    }
   }
 
-  async function saveData(){
+  async function saveData(url){
     try {
       await DataStore.save(
         new UserPosts({
           author: authorField,
           title: titleField.current.value,
           description: descField.current.value,
-          image: imageField
+          image: url
         })
       );
       console.log("Post saved successfully!");
-      console.log("Image URL: " + imageField);
+      console.log("Image URL: " + url);
     } catch (error) {
       console.log("Error saving post", error);
     }
@@ -118,11 +104,7 @@ function CreatePost() {
         <button 
           type="submit" 
           class="btn btn-primary" 
-          onClick={(e) => {
-            e.preventDefault();
-            console.log("Button was Pressed");
-            uploadImage();
-          }}>Submit
+          onClick={uploadImage}>Submit
         </button>
       </form>
   )
