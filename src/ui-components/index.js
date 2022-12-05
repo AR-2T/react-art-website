@@ -4,9 +4,4 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
-export { default as TempPost } from "./TempPost";
-export { default as EditProfile } from "./EditProfile";
-export { default as TempPostCollection } from "./TempPostCollection";
-export { default as UserPostTemp } from "./UserPostTemp";
-export { default as CreatePosts } from "./CreatePosts";
 export { default as studioTheme } from "./studioTheme";

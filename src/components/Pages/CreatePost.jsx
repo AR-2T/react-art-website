@@ -7,13 +7,13 @@ import { Storage } from "aws-amplify";
 import { toast } from 'react-toastify';
 import config from '../../aws-exports'
 import { v4 as uuidv4 } from 'uuid';
+import { useRef } from 'react';
 
 function CreatePost() {
-  let url;
-  const authorField = "";
-  const titleField = "";
-  const descField = "";
-  const imageField = "";
+  const authorField = "PP";
+  const titleField = useRef(null);
+  const descField = useRef(null);
+  const [imageField, setImageField] = useState("");
 
   const [files, setFiles] = useState([]);
   const [filename, setFilename] = useState("Drop your file here.");
@@ -28,17 +28,22 @@ function CreatePost() {
     setFiles(e.target.files);
   }
 
+  async function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
   async function uploadImage(){
     setIsLoading(true);
 
     await Promise.all(
       [...files].map((file) => {
         if(file.type === 'image/jpeg' || file.type ==='image/png'){
-          
+          try{
           const extension = file.name.split(".")[1];
           const name = file.name.split(".")[0];
           const key = `images/${uuidv4()}${name}.${extension}`;
-          url = `https://${bucket}.s3.${region}.amazonaws.com/public/${key}`
+          const url = (`https://${bucket}.s3.${region}.amazonaws.com/public/${key}`);
+
           //Puts the image file into s3 bucket
           Storage.put(key, file, {
             level: 'public',
@@ -51,18 +56,22 @@ function CreatePost() {
           })            
           .then(() =>{    //Do this if file is sucessfully uploaded
             //Implement Button on click function
-
-            console.log(url);
-            imageField(url);
-            buttonOnClick();
-          })
-            .catch((e) => {
+            const image = Storage.get(key, { level: 'public' })
+            .then(() =>{
+              console.log(image);
+              setImageField(image); 
+            })
+            .then(() =>{
+              saveData();
+            })
+          })}
+          catch(e){
               console.log('Upload Failed for ' + file.name + " due to: " + e );
               setIsLoading(false);
               toast.error('Upload Failed for ' + file.name + " due to: " + e, {
                 position: "top-center",
                 }); 
-            })
+            }
         }
         
         else{
@@ -75,17 +84,18 @@ function CreatePost() {
     );
   }
 
-  async function buttonOnClick(){
+  async function saveData(){
     try {
       await DataStore.save(
         new UserPosts({
           author: authorField,
-          title: titleField,
-          description: descField,
-          image: imageField 
+          title: titleField.current.value,
+          description: descField.current.value,
+          image: imageField
         })
       );
       console.log("Post saved successfully!");
+      console.log("Image URL: " + imageField);
     } catch (error) {
       console.log("Error saving post", error);
     }
@@ -96,19 +106,21 @@ function CreatePost() {
       <form>
         <div class="form-group">
           <label for="title">Title of Post</label>
-          <input type="text" class="form-control" id="inputTitle" placeholder="Starry Night" width="32"/>
+          <input type="text" class="form-control" ref={titleField} id="inputTitle" placeholder="Starry Night" width="32"/>
         </div>
         <div class="form-group">
           <label for="description">Description</label>
-          <textarea class="form-control" rows="5" id="comment" placeholder = "Lorem ipsum"/>
+          <textarea class="form-control" ref={descField} rows="5" id="comment" placeholder = "Lorem ipsum"/>
         </div>
         <div class="form-group">
-          <input type="file" class="form-control-file" id="exampleFormControlFile1"/>
+          <input type="file" onChange={onChange} class="form-control-file" id="exampleFormControlFile1"/>
         </div>
         <button 
           type="submit" 
           class="btn btn-primary" 
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault();
+            console.log("Button was Pressed");
             uploadImage();
           }}>Submit
         </button>
