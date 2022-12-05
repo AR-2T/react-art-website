@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useLayoutEffect} from 'react'
 import './Navbar.css';
 import {Link, useNavigate, useLocation} from "react-router-dom"
 import { Auth } from 'aws-amplify';
@@ -12,8 +12,9 @@ function Navbar() {
   const [logoStyle, setLogoStyle] = useState({});
   const [menuStyle, setMenuStyle] = useState({});
   const [navStyle, setNavStyle] = useState({});
+  const [size, setSize] = useState([0, 0]);
 
-  useEffect(()=>{
+  useEffect(()=>{ 
     if(menu == true){
       setLogoStyle({display:"none"});
       setNavStyle({minHeight:"100vh"});
@@ -33,6 +34,24 @@ function Navbar() {
     }
 
   }, [menu])
+
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+
+  useEffect(()=> {
+    if(size[0]>1000){
+      setMenu(false);
+      setLogoStyle({});
+      setNavStyle({});
+      setMenuStyle({});
+    }
+  }, [size])
 
   useEffect(()=>{
     setMenu(false);
@@ -103,8 +122,8 @@ function Navbar() {
               <button onClick={profileLink} className='loginButton' data-testid="signOutButton">Profile</button>
 
               <div class="dropdown-content">
-                <li><Link to="/user-settings"><i class="fa fa-gear"></i>Settings</Link></li>
-                <li><button onClick={signOut}><i class="fa fa-sign-out"></i>Sign Out</button></li>
+                <li><Link to="/user-settings"><i class="fa fa-gear"/>Settings</Link></li>
+               <li><button onClick={signOut}><i class="fa fa-sign-out"/>Sign Out</button></li>
               </div>
               
             </div>
