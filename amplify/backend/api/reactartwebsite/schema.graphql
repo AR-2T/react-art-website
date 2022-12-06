@@ -1,3 +1,10 @@
+type UserModel @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  biography: String
+  profilepic: String
+}
+
 enum FilterType {
   PEOPLE
   PLACES

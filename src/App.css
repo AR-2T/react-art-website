@@ -191,6 +191,34 @@ mark {
   font-style: normal;
 }
 
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+}
+
+
+.button:active {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: black;
+  outline: 0;
+}
+
+
+.button:hover {
+  outline: 0;
+}
+
+.button:hover .HoverArrow__linePath {
+  opacity: 1;
+  transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
+}
+
+
+.button:hover .HoverArrow__tipPath {
+  transform: var(--arrowHoverOffset);
+  transition: opacity var(--hoverTransition,var(--arrowHoverTransition));
+}
+
 .evenLengthColumns {
   display: flex;
 }

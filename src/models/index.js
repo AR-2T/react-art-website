@@ -10,9 +10,10 @@ const FilterType = {
   "ANIMALS": "ANIMALS"
 };
 
-const { ArtIdea, UserPosts } = initSchema(schema);
+const { UserModel, ArtIdea, UserPosts } = initSchema(schema);
 
 export {
+  UserModel,
   ArtIdea,
   UserPosts,
   FilterType

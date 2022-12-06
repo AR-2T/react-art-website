@@ -8,12 +8,27 @@ export enum FilterType {
   ANIMALS = "ANIMALS"
 }
 
+type UserModelMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
 type ArtIdeaMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
 type UserPostsMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+export declare class UserModel {
+  readonly id: string;
+  readonly name?: string | null;
+  readonly biography?: string | null;
+  readonly profilepic?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<UserModel, UserModelMetaData>);
+  static copyOf(source: UserModel, mutator: (draft: MutableModel<UserModel, UserModelMetaData>) => MutableModel<UserModel, UserModelMetaData> | void): UserModel;
 }
 
 export declare class ArtIdea {

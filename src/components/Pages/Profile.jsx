@@ -2,19 +2,18 @@ import React, {useState, useEffect} from 'react'
 import BannerArt from '../../assets/profile_pic.svg';
 import { useAuthenticator } from "@aws-amplify/ui-react";
 import { useNavigate } from "react-router-dom";
-import { UserPostTemp, TempPostCollection} from "../../ui-components"
 import UserPost from '../ProfilePost'
-import { DataStore, Predicates } from '@aws-amplify/datastore';
+import { DataStore } from '@aws-amplify/datastore';
 import { UserPosts } from '../../models';
-
 
 function Profile() {
     const [userPosts, setUserPosts] = useState([])
+    const [data, setData] = useState([])
     const { route } = useAuthenticator(context => [context.route]);
     const { user } = useAuthenticator();
 
     async function fetchPosts() {
-      const models = await DataStore.query(UserPosts,(c) => c.author('beginsWith', user.attributes.preferred_username), {
+      const models = await DataStore.query(UserPosts,(c) => c.author('beginsWith', user.username), {
         page: 0,
         limit: 16
       });
@@ -27,7 +26,6 @@ function Profile() {
       fetchPosts()
     }, [])
   
-
     const navigate = useNavigate();
 
     if (route !== 'authenticated' ) {
@@ -54,7 +52,7 @@ function Profile() {
                         {user.attributes.preferred_username}
                       </div>
                       <div className="bodyText text-[1.15rem] text-[#2d2d2d] text-start mt-[-0.5rem]">
-                        @USERNAME
+                        @{user.username}
                       </div>
                       <div className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
                         This is a short biography test.

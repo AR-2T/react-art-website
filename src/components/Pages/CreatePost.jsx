@@ -9,6 +9,8 @@ import config from '../../aws-exports'
 import { v4 as uuidv4 } from 'uuid';
 import { useRef } from 'react';
 import './createPost.css';
+import { useNavigate } from "react-router-dom";
+
 
 function CreatePost() {
   const authorField = "PP";
@@ -17,6 +19,7 @@ function CreatePost() {
   const [file, setFile] = useState(null);
   const [filename, setFilename] = useState("Drop your file here.");
   var [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const {
     aws_user_files_s3_bucket_region: region,
@@ -76,7 +79,7 @@ function CreatePost() {
     try {
       await DataStore.save(
         new UserPosts({
-          author: user.attributes.preferred_username,
+          author: user.username,
           title: titleField.current.value,
           description: descField.current.value,
           image: url
@@ -84,6 +87,7 @@ function CreatePost() {
       );
       console.log("Post saved successfully!");
       console.log("Image URL: " + url);
+      navigate("/profile");
     } catch (error) {
       console.log("Error saving post", error);
     }
