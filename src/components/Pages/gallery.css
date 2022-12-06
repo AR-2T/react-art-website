@@ -17,3 +17,20 @@
   border-radius: 0.75vmax;
 }
 
+.subHeadingGallery {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-style: bold;
+  font-size: 3rem;
+  /* line-height: 90%; */
+  user-select: none;
+  /* letter-spacing: -3px; */
+
+  background: linear-gradient(-45deg, #ff8132, #ff51c2);
+  background-size: 200% 200%;
+  animation: gradient 4s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

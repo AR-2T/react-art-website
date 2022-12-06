@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import './testPage.css';
 import img1 from '../../assets/People.png';
 import img2 from '../../assets/Group.png';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 //sending ideas still doesnt fully work btw
 

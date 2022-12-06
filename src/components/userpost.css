@@ -1,12 +1,12 @@
 .userPost{
     position: relative;
     color: white;
-    box-shadow: 0 8px 32px 0 rgba(11, 13, 44, 0.15);
+    border: 1px solid #e0e0e0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0.5vmax;
+    border-radius: 0.75rem;
     text-overflow: ellipsis;
 
     position: relative;
@@ -17,13 +17,14 @@
   
   .userPost img{
     color:black;
-    background-color: white;
+    background-color: #2d2d2d;
     position: absolute;
     top: 0;
 
     width: 100%;
     height: 100%;
-    border-radius: 0.5vmax;
+    object-fit: cover;
+    border-radius: 0.75rem;
   }
   
   #postTitle{
@@ -32,14 +33,14 @@
   }
   
   .postSection{
-    background-color: #2d2d2da0;
+    background-color: #000000a0;
     position: absolute;
     top: 0;
 
     width: 100%;
     height: 100%;
     opacity: 0;
-    border-radius: 0.5vmax;
+    border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

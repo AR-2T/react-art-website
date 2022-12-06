@@ -2,109 +2,131 @@ import React from 'react';
 import './home.css';
 import img1 from '../../assets/People.png';
 import img2 from '../../assets/Group.png';
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+
+  const navigate = useNavigate();
+
+  function redirecToProfile(){
+    navigate("/profile");
+  }
+
   return (
     <>
 
     <div className="defaultBackground min-h-screen">
 
-    <section className="sectionBlock px-[2rem] pt-[8rem] pb-[6rem]">
-      <div className="blockGridSystem homeSec1">
+      <section className="sectionBlock px-[2rem] pt-[8rem] pb-[6rem]">
+        <div className="blockGridSystem homeSec1">
 
-        <section className="headerSec1">
-          <h1 className="headingHome text-start">
-            Don't know <br/> what to make?
-          </h1>
+          <section className="headerSec1">
+            <h1 className="headingHome text-start">
+              Don't know <br/> what to make?
+            </h1>
 
-          <h2 className="subHeading2 text-[1.35rem] text-[#2d2d2d] text-start py-[1.75rem]">
-            Quickly gain ideas with ideART's randomly generated topics and start creating again.
-          </h2>
+            <h2 className="subHeading2 text-[1.35rem] text-[#2d2d2d] text-start py-[1.75rem]">
+              Quickly gain ideas with ideART's randomly generated topics and start creating again.
+            </h2>
 
-          <button className="button text-[1rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full">
-          Start Now
-          <svg class="HoverArrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" fill='white'>
-              <g fill-rule="evenodd">         
-                  <path class="HoverArrow__linePath" d="M0 5h7" ></path>
-                  <path class="HoverArrow__tipPath" d="M1 1l4 4-4 4"></path>
-              </g>
-            </svg>
-          </button>
-        </section>
+            <button onClick={redirecToProfile} className="button text-[1rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full">
+              Start Now
+              <svg class="HoverArrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" fill='white'>
+                <g fill-rule="evenodd">         
+                    <path class="HoverArrow__linePath" d="M0 5h7" ></path>
+                    <path class="HoverArrow__tipPath" d="M1 1l4 4-4 4"></path>
+                </g>
+              </svg>
+            </button>
+          </section>
 
-        <section className="imgDisplay">
-          <img src={img1} alt="Artwork" class="imageArtwork"/>
-        </section>
+          <section className="imgDisplay">
+            <img src={img1} alt="Artwork" class="imageArtwork"/>
+          </section>
 
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section className="sectionBlock px-[2rem] pb-[6rem]">
-      <div className="blockGridSystem homeSec2">
+      <section className="sectionBlock px-[2rem] pb-[6rem]">
+        <div className="blockGridSystem homeSec2">
 
-        <section className="imgDisplay2">
-          <img src={img2} alt="Artwork" class="imageArtwork"/>
-        </section>
+          <section className="imgDisplay2">
+            <img src={img2} alt="Artwork" class="imageArtwork"/>
+          </section>
 
-        <section className="ideArtInfo">
-          <h1 className="subHeading text-[#2d2d2d] text-[1.75rem] text-start mb-[1rem]">
-            What is ideArt?
-          </h1>
+          <section className="ideArtInfo">
+            <h1 className="subHeading text-[#2d2d2d] text-[1.75rem] text-start mb-[1rem]">
+              What is ideArt?
+            </h1>
 
-          <p className="bodyText text-[#2d2d2d] text-[1rem] text-start mb-[0.75rem]">
-            ideArt is a community-driven service that seeks to provide users with a self-sustaining 
-            flow of inspiration and new ideas. With our randomly generated topics/prompts, users can 
-            reference and create art pieces based on the given inspo.
-          </p>
+            <p className="bodyText text-[#2d2d2d] text-[1rem] text-start mb-[0.75rem]">
+              ideArt is a community-driven service that seeks to provide users with a self-sustaining 
+              flow of inspiration and new ideas. With our randomly generated topics/prompts, users can 
+              reference and create art pieces based on the given inspo.
+            </p>
 
-          <p className="bodyText text-[#2d2d2d] text-[1rem] text-start">
-            We also are an online social network platform that exhibits, promotes, and shares artists' 
-            works to our art-centric community.
-          </p>
-        </section>
+            <p className="bodyText text-[#2d2d2d] text-[1rem] text-start">
+              We also are an online social network platform that exhibits, promotes, and shares artists' 
+              works to our art-centric community.
+            </p>
+          </section>
 
-        <section className="moreInfo">
-          <h1 className="subHeading text-[#2d2d2d] text-[1.75rem] text-start mb-[1rem]">
-            Learn More About Us
-          </h1>
+          <section className="moreInfo">
+            <h1 className="subHeading text-[#2d2d2d] text-[1.75rem] text-start mb-[1rem]">
+              Learn More About Us
+            </h1>
 
-          <p className="bodyText text-[#2d2d2d] text-[1rem] text-start mb-[0.75rem]">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quasi nemo numquam modi 
-            officiis nihil officia molestiae deserunt tempore nam.
-          </p>
+            <p className="bodyText text-[#2d2d2d] text-[1rem] text-start mb-[0.75rem]">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quasi nemo numquam modi 
+              officiis nihil officia molestiae deserunt tempore nam.
+            </p>
 
-          <p className="bodyText text-[#2d2d2d] text-[1rem] text-start">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quasi nemo numquam modi 
-            officiis nihil officia molestiae deserunt tempore nam.
-          </p>
-        </section>
+            <p className="bodyText text-[#2d2d2d] text-[1rem] text-start">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quasi nemo numquam modi 
+              officiis nihil officia molestiae deserunt tempore nam.
+            </p>
 
-      </div>
-    </section>
+            <button className="button text-[0.75rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full mt-[1.75rem]">
+              Learn More
+              <svg class="HoverArrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" fill='white'>
+                <g fill-rule="evenodd">         
+                    <path class="HoverArrow__linePath" d="M0 5h7" ></path>
+                    <path class="HoverArrow__tipPath" d="M1 1l4 4-4 4"></path>
+                </g>
+              </svg>
+            </button>
+          </section>
 
-    <section className="sectionBlock px-[2rem] pb-[6rem]">
-      <div className="blockGridSystem homeSec3 gap-[2rem]">
-        
-        <section className="cardContainer">
-          <p className="bodyText text-[#2d2d2d] text-[1rem]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, repudiandae.
-          </p>
-        </section>
+          <section className="imgDisplay2">
+            <img src={img2} alt="Artwork" class="imageArtwork"/>
+          </section>
 
-        <section className="cardContainer">
-          <p className="bodyText text-[#2d2d2d] text-[1rem]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, repudiandae.
-          </p>
-        </section>
+        </div>
+      </section>
 
-        <section className="cardContainer">
-          <p className="bodyText text-[#2d2d2d] text-[1rem]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, repudiandae.
-          </p>
-        </section>
+      <section className="sectionBlock px-[2rem] pb-[6rem]">
+        <div className="blockGridSystem homeSec3 gap-[2rem]">
+          
+          <section className="cardContainer">
+            <p className="bodyText text-[#2d2d2d] text-[1rem]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, repudiandae.
+            </p>
+          </section>
 
-      </div>
-    </section>
+          <section className="cardContainer">
+            <p className="bodyText text-[#2d2d2d] text-[1rem]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, repudiandae.
+            </p>
+          </section>
+
+          <section className="cardContainer">
+            <p className="bodyText text-[#2d2d2d] text-[1rem]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, repudiandae.
+            </p>
+          </section>
+
+        </div>
+      </section>
 
     </div>
     
