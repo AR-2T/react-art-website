@@ -97,7 +97,7 @@ function Navbar() {
 
         <section className="navBarMiddle" style={menuStyle}>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="testpage">TestPage</Link></li>
+          <li><Link to="topic">Topics</Link></li>
           <li><Link to="gallery">Gallery</Link></li>
           <li><Link to="challenges">Challenges</Link></li>
           <li><Link to="about">About</Link></li>

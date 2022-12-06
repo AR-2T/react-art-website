@@ -1,0 +1,65 @@
+.subHeadingTopicGen {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-style: bold;
+    font-size: 3rem;
+    /* line-height: 90%; */
+    user-select: none;
+    /* letter-spacing: -3px; */
+  
+    background: linear-gradient(-45deg, #32ff9f, #517dff);
+    background-size: 200% 200%;
+    animation: gradient 4s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subHeadingTopicGen2 {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-style: bold;
+    font-size: 3rem;
+    /* line-height: 90%; */
+    user-select: none;
+    /* letter-spacing: -3px; */
+  
+    background: linear-gradient(-45deg, #ff3232, #ff9100);
+    background-size: 200% 200%;
+    animation: gradient 4s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+/* Alter based on screen-size */
+
+@media screen and (min-width: 1201px) {
+    .topicSec1 {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .topicSec1 {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .blockGridSystem {
+        grid-template-columns:
+            repeat(1, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .blockGridSystem {
+        grid-template-columns:
+            repeat(1, 1fr);
+    }
+  }

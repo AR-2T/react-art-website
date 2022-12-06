@@ -2,14 +2,18 @@ import React from 'react';
 import './home.css';
 import img1 from '../../assets/People.png';
 import img2 from '../../assets/Group.png';
+import img3 from '../../assets/LaptopGroup.png';
 import { useNavigate } from "react-router-dom";
 
 function Home() {
 
   const navigate = useNavigate();
 
-  function redirecToProfile(){
+  function redirectToProfile(){
     navigate("/profile");
+  }
+  function redirectToAbout(){
+    navigate("/about");
   }
 
   return (
@@ -29,7 +33,7 @@ function Home() {
               Quickly gain ideas with ideART's randomly generated topics and start creating again.
             </h2>
 
-            <button onClick={redirecToProfile} className="button text-[1rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full">
+            <button onClick={redirectToProfile} className="button text-[1rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full">
               Start Now
               <svg class="HoverArrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" fill='white'>
                 <g fill-rule="evenodd">         
@@ -71,22 +75,26 @@ function Home() {
             </p>
           </section>
 
-          <section className="moreInfo">
+          <section className="moreInfo align-middle">
+            <h1 className="subHeading text-[#2d2d2d] text-[1.75rem] text-start mb-[1rem]">
+              Our Goals
+            </h1>
+
+            <p className="bodyText text-[#2d2d2d] text-[1rem] text-start mb-[4rem]">
+              ideArt's mission is to help artists and creators alike find enriching, engaging topics they can
+                pull inspiration from. The ideART team hopes to spark the creativity of those who use our
+                products and guide users to new artistic heights.
+            </p>
+
             <h1 className="subHeading text-[#2d2d2d] text-[1.75rem] text-start mb-[1rem]">
               Learn More About Us
             </h1>
 
-            <p className="bodyText text-[#2d2d2d] text-[1rem] text-start mb-[0.75rem]">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quasi nemo numquam modi 
-              officiis nihil officia molestiae deserunt tempore nam.
-            </p>
-
             <p className="bodyText text-[#2d2d2d] text-[1rem] text-start">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quasi nemo numquam modi 
-              officiis nihil officia molestiae deserunt tempore nam.
+              Want to learn more about the team behind ideART? Click the redirect button below!
             </p>
 
-            <button className="button text-[0.75rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full mt-[1.75rem]">
+            <button onClick={redirectToAbout} className="button text-[0.9rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full mt-[1.75rem]">
               Learn More
               <svg class="HoverArrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" fill='white'>
                 <g fill-rule="evenodd">         
@@ -97,14 +105,14 @@ function Home() {
             </button>
           </section>
 
-          <section className="imgDisplay2">
-            <img src={img2} alt="Artwork" class="imageArtwork"/>
+          <section className="imgDisplay3">
+            <img src={img3} alt="Artwork" class="imageArtwork2"/>
           </section>
 
         </div>
       </section>
 
-      <section className="sectionBlock px-[2rem] pb-[6rem]">
+      {/* <section className="sectionBlock px-[2rem] pb-[6rem]">
         <div className="blockGridSystem homeSec3 gap-[2rem]">
           
           <section className="cardContainer">
@@ -126,7 +134,7 @@ function Home() {
           </section>
 
         </div>
-      </section>
+      </section> */}
 
     </div>
     

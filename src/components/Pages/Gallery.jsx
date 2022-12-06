@@ -48,7 +48,7 @@ function Gallery() {
 
     <div className="defaultBackground min-h-screen w-full">
        
-      <section className="sectionBlock px-[2rem] pt-[4rem] pb-[4rem]">
+      <section className="sectionBlock px-[2rem] pt-[4rem] pb-[2rem]">
 
         <section className="cardContainer">
           <div className="gallerySec1">

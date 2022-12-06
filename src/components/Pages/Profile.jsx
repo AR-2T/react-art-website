@@ -44,31 +44,38 @@ function Profile() {
         <div className="defaultBackground min-h-screen">
 
           <div className='sectionBlock px-[2rem] pt-[4rem] pb-[2rem]'>
-            <div className='flex flex-row justify-center items-center align-center rounded-lg p-[1rem]'>  
-              <img className='h-[8rem] rounded-full bg-white' src={BannerArt} alt="Avatar" /> 
-                <div className="pl-[2rem]">
-                    <div className="heading text-[2.5rem] text-[#2d2d2d] text-start">
-                      {user.attributes.preferred_username}
-                    </div>
-                    <div className="bodyText text-[1.15rem] text-[#2d2d2d] text-start mt-[-0.5rem]">
-                      @USERNAME
-                    </div>
-                    <div className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
-                      This is a short biography test.
-                    </div>
-                    <button onClick={createPostLink} className="button text-[0.75rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full mt-[1rem]">
-                      CREATE POST
-                    </button>
-                </div>
-            </div> 
+
+            <section className="cardContainer flex flex-row items-center">
+              
+              {/* <div className='flex flex-row justify-center items-center align-center p-[1rem]'>   */}
+                <img className='h-[8rem] rounded-full bg-white' src={BannerArt} alt="Avatar" /> 
+                  <div className="pl-[2rem]">
+                      <div className="heading text-[2.5rem] text-[#2d2d2d] text-start">
+                        {user.attributes.preferred_username}
+                      </div>
+                      <div className="bodyText text-[1.15rem] text-[#2d2d2d] text-start mt-[-0.5rem]">
+                        @USERNAME
+                      </div>
+                      <div className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
+                        This is a short biography test.
+                      </div>
+                      <button onClick={createPostLink} className="button text-[0.75rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full mt-[1rem]">
+                        CREATE POST
+                      </button>
+                  </div>
+              {/* </div>  */}
+
+            </section>
+            
           </div>
 
-          <section className="sectionBlock px-[2rem] pb-[2rem]">  
+          {/* <section className="sectionBlock px-[2rem] pb-[2rem]">  
             <hr/>
-          </section>
+          </section> */}
 
-          <section className="sectionBlock px-[2rem] pb-[2rem]">  
-              <div className="flex flex-col py-[1rem] px-[1rem] items-center"> 
+          <section className="sectionBlock px-[2rem] pb-[6rem]">  
+            <section className="cardContainer">
+              <div className="flex flex-col items-center"> 
                 {
                   userPosts.length === 0 ? 
                   <>
@@ -85,6 +92,7 @@ function Profile() {
                   </div>
                 }       
               </div>
+            </section>
           </section>
 
         </div>

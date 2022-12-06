@@ -128,7 +128,8 @@ function About() {
               Developer
             </h2>
             <p className="bodyText italic text-[0.8rem] m-[1rem]">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat expedita aliquam exercitationem reprehenderit nam magni.
+              I am a 4th year student at Cal Poly Pomona pursuing a Bachelor's Degree in Computer Science.
+              My interests include Music Creation, Game Design, and App Development.
             </p>
             <ul className="socials mx-[1rem] mb-[1rem]">
               {/* <li><a href="#"><i className="fa fa-facebook-square"></i></a></li>

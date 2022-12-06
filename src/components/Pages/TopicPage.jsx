@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react';
 import { DataStore } from '@aws-amplify/datastore';
 import { ArtIdea, FilterType } from './models';
 import Button from 'react-bootstrap/Button';
-import './testPage.css';
+import './topicPage.css';
 
-function TestPage() {
+function TopicPage() {
   const [databaseIdeas, setDatabaseIdeas] = useState([]);
   const [randomIdea, generateIdea] = useState(null);
   const [filterGetIdea,setFilterGetIdea] = useState(null);
@@ -149,45 +149,55 @@ function TestPage() {
 
   return (
       <>
-               <div className="selectGroup">
-            <div className="bodyTextHome text-start mt-[4vmax] mb-[0.5vmax] ml-[5vmax]">
-              Category Selection
-            </div>
 
-            <div className="flex flex-row">
-              <select className='form-select ml-[5vmax] w-[40%]' value={filterGetIdea} onChange={(evt)=>setFilterGetIdea(evt.target.value)}>
-                <option value={"Random"}>Random</option>
-                <option value={"Person"}>Person</option>
-                <option value={"Place"}>Place</option>
-                <option value={"Object"}>Object</option>
-                <option value={"Animal"}>Animal</option>
-                <option value={"Concept"}>Concept</option>
-                <option value={"Scenario"}>Scenario</option>
-              </select>
+      <div className="defaultBackground min-h-screen w-full">
+      
+        <section className="sectionBlock px-[2rem] pt-[4rem] pb-[2rem]">
 
-              <Button onClick={() => getRandomIdea()} className="generateIdeaButton ml-[1vmax] w-[30%] bg-[#3F3D56] border-transparent">Generate an idea</Button>
-            </div>
+          <div className="blockGridSystem topicSec1 gap-[2rem]">
 
-            <div className="selectedTopic mt-[1vmax] mb-[6vmax] ml-[5vmax] w-[72%]">
-              {randomIdea}
-            </div>
-          </div>
+            <section className="cardContainer">
+              <h1 className="subHeadingTopicGen text-start mb-[0.5rem]">
+                Topic Generation
+              </h1>
+              <p className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
+                Need an idea for your next creative endeavor?<br/>
+                Simply select a category below to generate a topic.
+              </p>
 
-          <div className="selectGroup">
-            <div className="bodyTextHome text-start mt-[4vmax] mb-[0.5vmax] ml-[5vmax]">
-              Idea for Submittal
-            </div>
+              <div className="flex flex-row mt-[1rem]">
+                <select className='form-select rounded-full w-[65%]' value={filterGetIdea} onChange={(evt)=>setFilterGetIdea(evt.target.value)}>
+                  <option value={"Random"}>Random</option>
+                  <option value={"Person"}>Person</option>
+                  <option value={"Place"}>Place</option>
+                  <option value={"Object"}>Object</option>
+                  <option value={"Animal"}>Animal</option>
+                  <option value={"Concept"}>Concept</option>
+                  <option value={"Scenario"}>Scenario</option>
+                </select>
 
-             <div>
-              <textarea className='form-select ml-[5vmax] w-[40%]' value={submitRandomIdea} onChange={(evt)=>setSubmitRandomIdea(evt.target.value)} />
-            </div> 
+                <Button onClick={() => getRandomIdea()} className="generateIdeaButton ml-[1rem] w-[35%] bg-[#2d2d2d] border-transparent rounded-full">Generate</Button>
+              </div>
 
-            <div className="bodyTextHome text-start mt-[4vmax] mb-[0.5vmax] ml-[5vmax]">
-              Category Selection
-            </div>
+              <div className="cardContainer mt-[1rem] align-text-top">
+                {randomIdea}
+              </div>
+            </section>
 
-            <div className="flex flex-row">
-              <select className='form-select ml-[5vmax] w-[40%]' value={filterSubmitIdea} onChange={(evt)=>setFilterSubmitIdea(evt.target.value)}>
+            <section className="cardContainer">
+              <h1 className="subHeadingTopicGen2 text-start mb-[0.5rem]">
+                Suggest Topics
+              </h1>
+              <p className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
+                Got an idea you don't see in our random generator? Suggest it below!
+              </p>
+
+              <div>
+                <textarea className='form-select mt-[1rem]' value={submitRandomIdea} onChange={(evt)=>setSubmitRandomIdea(evt.target.value)} />
+              </div> 
+
+            <div className="flex flex-row mt-[1rem]">
+              <select className='form-select rounded-full w-[65%]' value={filterSubmitIdea} onChange={(evt)=>setFilterSubmitIdea(evt.target.value)}>
                 <option value={"Choose a category"}>Choose a category</option>
                 <option value={"Person"}>Person</option>
                 <option value={"Place"}>Place</option>
@@ -196,16 +206,23 @@ function TestPage() {
                 <option value={"Concept"}>Concept</option>
               </select>
 
-              <Button onClick={() => submitIdea()} className="generateIdeaButton ml-[1vmax] w-[30%] bg-[#3F3D56] border-transparent">Submit an idea</Button>
+              <Button onClick={() => submitIdea()} className="generateIdeaButton ml-[1rem] w-[35%] bg-[#2d2d2d] border-transparent rounded-full">Submit</Button>
             </div>
 
-            <div className="selectedTopic mt-[1vmax] mb-[6vmax] ml-[5vmax] w-[72%]">
+            <div className="submitMessage italic text-[0.85rem] mt-[1rem]">
               {submitIdeaMessage}
             </div>
-          </div> 
+
+            </section>
+
+          </div>
+
+        </section>
+          
+      </div>
 
     </>
   )
 }
 
-export default TestPage
+export default TopicPage

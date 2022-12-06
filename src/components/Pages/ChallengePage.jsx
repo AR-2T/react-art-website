@@ -7,7 +7,7 @@ function ChallengePage() {
 
     <div className="defaultBackground min-h-screen">
 
-      <section className="sectionBlock px-[2vmax] pt-[4vmax] pb-[2vmax]">  
+      {/* <section className="sectionBlock px-[2vmax] pt-[4vmax] pb-[2vmax]">  
         <section className="container bg-[#FFFFFF] rounded-[0.75vmax] p-[2vmax]">
           <h2 className="subHeading2 text-[#2d2d2d] text-[2vmax] text-start">
             Explore&nbsp;
@@ -20,10 +20,25 @@ function ChallengePage() {
             Most Recent<i className="fa fa-caret-down pl-[0.5vmax]"></i>
           </button>
         </section>
+      </section> */}
+
+      <section className="sectionBlock px-[2rem] pt-[4rem] pb-[2rem]">
+        <section className="cardContainer">
+          <h1 className="subHeadingChallenges text-start mb-[0.5rem]">
+            Explore Challenges
+          </h1>
+          <p className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
+            Weekly challenges are posted here!
+          </p>
+
+          <button className="button text-[0.9rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full mt-[1rem]">
+            Most Recent<i className="fa fa-caret-down pl-[0.5vmax]"></i>
+          </button>
+        </section>
       </section>
 
-      <section className="sectionBlock px-[2vmax] pb-[2vmax]">
-        <section className="container p-[1vmax] bg-[#FFFFFF] rounded-[0.75vmax] flex flex-col items-center">
+      <section className="sectionBlock px-[2rem] pb-[6rem]">
+        <section className="cardContainer flex flex-col items-center">
           <div className="gridSystem w-[100%]">
             <div className="challengeContainer">
               <img src={require('../../assets/HNHecarimFull.jpg')} class="challContainerImg"/>

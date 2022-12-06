@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import config from '../../aws-exports'
 import { v4 as uuidv4 } from 'uuid';
 import { useRef } from 'react';
+import './createPost.css';
 
 function CreatePost() {
   const authorField = "PP";
@@ -89,25 +90,50 @@ function CreatePost() {
   }
 
   return (
-    // <div><CreatePosts /></div>
-      <form>
-        <div class="form-group">
-          <label for="title">Title of Post</label>
-          <input type="text" class="form-control" ref={titleField} id="inputTitle" placeholder="Starry Night" width="32"/>
-        </div>
-        <div class="form-group">
-          <label for="description">Description</label>
-          <textarea class="form-control" ref={descField} rows="5" id="comment" placeholder = "Lorem ipsum"/>
-        </div>
-        <div class="form-group">
-          <input type="file" onChange={onChange} class="form-control-file" id="exampleFormControlFile1"/>
-        </div>
-        <button 
-          type="submit" 
-          class="btn btn-primary" 
-          onClick={uploadImage}>Submit
-        </button>
-      </form>
+
+    <div className="defaultBackground min-h-screen w-full">
+
+      <section className="sectionBlock px-[2rem] pt-[4rem] pb-[4rem]">
+        <form>
+          <section className="cardContainer">
+            <div className="createSec1">
+              <h1 className="subHeadingCreate text-start mb-[0.5rem]">
+                New Post
+              </h1>
+              <p className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
+                Upload your work here to be published in our gallery!
+              </p>
+            </div>
+          </section>
+
+          <section className="cardContainer mt-[2rem]">
+            <div className="blockGridSystem createSec1 gap-[2rem]">
+              <section className="submissionSection">
+                <p className="subHeading2 text-[1.25rem] text-[#2d2d2d] mb-[0.5rem] text-start">
+                  Title of Post
+                </p>
+                <input type="text" class="form-control mb-[1rem]" ref={titleField} id="inputTitle" placeholder="Lorem ipsum"/>
+
+                <div className="submissionSector flex flex-row">
+                  <input type="file" onChange={onChange} class="form-control-file w-[65%]" id="exampleFormControlFile1"/>
+                  <button type="submit" class="btn btn-primary ml-[1rem] w-[35%] bg-[#2d2d2d] border-transparent rounded-full" onClick={uploadImage}>Submit</button>
+                </div>
+              </section>
+
+              <section className="descriptionSection">
+                <p className="subHeading2 text-[1.25rem] text-[#2d2d2d] mb-[0.5rem] text-start">
+                  Description
+                </p>
+                <textarea class="form-control" ref={descField} rows="5" id="comment" placeholder = "Lorem ipsum"/>
+              </section>
+
+            </div>
+          </section>
+          
+        </form>
+      </section>
+
+    </div>
   )
 }
 
