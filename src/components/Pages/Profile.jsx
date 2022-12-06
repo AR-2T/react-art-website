@@ -14,7 +14,7 @@ function Profile() {
     const { user } = useAuthenticator();
 
     async function fetchPosts() {
-      const models = await DataStore.query(UserPosts,(c) => c.author('beginsWith', ""), {
+      const models = await DataStore.query(UserPosts,(c) => c.author('beginsWith', user.attributes.preferred_username), {
         page: 0,
         limit: 16
       });

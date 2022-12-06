@@ -29,6 +29,10 @@ function App() {
 
   }
 
+  useEffect(()=> {
+    Amplify.DataStore.clear(); // Clear local data for consistency
+  }, [])
+
   return (
     <>
     <div className="App">
