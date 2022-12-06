@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useRef } from 'react';
 import './createPost.css';
 import { useNavigate } from "react-router-dom";
-
+import { useAuthenticator } from "@aws-amplify/ui-react";
 
 function CreatePost() {
   const authorField = "PP";
@@ -20,6 +20,7 @@ function CreatePost() {
   const [filename, setFilename] = useState("Drop your file here.");
   var [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const { route } = useAuthenticator(context => [context.route]);
 
   const {
     aws_user_files_s3_bucket_region: region,
@@ -28,6 +29,11 @@ function CreatePost() {
 
   async function onChange(e){
     setFile(e.target.files[0]);
+  }
+
+  if (route !== 'authenticated' ) {
+    navigate("/login");
+    window.location.reload(false);
   }
   
   async function uploadImage(e){

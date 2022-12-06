@@ -30,6 +30,7 @@ function Profile() {
 
     if (route !== 'authenticated' ) {
         navigate("/login");
+        window.location.reload(false);
       }
 
     function createPostLink(){
@@ -94,8 +95,6 @@ function Profile() {
           </section>
 
         </div>
-
-
           : null
         } 
       </>
