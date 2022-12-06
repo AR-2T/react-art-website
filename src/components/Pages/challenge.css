@@ -48,6 +48,24 @@
     gap: 1vmax;
 }
 
+.subHeadingChallenges {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-style: bold;
+    font-size: 3rem;
+    /* line-height: 90%; */
+    user-select: none;
+    /* letter-spacing: -3px; */
+  
+    background: linear-gradient(-45deg, #7e4fff, #ff6c37);
+    background-size: 200% 200%;
+    animation: gradient 4s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 @media screen and (min-width: 1001px) {
     .gridSystem {
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -72,24 +90,10 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .labelContainer {
-        font-size: 1.75vmax;
+        font-size: .5rem;
+    }
+    .subHeadingChallenges {
+        font-size: 2rem;
     }
   }
 
-  .subHeadingChallenges {
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-style: bold;
-    font-size: 3rem;
-    /* line-height: 90%; */
-    user-select: none;
-    /* letter-spacing: -3px; */
-  
-    background: linear-gradient(-45deg, #7e4fff, #ff6c37);
-    background-size: 200% 200%;
-    animation: gradient 4s ease infinite;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}

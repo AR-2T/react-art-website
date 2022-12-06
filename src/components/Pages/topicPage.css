@@ -62,4 +62,12 @@
         grid-template-columns:
             repeat(1, 1fr);
     }
+
+    .subHeadingTopicGen {
+        font-size: 2rem;
+    }
+
+    .subHeadingTopicGen2 {
+        font-size: 2rem;
+    }
   }

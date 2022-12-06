@@ -46,15 +46,15 @@ function Profile() {
             <section className="cardContainer flex flex-row items-center">
               
               {/* <div className='flex flex-row justify-center items-center align-center p-[1rem]'>   */}
-                <img className='h-[8rem] rounded-full bg-white' src={BannerArt} alt="Avatar" /> 
+                <img className='h-[4rem] md:h-[8rem] rounded-full bg-white' src={BannerArt} alt="Avatar" /> 
                   <div className="pl-[2rem]">
-                      <div className="heading text-[2.5rem] text-[#2d2d2d] text-start">
+                      <div className="heading text-[1.5rem] md:text-[2.5rem] text-[#2d2d2d] text-start">
                         {user.attributes.preferred_username}
                       </div>
-                      <div className="bodyText text-[1.15rem] text-[#2d2d2d] text-start mt-[-0.5rem]">
+                      <div className="bodyText text-[.75rem] md:text-[1.15rem] text-[#2d2d2d] text-start mt-[-0.25rem]">
                         @{user.username}
                       </div>
-                      <div className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
+                      <div className="bodyText text-[.75rem] md:text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
                         This is a short biography test.
                       </div>
                       <button onClick={createPostLink} className="button text-[0.75rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full mt-[1rem]">
