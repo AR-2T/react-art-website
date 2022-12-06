@@ -1,21 +1,20 @@
 import React, {useState, useEffect} from 'react';
 import { DataStore } from '@aws-amplify/datastore';
-import { ArtIdea } from './models';
+import { ArtIdea, FilterType } from './models';
 import Button from 'react-bootstrap/Button';
 import './testPage.css';
 import img1 from '../../assets/People.png';
 import img2 from '../../assets/Group.png';
-import styled from 'styled-components';
 
-//sending ideas still doesnt fully work btw
+//submitting ideas still doesnt fully work btw
 
 function TestPage() {
   const [databaseIdeas, setDatabaseIdeas] = useState([]);
   const [randomIdea, generateIdea] = useState(null);
   const [filterGetIdea,setFilterGetIdea] = useState(null);
-  const [filterSendIdea,setFilterSendIdea] = useState(null);
-  const [sendRandomIdea, setSendRandomIdea] = useState(null);
-  const inputProps = useInput();
+  const [filterSubmitIdea,setFilterSubmitIdea] = useState(null);
+  const [submitRandomIdea, setSubmitRandomIdea] = useState(null);
+  const [submitIdeaMessage, setSubmitIdeaMessage] = useState(null);
 
   async function fetchIdeas() {
     const models = await DataStore.query(ArtIdea);
@@ -72,52 +71,61 @@ function TestPage() {
     }
   }
 
-  /* async function sendIdea() {
-    switch(filterSendIdea) {
+  async function submitIdea() {
+    if (submitRandomIdea == "" || submitRandomIdea == null) {
+      setSubmitIdeaMessage("Please enter your idea in the text box before submitting it!");
+      return;
+    }
+    switch(filterSubmitIdea) {
       case "Person":
         await DataStore.save(
           new ArtIdea({
-          "idea": sendRandomIdea,
+          "idea": submitRandomIdea,
           "filter": FilterType.PEOPLE
-        })
-      );
+          })
+        );
+        setSubmitIdeaMessage("Successfully submitted the idea \"" + submitRandomIdea + "\" to the " + filterSubmitIdea + " category.");
         break
       case "Place":
         await DataStore.save(
           new ArtIdea({
-          "idea": sendRandomIdea,
+          "idea": submitRandomIdea,
           "filter": FilterType.PLACES
-        })
-      );
+          })
+        );
+        setSubmitIdeaMessage("Successfully submitted the idea \"" + submitRandomIdea + "\" to the " + filterSubmitIdea + " category.");
         break
       case "Object":
         await DataStore.save(
           new ArtIdea({
-          "idea": sendRandomIdea,
+          "idea": submitRandomIdea,
           "filter": FilterType.OBJECTS
-        })
-      );
+          })
+        );
+        setSubmitIdeaMessage("Successfully submitted the idea \"" + submitRandomIdea + "\" to the " + filterSubmitIdea + " category.");
         break
       case "Animal":
         await DataStore.save(
           new ArtIdea({
-          "idea": sendRandomIdea,
+          "idea": submitRandomIdea,
           "filter": FilterType.ANIMALS
-        })
-      );
+          })
+        );
+        setSubmitIdeaMessage("Successfully submitted the idea \"" + submitRandomIdea + "\" to the " + filterSubmitIdea + " category.");
         break
       case "Idea":
         await DataStore.save(
           new ArtIdea({
-          "idea": sendRandomIdea,
+          "idea": submitRandomIdea,
           "filter": FilterType.IDEAS
-        })
-      );
+          })
+        );
+        setSubmitIdeaMessage("Successfully submitted the idea \"" + submitRandomIdea + "\" to the " + filterSubmitIdea + " category.");
         break
       default:
-        
+        setSubmitIdeaMessage("Please choose a category before submitting your idea!");
     }
-  } */
+  }
   
   function useInput(defaultValue) {
     const [value, setValue] = useState(defaultValue);
@@ -134,7 +142,7 @@ function TestPage() {
       <>
                <div className="selectGroup">
             <div className="bodyTextHome text-start mt-[4vmax] mb-[0.5vmax] ml-[5vmax]">
-              Topic Selection
+              Category Selection
             </div>
 
             <div className="flex flex-row">
@@ -157,19 +165,19 @@ function TestPage() {
 
           <div className="selectGroup">
             <div className="bodyTextHome text-start mt-[4vmax] mb-[0.5vmax] ml-[5vmax]">
-              Topic Selection
+              Idea for Submittal
             </div>
 
-            {/* <div>
-              <StyledInput
-                {...inputProps}
-                placeholder="Type in here"
-              />
-              <span>Value: {inputProps.value} </span>
+             <div>
+              <textarea className='form-select ml-[5vmax] w-[40%]' value={submitRandomIdea} onChange={(evt)=>setSubmitRandomIdea(evt.target.value)} />
             </div> 
 
+            <div className="bodyTextHome text-start mt-[4vmax] mb-[0.5vmax] ml-[5vmax]">
+              Category Selection
+            </div>
+
             <div className="flex flex-row">
-              <select className='form-select ml-[5vmax] w-[40%]' value={filterSendIdea} onChange={(evt)=>setFilterSendIdea(evt.target.value)}>
+              <select className='form-select ml-[5vmax] w-[40%]' value={filterSubmitIdea} onChange={(evt)=>setFilterSubmitIdea(evt.target.value)}>
                 <option value={"Choose a category"}>Choose a category</option>
                 <option value={"Person"}>Person</option>
                 <option value={"Place"}>Place</option>
@@ -178,12 +186,12 @@ function TestPage() {
                 <option value={"Idea"}>Idea</option>
               </select>
 
-              <Button onClick={() => sendIdea()} className="generateIdeaButton ml-[1vmax] w-[30%] bg-[#3F3D56] border-transparent">Send an idea</Button>
+              <Button onClick={() => submitIdea()} className="generateIdeaButton ml-[1vmax] w-[30%] bg-[#3F3D56] border-transparent">Submit an idea</Button>
             </div>
 
             <div className="selectedTopic mt-[1vmax] mb-[6vmax] ml-[5vmax] w-[72%]">
-              {randomIdea}
-            </div>*/}
+              {submitIdeaMessage}
+            </div>
           </div> 
 
     </>
