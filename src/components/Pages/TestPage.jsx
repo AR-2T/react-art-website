@@ -3,17 +3,6 @@ import { DataStore } from '@aws-amplify/datastore';
 import { ArtIdea, FilterType } from './models';
 import Button from 'react-bootstrap/Button';
 import './testPage.css';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import img1 from '../../assets/People.png';
-import img2 from '../../assets/Group.png';
-// import styled from 'styled-components';
-
-//sending ideas still doesnt fully work btw
-=======
->>>>>>> 7027dbfd4a0c8aca966216bdbb5e715e1a12835b
->>>>>>> cebe195833675dff547416fd7076fa3dc3dc18e4
 
 function TestPage() {
   const [databaseIdeas, setDatabaseIdeas] = useState([]);
