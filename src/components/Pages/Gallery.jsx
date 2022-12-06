@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import './gallery.css'
 import { DataStore, Predicates } from '@aws-amplify/datastore';
-import { UserPosts } from '../../models';
+import { UserPosts, UserModel } from '../../models';
 import UserPost from '../UserPost'
 
 function Gallery() {
@@ -16,6 +16,12 @@ function Gallery() {
     if(models !== undefined) setUserPosts(models);
     console.log(models);
   }
+
+  async function getUserData(){
+    const models = await DataStore.query(UserModel);
+    console.log(models);
+  }
+
 
   async function queryPosts() {
     if(query[0] !== undefined){ //Only query when search input has text
@@ -40,6 +46,7 @@ function Gallery() {
 
   useEffect(()=> {
     fetchPosts()
+    getUserData()
   }, [])
 
 

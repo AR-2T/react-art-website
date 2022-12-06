@@ -21,7 +21,7 @@ function Home() {
 
     <div className="defaultBackground min-h-screen">
 
-      <section className="sectionBlock px-[2rem] pt-[8rem] pb-[6rem]">
+      <section className="sectionBlock px-[2rem] md:pt-[8rem] pt-[6rem] pb-[6rem]">
         <div className="blockGridSystem homeSec1">
 
           <section className="headerSec1">

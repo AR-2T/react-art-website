@@ -2,19 +2,18 @@ import React, {useState, useEffect} from 'react'
 import BannerArt from '../../assets/profile_pic.svg';
 import { useAuthenticator } from "@aws-amplify/ui-react";
 import { useNavigate } from "react-router-dom";
-import { UserPostTemp, TempPostCollection} from "../../ui-components"
 import UserPost from '../ProfilePost'
-import { DataStore, Predicates } from '@aws-amplify/datastore';
+import { DataStore } from '@aws-amplify/datastore';
 import { UserPosts } from '../../models';
-
 
 function Profile() {
     const [userPosts, setUserPosts] = useState([])
+    const [data, setData] = useState([])
     const { route } = useAuthenticator(context => [context.route]);
     const { user } = useAuthenticator();
 
     async function fetchPosts() {
-      const models = await DataStore.query(UserPosts,(c) => c.author('beginsWith', user.attributes.preferred_username), {
+      const models = await DataStore.query(UserPosts,(c) => c.author('beginsWith', user.username), {
         page: 0,
         limit: 16
       });
@@ -27,11 +26,11 @@ function Profile() {
       fetchPosts()
     }, [])
   
-
     const navigate = useNavigate();
 
     if (route !== 'authenticated' ) {
         navigate("/login");
+        window.location.reload(false);
       }
 
     function createPostLink(){
@@ -48,15 +47,15 @@ function Profile() {
             <section className="cardContainer flex flex-row items-center">
               
               {/* <div className='flex flex-row justify-center items-center align-center p-[1rem]'>   */}
-                <img className='h-[8rem] rounded-full bg-white' src={BannerArt} alt="Avatar" /> 
+                <img className='h-[4rem] md:h-[8rem] rounded-full bg-white' src={BannerArt} alt="Avatar" /> 
                   <div className="pl-[2rem]">
-                      <div className="heading text-[2.5rem] text-[#2d2d2d] text-start">
+                      <div className="heading text-[1.5rem] md:text-[2.5rem] text-[#2d2d2d] text-start">
                         {user.attributes.preferred_username}
                       </div>
-                      <div className="bodyText text-[1.15rem] text-[#2d2d2d] text-start mt-[-0.5rem]">
-                        @USERNAME
+                      <div className="bodyText text-[.75rem] md:text-[1.15rem] text-[#2d2d2d] text-start mt-[-0.25rem]">
+                        @{user.username}
                       </div>
-                      <div className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
+                      <div className="bodyText text-[.75rem] md:text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
                         This is a short biography test.
                       </div>
                       <button onClick={createPostLink} className="button text-[0.75rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full mt-[1rem]">
@@ -96,8 +95,6 @@ function Profile() {
           </section>
 
         </div>
-
-
           : null
         } 
       </>

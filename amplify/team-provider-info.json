@@ -17,6 +17,16 @@
       },
       "storage": {
         "s3reactartwebsiteimagestorage": {}
+      },
+      "function": {
+        "UserData": {},
+        "adduser": {
+          "deploymentBucketName": "amplify-reactartwebsite-staging-231705-deployment",
+          "s3Key": "amplify-builds/adduser-494333616850796f5547-build.zip"
+        }
+      },
+      "api": {
+        "reactartwebsite": {}
       }
     }
   }

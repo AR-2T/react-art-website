@@ -176,7 +176,7 @@ function TopicPage() {
                   <option value={"Scenario"}>Scenario</option>
                 </select>
 
-                <Button onClick={() => getRandomIdea()} className="generateIdeaButton ml-[1rem] w-[35%] bg-[#2d2d2d] border-transparent rounded-full">Generate</Button>
+                <Button onClick={() => getRandomIdea()} className="generateIdeaButton ml-[1rem] w-[35%] bg-[#2d2d2d] border-transparent rounded-full md:text-[1rem] text-[0.6rem]">Generate</Button>
               </div>
 
               <div className="cardContainer mt-[1rem] align-text-top">
@@ -206,7 +206,7 @@ function TopicPage() {
                 <option value={"Concept"}>Concept</option>
               </select>
 
-              <Button onClick={() => submitIdea()} className="generateIdeaButton ml-[1rem] w-[35%] bg-[#2d2d2d] border-transparent rounded-full">Submit</Button>
+              <Button onClick={() => submitIdea()} className="generateIdeaButton ml-[1rem] w-[35%] bg-[#2d2d2d] border-transparent rounded-full md:text-[1rem] text-[0.75rem]">Submit</Button>
             </div>
 
             <div className="submitMessage italic text-[0.85rem] mt-[1rem]">
