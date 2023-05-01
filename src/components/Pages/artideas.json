@@ -1,0 +1,2095 @@
+[
+  [
+    1,
+    {
+      "id": "166b5ffc-7b4b-43a0-926b-904521985a72",
+      "idea": "Panda",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:58:26.284Z",
+      "updatedAt": "2022-10-29T08:58:26.284Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033906285,
+      "_deleted": null
+    }
+  ],
+  [
+    2,
+    {
+      "id": "ed364da1-3e7f-4344-948f-c2804a92b04c",
+      "idea": "Thermometer",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:51:46.950Z",
+      "updatedAt": "2022-10-29T08:51:46.950Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033506952,
+      "_deleted": null
+    }
+  ],
+  [
+    3,
+    {
+      "id": "6e7fa84f-8e3a-4b6e-858b-ddc316051945",
+      "idea": "Teddy Bear",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:52:19.235Z",
+      "updatedAt": "2022-10-29T08:52:19.235Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033539237,
+      "_deleted": null
+    }
+  ],
+  [
+    4,
+    {
+      "id": "26f0bd82-ecd4-4d71-94ba-0ca6126ccdea",
+      "idea": "Tooth Picks",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:52:53.205Z",
+      "updatedAt": "2022-10-29T08:52:53.205Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033573208,
+      "_deleted": null
+    }
+  ],
+  [
+    5,
+    {
+      "id": "576275d3-7a06-4af3-8240-f66931560a3c",
+      "idea": "Laptop",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:50:22.413Z",
+      "updatedAt": "2022-10-29T08:50:22.413Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033422416,
+      "_deleted": null
+    }
+  ],
+  [
+    6,
+    {
+      "id": "8644bf80-02da-465c-bedd-0fd7e003bb01",
+      "idea": "Crocodile",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:56:11.040Z",
+      "updatedAt": "2022-10-29T08:56:11.040Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033771075,
+      "_deleted": null
+    }
+  ],
+  [
+    7,
+    {
+      "id": "4b8bb3b0-4cf6-43e1-bb35-1c518e0cbae2",
+      "idea": "Dog",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:56:29.320Z",
+      "updatedAt": "2022-10-29T08:56:29.320Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033789322,
+      "_deleted": null
+    }
+  ],
+  [
+    8,
+    {
+      "id": "a3c27914-a96c-4fc9-b526-6986433c4e81",
+      "idea": "Tom Holland",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:43:42.993Z",
+      "updatedAt": "2022-10-29T08:43:42.993Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033023024,
+      "_deleted": null
+    }
+  ],
+  [
+    9,
+    {
+      "id": "19063771-274f-4f54-9f1c-234e3358f448",
+      "idea": "George Washington",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-27T23:44:57.846Z",
+      "updatedAt": "2022-10-27T23:44:57.846Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914297877,
+      "_deleted": null
+    }
+  ],
+  [
+    10,
+    {
+      "id": "f86cde21-988c-4457-b9b6-a0851bceee41",
+      "idea": "Cellphone",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:49:36.889Z",
+      "updatedAt": "2022-10-29T08:49:36.889Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033376926,
+      "_deleted": null
+    }
+  ],
+  [
+    11,
+    {
+      "id": "e6a97f24-6c7d-4107-b12a-97947baa23c3",
+      "idea": "Deer",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:56:16.618Z",
+      "updatedAt": "2022-10-29T08:56:16.618Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033776620,
+      "_deleted": null
+    }
+  ],
+  [
+    12,
+    {
+      "id": "5d123817-d057-4939-a6fb-147f8abae7c2",
+      "idea": "Leg Warmers",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:53:05.470Z",
+      "updatedAt": "2022-10-29T08:53:05.470Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033585501,
+      "_deleted": null
+    }
+  ],
+  [
+    13,
+    {
+      "id": "8f27b92f-9378-4d10-911b-cf896b2ebc09",
+      "idea": "Failure",
+      "filter": "IDEAS",
+      "createdAt": "2022-11-02T07:44:34.420Z",
+      "updatedAt": "2022-11-02T07:44:34.420Z",
+      "_version": 1,
+      "_lastChangedAt": 1667375074454,
+      "_deleted": null
+    }
+  ],
+  [
+    14,
+    {
+      "id": "a1eb2239-5f56-46a8-adfc-88ef1207dc63",
+      "idea": "Blake Lively",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:45:06.066Z",
+      "updatedAt": "2022-10-29T08:45:06.066Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033106090,
+      "_deleted": null
+    }
+  ],
+  [
+    15,
+    {
+      "id": "5832397d-4d67-4798-a6e6-057b2019cb05",
+      "idea": "Paul Rudd",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:45:12.176Z",
+      "updatedAt": "2022-10-29T08:45:12.176Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033112212,
+      "_deleted": null
+    }
+  ],
+  [
+    16,
+    {
+      "id": "fc86a273-cecc-4178-9ebe-88ea502c4d97",
+      "idea": "Chair",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:52:24.920Z",
+      "updatedAt": "2022-10-29T08:52:24.920Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033544922,
+      "_deleted": null
+    }
+  ],
+  [
+    17,
+    {
+      "id": "8e37781b-abf3-48ef-86a5-13fb694a710d",
+      "idea": "Barack Obama",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:45:24.034Z",
+      "updatedAt": "2022-10-29T08:45:24.034Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033124067,
+      "_deleted": null
+    }
+  ],
+  [
+    18,
+    {
+      "id": "b4430d61-7ad4-420e-849c-57c52ff8b270",
+      "idea": "Vincent Van Gogh",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T05:34:30.406Z",
+      "updatedAt": "2022-10-29T05:34:30.406Z",
+      "_version": 1,
+      "_lastChangedAt": 1667021670435,
+      "_deleted": null
+    }
+  ],
+  [
+    19,
+    {
+      "id": "1f19c3f4-b4b1-48ce-be7b-e270b1f6ef22",
+      "idea": "Japan",
+      "filter": "PLACES",
+      "createdAt": "2022-10-27T23:45:54.523Z",
+      "updatedAt": "2022-10-27T23:45:54.523Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914354525,
+      "_deleted": null
+    }
+  ],
+  [
+    20,
+    {
+      "id": "3819f3d0-0d8a-48bf-88dc-e26b48e7745e",
+      "idea": "Billie Eilish",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:43:18.891Z",
+      "updatedAt": "2022-10-29T08:43:18.891Z",
+      "_version": 1,
+      "_lastChangedAt": 1667032998924,
+      "_deleted": null
+    }
+  ],
+  [
+    21,
+    {
+      "id": "9d75e157-defc-4ede-b394-7eea47846383",
+      "idea": "Credit Card",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:53:30.504Z",
+      "updatedAt": "2022-10-29T08:53:30.504Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033610506,
+      "_deleted": null
+    }
+  ],
+  [
+    22,
+    {
+      "id": "934e9c74-61f4-4f25-8043-aa65a171ee04",
+      "idea": "Sponge",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:52:00.343Z",
+      "updatedAt": "2022-10-29T08:52:00.343Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033520346,
+      "_deleted": null
+    }
+  ],
+  [
+    23,
+    {
+      "id": "f7a6d205-936c-498e-b726-bbc7ca46800c",
+      "idea": "Sheep",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T09:00:00.413Z",
+      "updatedAt": "2022-10-29T09:00:00.413Z",
+      "_version": 1,
+      "_lastChangedAt": 1667034000415,
+      "_deleted": null
+    }
+  ],
+  [
+    24,
+    {
+      "id": "fdf5514e-faee-45e4-aa6f-af655e13c57b",
+      "idea": "Abraham Lincoln",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-27T23:45:08.802Z",
+      "updatedAt": "2022-10-27T23:45:08.802Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914308805,
+      "_deleted": null
+    }
+  ],
+  [
+    25,
+    {
+      "id": "bb1fd13f-0f8f-4798-a551-60758d1cb946",
+      "idea": "Zendaya",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:44:39.176Z",
+      "updatedAt": "2022-10-29T08:44:39.176Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033079203,
+      "_deleted": null
+    }
+  ],
+  [
+    26,
+    {
+      "id": "9bda525a-26b4-4134-82e9-15db087a66ab",
+      "idea": "Armadillo",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-27T23:46:54.223Z",
+      "updatedAt": "2022-10-27T23:46:54.223Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914414226,
+      "_deleted": null
+    }
+  ],
+  [
+    27,
+    {
+      "id": "13956789-1a72-472b-8849-a92546a43f07",
+      "idea": "London",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:46:17.197Z",
+      "updatedAt": "2022-10-29T08:46:17.197Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033177233,
+      "_deleted": null
+    }
+  ],
+  [
+    28,
+    {
+      "id": "07b38761-c0d8-49b7-a456-7270f7a2e1c8",
+      "idea": "TV",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:51:12.197Z",
+      "updatedAt": "2022-10-29T08:51:12.197Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033472225,
+      "_deleted": null
+    }
+  ],
+  [
+    29,
+    {
+      "id": "313d8037-5c42-4310-9eef-1f1c6dd45d9f",
+      "idea": "Chris Evans",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:44:45.422Z",
+      "updatedAt": "2022-10-29T08:44:45.422Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033085446,
+      "_deleted": null
+    }
+  ],
+  [
+    30,
+    {
+      "id": "91dc621b-79e0-45a1-bf61-030c7643d878",
+      "idea": "Penguin",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:58:44.895Z",
+      "updatedAt": "2022-10-29T08:58:44.895Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033924897,
+      "_deleted": null
+    }
+  ],
+  [
+    31,
+    {
+      "id": "b4ae64a1-6692-4033-bcd1-a72019f42334",
+      "idea": "Helmet",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:49:42.374Z",
+      "updatedAt": "2022-10-29T08:49:42.374Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033382377,
+      "_deleted": null
+    }
+  ],
+  [
+    32,
+    {
+      "id": "4fa74f93-8f1a-493d-839b-68c29b408521",
+      "idea": "Cricket",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:56:05.926Z",
+      "updatedAt": "2022-10-29T08:56:05.926Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033765928,
+      "_deleted": null
+    }
+  ],
+  [
+    33,
+    {
+      "id": "04577d12-4263-42b4-ad42-f3014b907da6",
+      "idea": "Pineapple",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-27T23:46:13.373Z",
+      "updatedAt": "2022-10-27T23:46:13.373Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914373406,
+      "_deleted": null
+    }
+  ],
+  [
+    34,
+    {
+      "id": "b6f7312c-e786-4145-bbd8-8d3d2985c781",
+      "idea": "Switzerland",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:48:35.569Z",
+      "updatedAt": "2022-10-29T08:48:35.569Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033315599,
+      "_deleted": null
+    }
+  ],
+  [
+    35,
+    {
+      "id": "4ba88235-cc21-4baf-a96d-7ab4f2a154a4",
+      "idea": "Lobster",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:57:53.684Z",
+      "updatedAt": "2022-10-29T08:57:53.684Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033873686,
+      "_deleted": null
+    }
+  ],
+  [
+    36,
+    {
+      "id": "0a61979a-5ab2-47f4-b281-7b056ae06327",
+      "idea": "Goose",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:57:17.678Z",
+      "updatedAt": "2022-10-29T08:57:17.678Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033837680,
+      "_deleted": null
+    }
+  ],
+  [
+    37,
+    {
+      "id": "720d42d1-8c07-4859-8e9e-ef96442e49de",
+      "idea": "Pig",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:58:52.836Z",
+      "updatedAt": "2022-10-29T08:58:52.836Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033932838,
+      "_deleted": null
+    }
+  ],
+  [
+    38,
+    {
+      "id": "66c65163-1157-402f-9614-73718fea95db",
+      "idea": "Helen Keller",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T05:34:17.098Z",
+      "updatedAt": "2022-10-29T05:34:17.098Z",
+      "_version": 1,
+      "_lastChangedAt": 1667021657127,
+      "_deleted": null
+    }
+  ],
+  [
+    39,
+    {
+      "id": "de9d944c-148c-4443-8e95-3ae88bf4ee99",
+      "idea": "Coyote",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:55:54.347Z",
+      "updatedAt": "2022-10-29T08:55:54.347Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033754350,
+      "_deleted": null
+    }
+  ],
+  [
+    40,
+    {
+      "id": "a7754a59-f65b-474e-82b6-bba0001f4cb1",
+      "idea": "Crab",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:56:00.235Z",
+      "updatedAt": "2022-10-29T08:56:00.235Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033760238,
+      "_deleted": null
+    }
+  ],
+  [
+    41,
+    {
+      "id": "2608e02e-fd26-4be8-8c82-05240ca565d6",
+      "idea": "Rabbit",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:59:20.347Z",
+      "updatedAt": "2022-10-29T08:59:20.347Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033960349,
+      "_deleted": null
+    }
+  ],
+  [
+    42,
+    {
+      "id": "122f34f4-ef6e-4427-8a20-758d4e91f6a4",
+      "idea": "Scotch Tape",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:51:35.765Z",
+      "updatedAt": "2022-10-29T08:51:35.765Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033495767,
+      "_deleted": null
+    }
+  ],
+  [
+    43,
+    {
+      "id": "ec997b42-f7e5-4e3d-9ab2-00cd85a6239c",
+      "idea": "Dream",
+      "filter": "IDEAS",
+      "createdAt": "2022-10-27T23:48:57.412Z",
+      "updatedAt": "2022-10-27T23:48:57.412Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914537414,
+      "_deleted": null
+    }
+  ],
+  [
+    44,
+    {
+      "id": "4a3c21fb-be84-4e6f-ae29-354a69968c44",
+      "idea": "Parrot",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:58:33.944Z",
+      "updatedAt": "2022-10-29T08:58:33.944Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033913947,
+      "_deleted": null
+    }
+  ],
+  [
+    45,
+    {
+      "id": "21886621-15c9-45b1-a393-65efaa3663f6",
+      "idea": "Germany",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:48:11.563Z",
+      "updatedAt": "2022-10-29T08:48:11.563Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033291565,
+      "_deleted": null
+    }
+  ],
+  [
+    46,
+    {
+      "id": "4f33d7e8-51cc-447b-a0f1-dc45f411c144",
+      "idea": "Norway",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:49:20.699Z",
+      "updatedAt": "2022-10-29T08:49:20.699Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033360735,
+      "_deleted": null
+    }
+  ],
+  [
+    47,
+    {
+      "id": "db9dd86f-b268-407c-9120-e2a259434855",
+      "idea": "The Beatles",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:43:27.137Z",
+      "updatedAt": "2022-10-29T08:43:27.137Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033007171,
+      "_deleted": null
+    }
+  ],
+  [
+    48,
+    {
+      "id": "4d76450a-47e5-429a-8df8-7b569299efae",
+      "idea": "Sharpie",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:53:18.093Z",
+      "updatedAt": "2022-10-29T08:53:18.093Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033598095,
+      "_deleted": null
+    }
+  ],
+  [
+    49,
+    {
+      "id": "355c318f-4783-4ed0-bed5-dc61b2a6575b",
+      "idea": "Hatred",
+      "filter": "IDEAS",
+      "createdAt": "2022-10-27T23:49:10.037Z",
+      "updatedAt": "2022-10-27T23:49:10.037Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914550068,
+      "_deleted": null
+    }
+  ],
+  [
+    50,
+    {
+      "id": "3e0e489a-7cc4-4cdf-9544-5f3b666d6887",
+      "idea": "Love",
+      "filter": "IDEAS",
+      "createdAt": "2022-10-27T23:48:45.556Z",
+      "updatedAt": "2022-10-27T23:48:45.556Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914525558,
+      "_deleted": null
+    }
+  ],
+  [
+    51,
+    {
+      "id": "d3ff8fcb-cff7-4902-8394-7f1bdab47a0b",
+      "idea": "Rome",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:46:29.742Z",
+      "updatedAt": "2022-10-29T08:46:29.742Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033189770,
+      "_deleted": null
+    }
+  ],
+  [
+    52,
+    {
+      "id": "91f9ec97-6438-43d8-a5ad-0a8c2f015611",
+      "idea": "Mexico",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:47:33.328Z",
+      "updatedAt": "2022-10-29T08:47:33.328Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033253330,
+      "_deleted": null
+    }
+  ],
+  [
+    53,
+    {
+      "id": "c863b031-e704-4360-b5ce-bcc88b8a68ca",
+      "idea": "Turkey",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:48:05.621Z",
+      "updatedAt": "2022-10-29T08:48:05.621Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033285623,
+      "_deleted": null
+    }
+  ],
+  [
+    54,
+    {
+      "id": "df6e4948-7f9b-4f05-a31b-45e7cbe9ea38",
+      "idea": "Success",
+      "filter": "IDEAS",
+      "createdAt": "2022-11-02T07:44:18.124Z",
+      "updatedAt": "2022-11-02T07:44:18.124Z",
+      "_version": 1,
+      "_lastChangedAt": 1667375058162,
+      "_deleted": null
+    }
+  ],
+  [
+    55,
+    {
+      "id": "a84aee9c-ff69-4b1c-8ae2-ec8a3ec98cc8",
+      "idea": "Tablet",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:50:29.819Z",
+      "updatedAt": "2022-10-29T08:50:29.819Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033429850,
+      "_deleted": null
+    }
+  ],
+  [
+    56,
+    {
+      "id": "2b62cfe0-e667-412e-9ed9-7ab610383794",
+      "idea": "Pen",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-27T23:46:04.188Z",
+      "updatedAt": "2022-10-27T23:46:04.188Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914364215,
+      "_deleted": null
+    }
+  ],
+  [
+    57,
+    {
+      "id": "b7488a91-f719-4809-b365-3edca1c9eda9",
+      "idea": "Toy",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:52:12.648Z",
+      "updatedAt": "2022-10-29T08:52:12.648Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033532650,
+      "_deleted": null
+    }
+  ],
+  [
+    58,
+    {
+      "id": "d5494b8f-e8f4-4b70-ad57-54758031ce96",
+      "idea": "Quarter",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:49:54.884Z",
+      "updatedAt": "2022-10-29T08:49:54.884Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033394886,
+      "_deleted": null
+    }
+  ],
+  [
+    59,
+    {
+      "id": "4052e1aa-0141-4849-bb6f-d715ba38794a",
+      "idea": "Shovel",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:53:12.129Z",
+      "updatedAt": "2022-10-29T08:53:12.129Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033592130,
+      "_deleted": null
+    }
+  ],
+  [
+    60,
+    {
+      "id": "49ea4d84-9033-46d6-9815-f9997fd75be9",
+      "idea": "Los Angeles",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:45:58.398Z",
+      "updatedAt": "2022-10-29T08:45:58.398Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033158400,
+      "_deleted": null
+    }
+  ],
+  [
+    61,
+    {
+      "id": "e742c61f-2a3c-4352-b603-d751ec4b4094",
+      "idea": "Glasses",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:50:43.089Z",
+      "updatedAt": "2022-10-29T08:50:43.089Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033443092,
+      "_deleted": null
+    }
+  ],
+  [
+    62,
+    {
+      "id": "5e858163-4e76-43a1-87a8-0f21b34226dc",
+      "idea": "Freedom",
+      "filter": "IDEAS",
+      "createdAt": "2022-11-02T07:44:51.386Z",
+      "updatedAt": "2022-11-02T07:44:51.386Z",
+      "_version": 1,
+      "_lastChangedAt": 1667375091415,
+      "_deleted": null
+    }
+  ],
+  [
+    63,
+    {
+      "id": "43a5e646-150a-4deb-99d4-e2cbf8bf9993",
+      "idea": "Greece",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:48:29.695Z",
+      "updatedAt": "2022-10-29T08:48:29.695Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033309697,
+      "_deleted": null
+    }
+  ],
+  [
+    64,
+    {
+      "id": "dda536a9-ea7b-4069-80a5-ead4bdafff35",
+      "idea": "Dinosaur",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:56:23.642Z",
+      "updatedAt": "2022-10-29T08:56:23.642Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033783644,
+      "_deleted": null
+    }
+  ],
+  [
+    65,
+    {
+      "id": "8bd4fc5e-3c5d-43f7-9c37-036dd038077e",
+      "idea": "Dragonfly",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:56:44.052Z",
+      "updatedAt": "2022-10-29T08:56:44.052Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033804054,
+      "_deleted": null
+    }
+  ],
+  [
+    66,
+    {
+      "id": "8317213a-eb7d-444a-8019-856a73a30b08",
+      "idea": "Fork",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:50:48.509Z",
+      "updatedAt": "2022-10-29T08:50:48.509Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033448511,
+      "_deleted": null
+    }
+  ],
+  [
+    67,
+    {
+      "id": "df3d02f7-51dc-4f13-a2b0-9cebd674940a",
+      "idea": "Baboon",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:53:54.635Z",
+      "updatedAt": "2022-10-29T08:54:27.327Z",
+      "_version": 2,
+      "_lastChangedAt": 1667033667351,
+      "_deleted": null
+    }
+  ],
+  [
+    68,
+    {
+      "id": "f1db83b5-1289-4fc5-b0c9-482f24802d37",
+      "idea": "Hare",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:57:23.000Z",
+      "updatedAt": "2022-10-29T08:57:23.000Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033843002,
+      "_deleted": null
+    }
+  ],
+  [
+    69,
+    {
+      "id": "8f33d5ef-4beb-481a-82cc-f33f14742cda",
+      "idea": "Craziness",
+      "filter": "IDEAS",
+      "createdAt": "2022-11-02T07:45:49.615Z",
+      "updatedAt": "2022-11-02T07:46:26.667Z",
+      "_version": 2,
+      "_lastChangedAt": 1667375186725,
+      "_deleted": null
+    }
+  ],
+  [
+    70,
+    {
+      "id": "7d0aa89b-593e-440f-86bc-c406fec744a3",
+      "idea": "Couch",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:52:36.260Z",
+      "updatedAt": "2022-10-29T08:52:36.260Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033556288,
+      "_deleted": null
+    }
+  ],
+  [
+    71,
+    {
+      "id": "20aae6ee-100d-4278-ba29-4d16af726d93",
+      "idea": "Apex",
+      "filter": "IDEAS",
+      "createdAt": "2022-11-02T08:13:33.925Z",
+      "updatedAt": "2022-11-02T08:13:33.925Z",
+      "_version": 1,
+      "_lastChangedAt": 1667376813962,
+      "_deleted": null
+    }
+  ],
+  [
+    72,
+    {
+      "id": "68c3fce2-831e-4635-8d88-20afb1949fd6",
+      "idea": "Whale",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T09:00:11.098Z",
+      "updatedAt": "2022-10-29T09:00:11.098Z",
+      "_version": 1,
+      "_lastChangedAt": 1667034011100,
+      "_deleted": null
+    }
+  ],
+  [
+    73,
+    {
+      "id": "75e05c57-a4a2-40ac-9e3f-dfc49af80a12",
+      "idea": "Shirt",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:50:05.626Z",
+      "updatedAt": "2022-10-29T08:50:05.626Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033405628,
+      "_deleted": null
+    }
+  ],
+  [
+    74,
+    {
+      "id": "63f6183c-992d-4166-adb5-730dfcf64abc",
+      "idea": "Glow Sticks",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:52:41.551Z",
+      "updatedAt": "2022-10-29T08:52:41.551Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033561553,
+      "_deleted": null
+    }
+  ],
+  [
+    75,
+    {
+      "id": "ea52489f-024c-4f43-9da8-9abaf5eaef2a",
+      "idea": "Bald Eagle",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:55:10.633Z",
+      "updatedAt": "2022-10-29T08:55:10.633Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033710635,
+      "_deleted": null
+    }
+  ],
+  [
+    76,
+    {
+      "id": "3d3730c5-47b3-4987-849c-ce8333bdaf9a",
+      "idea": "Porcupine",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:59:13.488Z",
+      "updatedAt": "2022-10-29T08:59:13.488Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033953490,
+      "_deleted": null
+    }
+  ],
+  [
+    77,
+    {
+      "id": "5f7dab5d-1979-4144-92b1-3440fd9df4d1",
+      "idea": "Flag",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:52:47.184Z",
+      "updatedAt": "2022-10-29T08:52:47.184Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033567186,
+      "_deleted": null
+    }
+  ],
+  [
+    78,
+    {
+      "id": "5c30974e-2730-49e7-9c55-24ec08ea044a",
+      "idea": "Grant MacDonald",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-27T23:45:24.979Z",
+      "updatedAt": "2022-10-27T23:45:24.979Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914325012,
+      "_deleted": null
+    }
+  ],
+  [
+    79,
+    {
+      "id": "81957f35-0c66-4df3-9d5e-aab111b22805",
+      "idea": "Detergent",
+      "filter": "OBJECTS",
+      "createdAt": "2022-12-06T09:02:24.798Z",
+      "updatedAt": "2022-12-06T09:02:24.798Z",
+      "_version": 1,
+      "_lastChangedAt": 1670317344800,
+      "_deleted": null
+    }
+  ],
+  [
+    80,
+    {
+      "id": "12c86ea9-fcee-43d1-befb-430d1a672ea9",
+      "idea": "Wombat",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T09:00:17.767Z",
+      "updatedAt": "2022-10-29T09:00:17.767Z",
+      "_version": 1,
+      "_lastChangedAt": 1667034017769,
+      "_deleted": null
+    }
+  ],
+  [
+    81,
+    {
+      "id": "b8ce0c79-5819-462c-8261-8525c8c9977b",
+      "idea": "Ant",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-27T23:46:47.564Z",
+      "updatedAt": "2022-10-27T23:46:47.564Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914407588,
+      "_deleted": null
+    }
+  ],
+  [
+    82,
+    {
+      "id": "6e51f8d7-7c89-485c-bf64-488ccfc45f72",
+      "idea": "Rubber Band",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:52:59.946Z",
+      "updatedAt": "2022-10-29T08:52:59.946Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033579948,
+      "_deleted": null
+    }
+  ],
+  [
+    83,
+    {
+      "id": "559ee617-41e1-43b7-a222-587125f620b3",
+      "idea": "Singapore",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:48:22.664Z",
+      "updatedAt": "2022-10-29T08:48:22.664Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033302666,
+      "_deleted": null
+    }
+  ],
+  [
+    84,
+    {
+      "id": "32d45942-551a-4dbe-b56e-192e9b808255",
+      "idea": "Dress",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:50:11.706Z",
+      "updatedAt": "2022-10-29T08:50:11.706Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033411708,
+      "_deleted": null
+    }
+  ],
+  [
+    85,
+    {
+      "id": "a9d46f76-0235-43ed-9ea6-a29125a0aca8",
+      "idea": "Life",
+      "filter": "IDEAS",
+      "createdAt": "2022-11-02T07:45:12.317Z",
+      "updatedAt": "2022-11-02T07:45:12.317Z",
+      "_version": 1,
+      "_lastChangedAt": 1667375112353,
+      "_deleted": null
+    }
+  ],
+  [
+    86,
+    {
+      "id": "90990b11-355a-46bf-b408-9d1ff15bb4c9",
+      "idea": "Grand Canyon",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:47:01.882Z",
+      "updatedAt": "2022-10-29T08:47:01.882Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033221884,
+      "_deleted": null
+    }
+  ],
+  [
+    87,
+    {
+      "id": "78de2a88-9040-481d-9640-cb166f575592",
+      "idea": "Owl",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:58:12.278Z",
+      "updatedAt": "2022-10-29T08:58:12.278Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033892280,
+      "_deleted": null
+    }
+  ],
+  [
+    88,
+    {
+      "id": "d0101392-c8b3-43f3-92f5-4ab8cbc6bc4a",
+      "idea": "Rooster",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:59:37.581Z",
+      "updatedAt": "2022-10-29T08:59:37.581Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033977583,
+      "_deleted": null
+    }
+  ],
+  [
+    89,
+    {
+      "id": "cc663f66-e92f-4573-b86b-684fe677b0de",
+      "idea": "Ariana Grande",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T05:34:46.011Z",
+      "updatedAt": "2022-10-29T05:34:46.011Z",
+      "_version": 1,
+      "_lastChangedAt": 1667021686014,
+      "_deleted": null
+    }
+  ],
+  [
+    90,
+    {
+      "id": "8ee88168-e6af-4c5d-9d4b-a2ff2d2e466c",
+      "idea": "Rattlesnake",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:59:32.609Z",
+      "updatedAt": "2022-10-29T08:59:32.609Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033972611,
+      "_deleted": null
+    }
+  ],
+  [
+    91,
+    {
+      "id": "8f8c986a-4650-4567-af4e-a3997e6440cf",
+      "idea": "Perfection",
+      "filter": "IDEAS",
+      "createdAt": "2022-11-02T07:44:34.675Z",
+      "updatedAt": "2022-11-02T07:52:42.947Z",
+      "_version": 2,
+      "_lastChangedAt": 1667375563003,
+      "_deleted": null
+    }
+  ],
+  [
+    92,
+    {
+      "id": "cbb05cb1-d27f-4bfd-ac2e-ab60655b3b1d",
+      "idea": "India",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:49:00.192Z",
+      "updatedAt": "2022-10-29T08:49:00.192Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033340218,
+      "_deleted": null
+    }
+  ],
+  [
+    93,
+    {
+      "id": "c51f8882-1f65-4bab-928d-bc141e3b93b8",
+      "idea": "Maui",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:46:22.704Z",
+      "updatedAt": "2022-10-29T08:46:22.704Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033182706,
+      "_deleted": null
+    }
+  ],
+  [
+    94,
+    {
+      "id": "c0e69be9-187b-4276-bea5-599e5f2b505d",
+      "idea": "CD",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:50:17.086Z",
+      "updatedAt": "2022-10-29T08:50:17.086Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033417123,
+      "_deleted": null
+    }
+  ],
+  [
+    95,
+    {
+      "id": "3b4fa839-f9e3-406c-9ae0-ceb1ede6d3c8",
+      "idea": "Boredom",
+      "filter": "IDEAS",
+      "createdAt": "2022-11-02T08:12:57.314Z",
+      "updatedAt": "2022-11-02T08:12:57.314Z",
+      "_version": 1,
+      "_lastChangedAt": 1667376777347,
+      "_deleted": null
+    }
+  ],
+  [
+    96,
+    {
+      "id": "1724b517-f0e6-4e88-94a6-bddb39b8038c",
+      "idea": "Cat",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:55:38.408Z",
+      "updatedAt": "2022-10-29T08:55:38.408Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033738410,
+      "_deleted": null
+    }
+  ],
+  [
+    97,
+    {
+      "id": "45d6bf1b-f4f1-4645-89a6-c765b6ab798e",
+      "idea": "Sweater",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:51:06.686Z",
+      "updatedAt": "2022-10-29T08:51:06.686Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033466711,
+      "_deleted": null
+    }
+  ],
+  [
+    98,
+    {
+      "id": "96361576-814e-4928-9005-0f7c8767e6c4",
+      "idea": "The Weeknd",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:43:32.822Z",
+      "updatedAt": "2022-10-29T08:43:32.822Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033012858,
+      "_deleted": null
+    }
+  ],
+  [
+    99,
+    {
+      "id": "89b741dc-770d-4a28-9205-890c859d5d7e",
+      "idea": "Seal",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:59:53.036Z",
+      "updatedAt": "2022-10-29T08:59:53.036Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033993038,
+      "_deleted": null
+    }
+  ],
+  [
+    100,
+    {
+      "id": "d87c0e75-0ece-4767-b741-9da1561031f4",
+      "idea": "Rio de Janeiro",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:47:25.553Z",
+      "updatedAt": "2022-10-29T08:47:25.553Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033245555,
+      "_deleted": null
+    }
+  ],
+  [
+    101,
+    {
+      "id": "3b6643e7-4518-4413-9acc-7443543d4fed",
+      "idea": "Penny",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:50:00.300Z",
+      "updatedAt": "2022-10-29T08:50:00.300Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033400333,
+      "_deleted": null
+    }
+  ],
+  [
+    102,
+    {
+      "id": "e0dccab6-3f97-46e9-b648-cd60bc9c6d78",
+      "idea": "Pencil",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:50:36.756Z",
+      "updatedAt": "2022-10-29T08:50:36.756Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033436758,
+      "_deleted": null
+    }
+  ],
+  [
+    103,
+    {
+      "id": "a5dd48f0-2756-4af6-9753-a318a68c1db4",
+      "idea": "Blanket",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:51:54.657Z",
+      "updatedAt": "2022-10-29T08:51:54.657Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033514659,
+      "_deleted": null
+    }
+  ],
+  [
+    104,
+    {
+      "id": "e0604c60-e331-4cb1-8bd0-a846a2afc083",
+      "idea": "Badger",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:54:44.113Z",
+      "updatedAt": "2022-10-29T08:54:44.113Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033684116,
+      "_deleted": null
+    }
+  ],
+  [
+    105,
+    {
+      "id": "8099df18-74f8-4317-92df-21e2eab99ebf",
+      "idea": "Husky",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:57:40.880Z",
+      "updatedAt": "2022-10-29T08:57:40.880Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033860882,
+      "_deleted": null
+    }
+  ],
+  [
+    106,
+    {
+      "id": "2f8a95b9-3cf3-44f4-84a7-dcdf40b7bd10",
+      "idea": "Apple",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-27T23:46:27.281Z",
+      "updatedAt": "2022-10-27T23:46:27.281Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914387319,
+      "_deleted": null
+    }
+  ],
+  [
+    107,
+    {
+      "id": "6652add5-c3f9-43d1-ab00-76d05cd77461",
+      "idea": "Thailand",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:48:00.634Z",
+      "updatedAt": "2022-10-29T08:48:00.634Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033280636,
+      "_deleted": null
+    }
+  ],
+  [
+    108,
+    {
+      "id": "a1df928f-cc5c-4409-bfa7-847467903f13",
+      "idea": "Elephant",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:56:50.290Z",
+      "updatedAt": "2022-10-29T08:56:50.290Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033810293,
+      "_deleted": null
+    }
+  ],
+  [
+    109,
+    {
+      "id": "91cb21da-1c46-46be-9fb7-0b5c7643a74d",
+      "idea": "Hong Kong",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:49:12.528Z",
+      "updatedAt": "2022-10-29T08:49:12.528Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033352563,
+      "_deleted": null
+    }
+  ],
+  [
+    110,
+    {
+      "id": "3066273f-e4b6-429d-aaf8-30299f162e46",
+      "idea": "Toothbrush",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:50:59.571Z",
+      "updatedAt": "2022-10-29T08:50:59.571Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033459573,
+      "_deleted": null
+    }
+  ],
+  [
+    111,
+    {
+      "id": "fd7fbddb-c94e-43f2-9926-6dd9483113f4",
+      "idea": "Fox",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:57:08.851Z",
+      "updatedAt": "2022-10-29T08:57:08.851Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033828853,
+      "_deleted": null
+    }
+  ],
+  [
+    112,
+    {
+      "id": "dea5564a-4f9e-4ed2-9e6a-0aa76ecddc8e",
+      "idea": "Fish",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:56:58.435Z",
+      "updatedAt": "2022-10-29T08:56:58.435Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033818437,
+      "_deleted": null
+    }
+  ],
+  [
+    113,
+    {
+      "id": "c38aa16f-f15e-4522-970b-f084d6df6614",
+      "idea": "Pain",
+      "filter": "IDEAS",
+      "createdAt": "2022-11-02T07:43:24.241Z",
+      "updatedAt": "2022-11-02T07:43:24.241Z",
+      "_version": 1,
+      "_lastChangedAt": 1667375004269,
+      "_deleted": null
+    }
+  ],
+  [
+    114,
+    {
+      "id": "313e3f66-93c4-4819-8143-cf5bec3226b4",
+      "idea": "Tiger",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T09:00:05.703Z",
+      "updatedAt": "2022-10-29T09:00:05.703Z",
+      "_version": 1,
+      "_lastChangedAt": 1667034005705,
+      "_deleted": null
+    }
+  ],
+  [
+    115,
+    {
+      "id": "220a8a59-7668-4557-9ede-5252428e0440",
+      "idea": "Dubai",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:46:11.240Z",
+      "updatedAt": "2022-10-29T08:46:11.240Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033171276,
+      "_deleted": null
+    }
+  ],
+  [
+    116,
+    {
+      "id": "e8f83fc2-6c72-4b48-80f0-53423638457a",
+      "idea": "Machu Picchu",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:47:49.491Z",
+      "updatedAt": "2022-10-29T08:47:49.491Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033269517,
+      "_deleted": null
+    }
+  ],
+  [
+    117,
+    {
+      "id": "a320cc2a-20a3-4d37-b929-aacdc90c9e0e",
+      "idea": "Felix Kjellberg",
+      "filter": "PEOPLE",
+      "createdAt": "2022-12-06T00:46:38.711Z",
+      "updatedAt": "2022-12-06T00:46:38.711Z",
+      "_version": 1,
+      "_lastChangedAt": 1670287598746,
+      "_deleted": null
+    }
+  ],
+  [
+    118,
+    {
+      "id": "0252aff7-fa52-4d6e-8c1f-c0bbd304c314",
+      "idea": "Hamster",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:57:32.750Z",
+      "updatedAt": "2022-10-29T08:57:32.750Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033852753,
+      "_deleted": null
+    }
+  ],
+  [
+    119,
+    {
+      "id": "b25fac6b-d0b2-42d3-8bd8-6fdebe5f9977",
+      "idea": "Octopus",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:58:19.211Z",
+      "updatedAt": "2022-10-29T08:58:19.211Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033899213,
+      "_deleted": null
+    }
+  ],
+  [
+    120,
+    {
+      "id": "e878c419-4a1c-4019-9e4c-d20bec09fc92",
+      "idea": "Ryan Reynolds",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:44:57.190Z",
+      "updatedAt": "2022-10-29T08:44:57.190Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033097212,
+      "_deleted": null
+    }
+  ],
+  [
+    121,
+    {
+      "id": "cd0b36fb-39cc-4c46-99fc-81f2db3b8b9c",
+      "idea": "Australia",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:47:55.326Z",
+      "updatedAt": "2022-10-29T08:47:55.326Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033275328,
+      "_deleted": null
+    }
+  ],
+  [
+    122,
+    {
+      "id": "81a9bb99-f4b2-4c01-8ffc-a651cff81eb8",
+      "idea": "Rat",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:59:26.889Z",
+      "updatedAt": "2022-10-29T08:59:26.889Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033966891,
+      "_deleted": null
+    }
+  ],
+  [
+    123,
+    {
+      "id": "3551b864-dc37-45d9-ab92-76012ae2e8ca",
+      "idea": "Grapefruit Juice",
+      "filter": "OBJECTS",
+      "createdAt": "2022-12-06T00:28:34.286Z",
+      "updatedAt": "2022-12-06T00:28:34.286Z",
+      "_version": 1,
+      "_lastChangedAt": 1670286514316,
+      "_deleted": null
+    }
+  ],
+  [
+    124,
+    {
+      "id": "3d498b42-917a-4592-a827-bf63cb9c8b19",
+      "idea": "Iguana",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:57:47.709Z",
+      "updatedAt": "2022-10-29T08:57:47.709Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033867711,
+      "_deleted": null
+    }
+  ],
+  [
+    125,
+    {
+      "id": "dc1d1ac6-10ee-4393-a01a-eee43b2bb4b2",
+      "idea": "Purse",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:53:23.582Z",
+      "updatedAt": "2022-10-29T08:53:23.582Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033603737,
+      "_deleted": null
+    }
+  ],
+  [
+    126,
+    {
+      "id": "8539bee0-a27f-4408-892b-5e07b0441d51",
+      "idea": "Happiness",
+      "filter": "IDEAS",
+      "createdAt": "2022-11-02T07:44:34.903Z",
+      "updatedAt": "2022-11-02T07:52:16.596Z",
+      "_version": 2,
+      "_lastChangedAt": 1667375536648,
+      "_deleted": null
+    }
+  ],
+  [
+    127,
+    {
+      "id": "eb565e0c-b834-42f1-9c34-0e021bac011f",
+      "idea": "Marilyn Manson",
+      "filter": "PEOPLE",
+      "createdAt": "2022-12-06T06:56:10.695Z",
+      "updatedAt": "2022-12-06T06:56:10.695Z",
+      "_version": 1,
+      "_lastChangedAt": 1670309770722,
+      "_deleted": null
+    }
+  ],
+  [
+    128,
+    {
+      "id": "08d0e0c9-0d83-4b88-95d3-a5dec75652aa",
+      "idea": "Jennifer Lawrence",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:44:50.944Z",
+      "updatedAt": "2022-10-29T08:44:50.944Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033090976,
+      "_deleted": null
+    }
+  ],
+  [
+    129,
+    {
+      "id": "3db5b585-59ed-4ac5-8686-2db3b02e8c88",
+      "idea": "Pigeon",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:58:59.377Z",
+      "updatedAt": "2022-10-29T08:58:59.377Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033939379,
+      "_deleted": null
+    }
+  ],
+  [
+    130,
+    {
+      "id": "ea19396d-ed27-4e2d-986b-76e4775c9864",
+      "idea": "Bee",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:55:25.101Z",
+      "updatedAt": "2022-10-29T08:55:25.101Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033725135,
+      "_deleted": null
+    }
+  ],
+  [
+    131,
+    {
+      "id": "4b46ed2f-b0de-48c1-a21c-884e5fe9958f",
+      "idea": "Monkey",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:57:59.248Z",
+      "updatedAt": "2022-10-29T08:57:59.248Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033879250,
+      "_deleted": null
+    }
+  ],
+  [
+    132,
+    {
+      "id": "8396159f-9443-49d5-ad15-50cbd15e528c",
+      "idea": "Paris",
+      "filter": "PLACES",
+      "createdAt": "2022-10-27T23:45:39.588Z",
+      "updatedAt": "2022-10-27T23:45:39.588Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914339629,
+      "_deleted": null
+    }
+  ],
+  [
+    133,
+    {
+      "id": "89dc8cfd-bac2-42b7-a733-df9cffb28368",
+      "idea": "Diana, Princess of Wales",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:45:31.077Z",
+      "updatedAt": "2022-10-29T08:45:31.077Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033131079,
+      "_deleted": null
+    }
+  ],
+  [
+    134,
+    {
+      "id": "180f0b76-368f-459b-8703-3177db567c54",
+      "idea": "Cardboard Box",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:51:25.262Z",
+      "updatedAt": "2022-10-29T08:51:25.262Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033485264,
+      "_deleted": null
+    }
+  ],
+  [
+    135,
+    {
+      "id": "28a05aca-ad67-4c3d-b241-fe1e7b1fb910",
+      "idea": "Budapest",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:48:54.380Z",
+      "updatedAt": "2022-10-29T08:48:54.380Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033334382,
+      "_deleted": null
+    }
+  ],
+  [
+    136,
+    {
+      "id": "99244caa-b482-43ed-89a2-58672c3217b6",
+      "idea": "Mule",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:58:06.821Z",
+      "updatedAt": "2022-10-29T08:58:06.821Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033886823,
+      "_deleted": null
+    }
+  ],
+  [
+    137,
+    {
+      "id": "40e724da-5c15-4309-b2bf-f11dc9b965c7",
+      "idea": "Doll",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:52:05.345Z",
+      "updatedAt": "2022-10-29T08:52:05.345Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033525371,
+      "_deleted": null
+    }
+  ],
+  [
+    138,
+    {
+      "id": "388702e3-d246-4257-b496-4428a6b0a081",
+      "idea": "China",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:49:05.321Z",
+      "updatedAt": "2022-10-29T08:49:05.321Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033345323,
+      "_deleted": null
+    }
+  ],
+  [
+    139,
+    {
+      "id": "f1c01d96-9665-4765-b27b-3185979d94b4",
+      "idea": "New York",
+      "filter": "PLACES",
+      "createdAt": "2022-10-27T23:45:46.967Z",
+      "updatedAt": "2022-10-27T23:45:46.967Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914346969,
+      "_deleted": null
+    }
+  ],
+  [
+    140,
+    {
+      "id": "cd98a466-88e2-4f51-a35e-b103efe497b8",
+      "idea": "Tokyo",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:46:56.697Z",
+      "updatedAt": "2022-10-29T08:46:56.697Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033216722,
+      "_deleted": null
+    }
+  ],
+  [
+    141,
+    {
+      "id": "7c4a1c4a-6b5f-4f2f-ba9a-0ebacdd21212",
+      "idea": "Cow",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:55:45.884Z",
+      "updatedAt": "2022-10-29T08:55:45.884Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033745886,
+      "_deleted": null
+    }
+  ],
+  [
+    142,
+    {
+      "id": "8395007e-c6a4-43d6-a8b5-56c27bdfa129",
+      "idea": "Turls & Caicos",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:46:50.428Z",
+      "updatedAt": "2022-10-29T08:46:50.428Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033210430,
+      "_deleted": null
+    }
+  ],
+  [
+    143,
+    {
+      "id": "cf3d365b-11f5-424f-ad92-1f3cb3afdacf",
+      "idea": "Miami",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:46:04.250Z",
+      "updatedAt": "2022-10-29T08:46:04.250Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033164282,
+      "_deleted": null
+    }
+  ],
+  [
+    144,
+    {
+      "id": "a4c76016-effe-4648-be3e-e4f2e10c7d3d",
+      "idea": "Spoon",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:50:54.175Z",
+      "updatedAt": "2022-10-29T08:50:54.175Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033454177,
+      "_deleted": null
+    }
+  ],
+  [
+    145,
+    {
+      "id": "f83491c3-4a04-401b-b91a-4e61e4f73f03",
+      "idea": "Taylor Swift",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T05:34:38.396Z",
+      "updatedAt": "2022-10-29T05:34:38.396Z",
+      "_version": 1,
+      "_lastChangedAt": 1667021678399,
+      "_deleted": null
+    }
+  ],
+  [
+    146,
+    {
+      "id": "cf984a3f-31d0-46a1-af3f-0d1f7320501b",
+      "idea": "Alligator",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-27T23:46:37.289Z",
+      "updatedAt": "2022-10-27T23:46:37.289Z",
+      "_version": 1,
+      "_lastChangedAt": 1666914397325,
+      "_deleted": null
+    }
+  ],
+  [
+    147,
+    {
+      "id": "ab4e0de0-bbbe-48a4-b687-89fde836bdce",
+      "idea": "Tissue Box",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:51:40.958Z",
+      "updatedAt": "2022-10-29T08:51:40.958Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033500960,
+      "_deleted": null
+    }
+  ],
+  [
+    148,
+    {
+      "id": "a532fe7a-a622-4769-8ae4-92289706506b",
+      "idea": "Pelican",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:58:38.895Z",
+      "updatedAt": "2022-10-29T08:58:38.895Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033918897,
+      "_deleted": null
+    }
+  ],
+  [
+    149,
+    {
+      "id": "fc74c81f-03e7-4955-ad7b-a4bcff565afe",
+      "idea": "Disappointment",
+      "filter": "IDEAS",
+      "createdAt": "2022-11-02T08:12:42.506Z",
+      "updatedAt": "2022-11-02T08:12:42.506Z",
+      "_version": 1,
+      "_lastChangedAt": 1667376762508,
+      "_deleted": null
+    }
+  ],
+  [
+    150,
+    {
+      "id": "ca0b7ba8-03cf-470b-9a53-e8c8a14b221b",
+      "idea": "Flamingo",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:57:03.537Z",
+      "updatedAt": "2022-10-29T08:57:03.537Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033823539,
+      "_deleted": null
+    }
+  ],
+  [
+    151,
+    {
+      "id": "bbae7f54-0b87-42fb-abdf-2ea47b1b4d76",
+      "idea": "Tire Swing",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:51:19.091Z",
+      "updatedAt": "2022-10-29T08:51:19.091Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033479093,
+      "_deleted": null
+    }
+  ],
+  [
+    152,
+    {
+      "id": "03f2e77f-66c6-4008-8fd1-6c3a5400b00a",
+      "idea": "Dolphin",
+      "filter": "ANIMALS",
+      "createdAt": "2022-10-29T08:56:38.109Z",
+      "updatedAt": "2022-10-29T08:56:38.109Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033798112,
+      "_deleted": null
+    }
+  ],
+  [
+    153,
+    {
+      "id": "cc8dbea2-5b90-4c61-97f0-a638b5ff27c6",
+      "idea": "Growth",
+      "filter": "IDEAS",
+      "createdAt": "2022-11-02T08:13:06.318Z",
+      "updatedAt": "2022-11-02T08:13:06.318Z",
+      "_version": 1,
+      "_lastChangedAt": 1667376786352,
+      "_deleted": null
+    }
+  ],
+  [
+    154,
+    {
+      "id": "e02e147e-ac9b-47bb-9fc1-b23b1635bcd0",
+      "idea": "Dollar",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:49:48.547Z",
+      "updatedAt": "2022-10-29T08:49:48.547Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033388568,
+      "_deleted": null
+    }
+  ],
+  [
+    155,
+    {
+      "id": "8468bc62-8f17-4f36-bf89-9129187af24b",
+      "idea": "Niagara Falls",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:48:48.121Z",
+      "updatedAt": "2022-10-29T08:48:48.121Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033328123,
+      "_deleted": null
+    }
+  ],
+  [
+    156,
+    {
+      "id": "5ed2594a-79fb-4894-85b4-1a42e011db81",
+      "idea": "Albert Einstein",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T05:34:06.957Z",
+      "updatedAt": "2022-10-29T05:34:06.957Z",
+      "_version": 1,
+      "_lastChangedAt": 1667021646990,
+      "_deleted": null
+    }
+  ],
+  [
+    157,
+    {
+      "id": "9e1b00dc-33b3-438c-a68f-923c0c9e9a70",
+      "idea": "Taj Mahal",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:48:17.485Z",
+      "updatedAt": "2022-10-29T08:48:17.485Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033297516,
+      "_deleted": null
+    }
+  ],
+  [
+    158,
+    {
+      "id": "70c92baa-64cb-4b9f-840b-d7e29987885c",
+      "idea": "Spain",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:48:41.393Z",
+      "updatedAt": "2022-10-29T08:48:41.393Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033321417,
+      "_deleted": null
+    }
+  ],
+  [
+    159,
+    {
+      "id": "2910af16-7653-4540-b8b7-b5607c70d48a",
+      "idea": "Yosemite",
+      "filter": "PLACES",
+      "createdAt": "2022-10-29T08:47:08.274Z",
+      "updatedAt": "2022-10-29T08:47:08.274Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033228276,
+      "_deleted": null
+    }
+  ],
+  [
+    160,
+    {
+      "id": "e31f9144-8eaa-48fa-b9e1-5812bafb1e05",
+      "idea": "USB Drive",
+      "filter": "OBJECTS",
+      "createdAt": "2022-10-29T08:51:30.567Z",
+      "updatedAt": "2022-10-29T08:51:30.567Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033490570,
+      "_deleted": null
+    }
+  ],
+  [
+    161,
+    {
+      "id": "d132e910-0c31-429c-943d-774370035e64",
+      "idea": "Dwayne Johnson",
+      "filter": "PEOPLE",
+      "createdAt": "2022-10-29T08:45:18.281Z",
+      "updatedAt": "2022-10-29T08:45:18.281Z",
+      "_version": 1,
+      "_lastChangedAt": 1667033118309,
+      "_deleted": null
+    }
+  ]
+]

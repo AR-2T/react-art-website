@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import './gallery.css'
-import { DataStore, Predicates } from '@aws-amplify/datastore';
-import { UserPosts, UserModel } from '../../models';
+import { API } from "aws-amplify";
+import { listUserPosts } from "../../graphql/queries";
 import UserPost from '../UserPost'
 
 function Gallery() {
@@ -9,44 +9,44 @@ function Gallery() {
   const [query, setQuery] = useState("")
 
   async function fetchPosts() {
-    const models = await DataStore.query(UserPosts, Predicates.ALL, {
-      page: 0,
-      limit: 16
+    // List all items
+    const models = await API.graphql({
+      query: listUserPosts
     });
-    if(models !== undefined) setUserPosts(models);
-    console.log(models);
-  }
-
-  async function getUserData(){
-    const models = await DataStore.query(UserModel);
-    console.log(models);
-  }
-
-
-  async function queryPosts() {
-    if(query[0] !== undefined){ //Only query when search input has text
-      const query2 = query[0].toUpperCase() + query.slice(1); // Case insensitive query
-
-      const models = await DataStore.query(UserPosts,(c) =>
-      c.or((c) => c.author('beginsWith', query).title('beginsWith', query).description('beginsWith', query).author('beginsWith', query2).title('beginsWith', query2).description('beginsWith', query2))
-      , {
-        page: 0,
-        limit: 16
-      });
-
-      if(models !== undefined){
-        setUserPosts(models);
-      } 
-      console.log(models);
+    if(models !== undefined){
+      setUserPosts(models.data.listUserPosts.items);
+      console.log(models.data.listUserPosts.items);
     }
     else{
-      fetchPosts();
+      console.log("error");
     }
+
+  }
+
+  async function queryPosts() {
+    // if(query[0] !== undefined){ //Only query when search input has text
+    //   const query2 = query[0].toUpperCase() + query.slice(1); // Case insensitive query
+
+    //   const models = await DataStore.query(UserPosts,(c) =>
+    //   c.or((c) => c.author('beginsWith', query).title('beginsWith', query).description('beginsWith', query).author('beginsWith', query2).title('beginsWith', query2).description('beginsWith', query2))
+    //   , {
+    //     page: 0,
+    //     limit: 16
+    //   });
+
+    //   if(models !== undefined){
+    //     setUserPosts(models);
+    //   } 
+    //   console.log(models);
+    // }
+    // else{
+    //   fetchPosts();
+    // }
   }
 
   useEffect(()=> {
     fetchPosts()
-    getUserData()
+    // getUserData()
   }, [])
 
 

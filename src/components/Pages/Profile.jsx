@@ -1,37 +1,46 @@
 import React, {useState, useEffect} from 'react'
 import BannerArt from '../../assets/profile_pic.svg';
 import { useAuthenticator } from "@aws-amplify/ui-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import UserPost from '../ProfilePost'
-import { DataStore } from '@aws-amplify/datastore';
-import { UserPosts } from '../../models';
+import { API } from "aws-amplify";
+import { listUserPosts } from "../../graphql/queries";
 
 function Profile() {
     const [userPosts, setUserPosts] = useState([])
-    const [data, setData] = useState([])
     const { route } = useAuthenticator(context => [context.route]);
     const { user } = useAuthenticator();
+    const navigate = useNavigate();
 
     async function fetchPosts() {
-      const models = await DataStore.query(UserPosts,(c) => c.author('beginsWith', user.username), {
-        page: 0,
-        limit: 16
+      const variables = {
+        filter: {
+          author: {
+            eq: user.username
+          }
+        }
+      };
+
+      // Get a specific item
+      const models = await API.graphql({
+        query: listUserPosts,
+        variables: variables
       });
 
-      if(models !== undefined) setUserPosts(models);
-      console.log(models);
+      if(models !== undefined) setUserPosts(models.data.listUserPosts.items);
+      console.log(models.data.listUserPosts.items);
     }
 
     useEffect(()=> {
       fetchPosts()
     }, [])
-  
-    const navigate = useNavigate();
 
-    if (route !== 'authenticated' ) {
+    useEffect(()=> {
+      if (route !== 'authenticated' ) {
         navigate("/login");
-        window.location.reload(false);
       }
+    }, [useLocation])
+  
 
     function createPostLink(){
       navigate("/create-post");

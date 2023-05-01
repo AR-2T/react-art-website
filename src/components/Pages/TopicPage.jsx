@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import { DataStore } from '@aws-amplify/datastore';
 import { ArtIdea, FilterType } from './models';
+import { DataStore } from 'aws-amplify';
+import { API } from "aws-amplify";
+import { listArtIdeas, getArtIdea } from "../../graphql/queries";
+
 import Button from 'react-bootstrap/Button';
 import './topicPage.css';
 
@@ -13,9 +16,13 @@ function TopicPage() {
   const [submitIdeaMessage, setSubmitIdeaMessage] = useState(null);
 
   async function fetchIdeas() {
-    const models = await DataStore.query(ArtIdea);
-    if (models !== undefined) setDatabaseIdeas(models);
-    console.log(models);
+
+    const models = await API.graphql({
+      query: listArtIdeas
+    });
+
+    if (models !== undefined) setDatabaseIdeas(models.data.listArtIdeas.items);
+    console.log(models.data.listArtIdeas.items);
   }
 
   useEffect(()=> {

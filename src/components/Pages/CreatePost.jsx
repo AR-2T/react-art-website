@@ -1,8 +1,7 @@
 import { Flex } from '@aws-amplify/ui-react'
 import React, {useState} from 'react'
 import { CreatePosts} from "../../ui-components"
-import { DataStore } from '@aws-amplify/datastore';
-import { UserPosts } from "../../models";
+
 import { Storage, Auth } from "aws-amplify";
 import { toast } from 'react-toastify';
 import config from '../../aws-exports'
@@ -11,6 +10,9 @@ import { useRef } from 'react';
 import './createPost.css';
 import { useNavigate } from "react-router-dom";
 import { useAuthenticator } from "@aws-amplify/ui-react";
+
+import { API } from "aws-amplify";
+import { createUserPosts } from '../../graphql/mutations';
 
 function CreatePost() {
   const authorField = "PP";
@@ -33,7 +35,6 @@ function CreatePost() {
 
   if (route !== 'authenticated' ) {
     navigate("/login");
-    window.location.reload(false);
   }
   
   async function uploadImage(e){
@@ -83,17 +84,22 @@ function CreatePost() {
   async function saveData(url){
     let user = await Auth.currentAuthenticatedUser(); 
     try {
-      await DataStore.save(
-        new UserPosts({
-          author: user.username,
-          title: titleField.current.value,
-          description: descField.current.value,
-          image: url
-        })
-      );
+      const newUserPosts = await API.graphql({
+        query: createUserPosts,
+        variables: {
+            input: {
+            "author": user.username,
+            "title": titleField.current.value,
+            "description": descField.current.value,
+            "image": url
+            }
+        }
+      });
+
       console.log("Post saved successfully!");
       console.log("Image URL: " + url);
       navigate("/profile");
+
     } catch (error) {
       console.log("Error saving post", error);
     }
