@@ -49,7 +49,7 @@ function Profile() {
     return (
         <>
         {route === 'authenticated' ? 
-        <div className="defaultBackground min-h-screen">
+        <div className="min-h-screen container mx-auto">
 
           <div className='sectionBlock px-[2rem] pt-[4rem] pb-[2rem]'>
 

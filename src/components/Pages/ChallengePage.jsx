@@ -5,7 +5,7 @@ function ChallengePage() {
   return (
     <>
 
-    <div className="defaultBackground min-h-screen">
+    <div className="min-h-screen container mx-auto">
 
       {/* <section className="sectionBlock px-[2vmax] pt-[4vmax] pb-[2vmax]">  
         <section className="container bg-[#FFFFFF] rounded-[0.75vmax] p-[2vmax]">

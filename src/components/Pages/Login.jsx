@@ -87,7 +87,7 @@ export default function Login() {
   }
 
   return (
-    <div className="">
+    <div className="container mx-auto">
     <Grid templateColumns={{ base: "1fr 0", medium: "1fr 1fr" }}>
       <Flex className="loginBackground"
         backgroundColor={tokens.colors.background.tertiary}

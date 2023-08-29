@@ -9,7 +9,7 @@ function About() {
   return (
     <>
 
-    <div className="defaultBackground min-h-screen">
+    <div className="min-h-screen container mx-auto">
 
       <section className="sectionBlock px-[2rem] pt-[4rem] pb-[4rem]">
         <div className="blockGridSystem aboutSec1 gap-[2rem]">

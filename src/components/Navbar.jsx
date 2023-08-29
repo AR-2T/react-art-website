@@ -79,10 +79,13 @@ function Navbar() {
   
   return (
     <>
-    <nav className="navBar" style={navStyle}>
+    <nav className="navBar container mx-auto" style={navStyle}>
       <div className='mobileNavBar'>
         <section className="navBarLogo">
+          <Link to="/" className="d-flex flex-row justify-center align-middle ">
+          <img src={require('../assets/Logo.png')} className=" h-12"/>
           <p className="websiteName" style={logoStyle}>ideART</p> 
+          </Link>
         </section>
 
         <button className='navBarMenu' onClick={enableMenu}>
