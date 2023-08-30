@@ -62,7 +62,6 @@ function ChallengePage() {
 
         <section className="sectionBlock px-[2rem] pb-[6rem]">
           <section className="cardContainer flex flex-col items-center">
-            <div className="gridSystem w-[100%]">
               {
                 challengePages.length === 0 ?
                   <div> No results found.</div>
@@ -76,12 +75,10 @@ function ChallengePage() {
                             {ChallengePage.name}
                           </div>
                         </div>
-
                       ))
                     }
                   </div>
               }
-            </div>
           </section>
         </section>
 
