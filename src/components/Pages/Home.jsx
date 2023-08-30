@@ -19,7 +19,7 @@ function Home() {
   return (
     <>
 
-    <div className="defaultBackground min-h-screen">
+    <div className="min-h-screen container mx-auto">
 
       <section className="sectionBlock px-[2rem] md:pt-[8rem] pt-[6rem] pb-[6rem]">
         <div className="blockGridSystem homeSec1">

@@ -6,7 +6,7 @@ function Footer() {
     <>
     
 
-    <div className="footer">
+    <div className="footer container mx-auto">
         <section className="sectionBlock p-[2rem] flex flex-row justify-center relative">
             <section className="blockFooter1 w-[35%] mr-[1rem]">
                 <h1 className="websiteName text-start">

@@ -10,7 +10,6 @@
   background: white;
   top: 0;
   z-index: 100;
-  box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.1);
   padding-left: 2rem;
   padding-right: 2rem;
 }

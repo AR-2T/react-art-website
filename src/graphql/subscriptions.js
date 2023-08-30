@@ -1,6 +1,51 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const onCreateChallengePage = /* GraphQL */ `
+  subscription OnCreateChallengePage(
+    $filter: ModelSubscriptionChallengePageFilterInput
+  ) {
+    onCreateChallengePage(filter: $filter) {
+      id
+      name
+      image
+      description
+      created
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateChallengePage = /* GraphQL */ `
+  subscription OnUpdateChallengePage(
+    $filter: ModelSubscriptionChallengePageFilterInput
+  ) {
+    onUpdateChallengePage(filter: $filter) {
+      id
+      name
+      image
+      description
+      created
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteChallengePage = /* GraphQL */ `
+  subscription OnDeleteChallengePage(
+    $filter: ModelSubscriptionChallengePageFilterInput
+  ) {
+    onDeleteChallengePage(filter: $filter) {
+      id
+      name
+      image
+      description
+      created
+      createdAt
+      updatedAt
+    }
+  }
+`;
 export const onCreateUserModel = /* GraphQL */ `
   subscription OnCreateUserModel(
     $filter: ModelSubscriptionUserModelFilterInput

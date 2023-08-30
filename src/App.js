@@ -17,6 +17,7 @@ import Footer from './components/Footer';
 import Profile from './components/Pages/Profile';
 import CreatePost from './components/Pages/CreatePost';
 import CreatePost2 from './components/Pages/CreatePost2';
+import ChallengeDetailsPage from './components/Pages/ChallengeDetailsPage';
 import './App.css';
 
 import { Amplify } from 'aws-amplify';
@@ -46,6 +47,8 @@ function App() {
         <Route path="login" element={<Login/>} />
         <Route path="profile" element={<Profile/>} />
         <Route path="create-post" element={<CreatePost/>} />
+        <Route path= 'challenges/:challengeID' element=
+        {<ChallengeDetailsPage/>} />
       </Routes>
       <Footer/>
 

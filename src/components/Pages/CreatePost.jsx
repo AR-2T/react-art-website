@@ -107,7 +107,7 @@ function CreatePost() {
 
   return (
 
-    <div className="defaultBackground min-h-screen w-full">
+    <div className="min-h-screen w-full container mx-auto">
 
       <section className="sectionBlock px-[2rem] pt-[4rem] pb-[4rem]">
         <form>
