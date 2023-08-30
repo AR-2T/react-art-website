@@ -3,23 +3,26 @@ import './challenge.css';
 import { API } from "aws-amplify";
 import { listChallengePages, getChallengePage } from "../../graphql/queries";
 
-async function ChallengePage() {
+function ChallengePage() {
   const [challengePages, setChallengePage] = useState([])
   // List all items
-  const allChallengePages = await API.graphql({
-    query: listChallengePages
-  });
-  if(allChallengePages !== undefined){
-    setChallengePage(allChallengePages.data.listChallengePages.items)
-    console.log(allChallengePages);
+
+  async function allChallengePages() {
+    const allChallengePages = await API.graphql({
+      query: listChallengePages
+    });
+    if (allChallengePages !== undefined) {
+      setChallengePage(allChallengePages.data.listChallengePages.items)
+      console.log(allChallengePages);
+    }
+    else {
+      console.log("error");
+    }
   }
-  else{
-    console.log("error");
-  }
-  
+
 
   useEffect(() => {
-    ChallengePage()
+    allChallengePages()
   }, [])
 
   return (
