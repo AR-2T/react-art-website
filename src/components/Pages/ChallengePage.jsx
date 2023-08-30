@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './challenge.css';
 import { API } from "aws-amplify";
 import { listChallengePages, getChallengePage } from "../../graphql/queries";
+import { Link } from 'react-router-dom'
 
 function ChallengePage() {
   const [challengePages, setChallengePage] = useState([])
@@ -62,23 +63,27 @@ function ChallengePage() {
 
         <section className="sectionBlock px-[2rem] pb-[6rem]">
           <section className="cardContainer flex flex-col items-center">
-              {
-                challengePages.length === 0 ?
-                  <div> No results found.</div>
-                  :
-                  <div className='gridSystem w-[100%]'>
-                    {
-                      challengePages.map((ChallengePage, index) => (
-                        <div className="challengeContainer">
+            {
+              challengePages.length === 0 ?
+                <div> No results found.</div>
+                :
+                <div className='gridSystem w-[100%]'>
+                  {
+                    challengePages.map((ChallengePage, index) => (
+
+                      <div className="challengeContainer">
+                        <Link to={"/challenges/" + ChallengePage.id}>
                           <img src={require('../../assets/DSIreliaFull.jpg')} class="challContainerImg" />
                           <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
                             {ChallengePage.name}
                           </div>
-                        </div>
-                      ))
-                    }
-                  </div>
-              }
+                        </Link>
+                      </div>
+
+                    ))
+                  }
+                </div>
+            }
           </section>
         </section>
 
