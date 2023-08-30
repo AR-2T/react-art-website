@@ -1,6 +1,54 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const createChallengePage = /* GraphQL */ `
+  mutation CreateChallengePage(
+    $input: CreateChallengePageInput!
+    $condition: ModelChallengePageConditionInput
+  ) {
+    createChallengePage(input: $input, condition: $condition) {
+      id
+      name
+      image
+      description
+      created
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateChallengePage = /* GraphQL */ `
+  mutation UpdateChallengePage(
+    $input: UpdateChallengePageInput!
+    $condition: ModelChallengePageConditionInput
+  ) {
+    updateChallengePage(input: $input, condition: $condition) {
+      id
+      name
+      image
+      description
+      created
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteChallengePage = /* GraphQL */ `
+  mutation DeleteChallengePage(
+    $input: DeleteChallengePageInput!
+    $condition: ModelChallengePageConditionInput
+  ) {
+    deleteChallengePage(input: $input, condition: $condition) {
+      id
+      name
+      image
+      description
+      created
+      createdAt
+      updatedAt
+    }
+  }
+`;
 export const createUserModel = /* GraphQL */ `
   mutation CreateUserModel(
     $input: CreateUserModelInput!

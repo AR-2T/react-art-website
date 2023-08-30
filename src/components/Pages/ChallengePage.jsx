@@ -1,13 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './challenge.css';
+import { API } from "aws-amplify";
+import { listChallengePages, getChallengePage } from "../../graphql/queries";
 
-function ChallengePage() {
+async function ChallengePage() {
+  const [challengePages, setChallengePage] = useState([])
+  // List all items
+  const allChallengePages = await API.graphql({
+    query: listChallengePages
+  });
+  if(allChallengePages !== undefined){
+    setChallengePage(allChallengePages.data.listChallengePages.items)
+    console.log(allChallengePages);
+  }
+  else{
+    console.log("error");
+  }
+  
+
+  useEffect(() => {
+    ChallengePage()
+  }, [])
+
   return (
     <>
 
-    <div className="min-h-screen container mx-auto">
+      <div className="min-h-screen container mx-auto">
 
-      {/* <section className="sectionBlock px-[2vmax] pt-[4vmax] pb-[2vmax]">  
+        {/* <section className="sectionBlock px-[2vmax] pt-[4vmax] pb-[2vmax]">  
         <section className="container bg-[#FFFFFF] rounded-[0.75vmax] p-[2vmax]">
           <h2 className="subHeading2 text-[#2d2d2d] text-[2vmax] text-start">
             Explore&nbsp;
@@ -22,89 +42,47 @@ function ChallengePage() {
         </section>
       </section> */}
 
-      <section className="sectionBlock px-[2rem] pt-[4rem] pb-[2rem]">
-        <section className="cardContainer">
-          <h1 className="subHeadingChallenges text-start mb-[0.5rem]">
-            Explore Challenges
-          </h1>
-          <p className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
-            Weekly challenges are posted here!
-          </p>
+        <section className="sectionBlock px-[2rem] pt-[4rem] pb-[2rem]">
+          <section className="cardContainer">
+            <h1 className="subHeadingChallenges text-start mb-[0.5rem]">
+              Explore Challenges
+            </h1>
+            <p className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
+              Weekly challenges are posted here!
+            </p>
 
-          <button className="button text-[0.9rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full mt-[1rem]">
-            Most Recent<i className="fa fa-caret-down pl-[0.5vmax]"></i>
-          </button>
+            <button className="button text-[0.9rem] text-[#FFFFFF] bg-[#2d2d2d] rounded-full mt-[1rem]">
+              Most Recent<i className="fa fa-caret-down pl-[0.5vmax]"></i>
+            </button>
+          </section>
         </section>
-      </section>
 
-      <section className="sectionBlock px-[2rem] pb-[6rem]">
-        <section className="cardContainer flex flex-col items-center">
-          <div className="gridSystem w-[100%]">
-            <div className="challengeContainer">
-              <img src={require('../../assets/HNHecarimFull.jpg')} class="challContainerImg"/>
-              {/* <h1 className="subHeading2 z-[1] text-[#FFFFFF] text-[1vmax] bg-black p-[1vmax] relative">
-                Challenge Name
-              </h1> */}
-              <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
-                Challenge Prompt
-              </div>
+        <section className="sectionBlock px-[2rem] pb-[6rem]">
+          <section className="cardContainer flex flex-col items-center">
+            <div className="gridSystem w-[100%]">
+              {
+                challengePages.length === 0 ?
+                  <div> No results found.</div>
+                  :
+                  <div className='gridSystem w-[100%]'>
+                    {
+                      challengePages.map((ChallengePage, index) => (
+                        <div className="challengeContainer">
+                          <img src={require('../../assets/DSIreliaFull.jpg')} class="challContainerImg" />
+                          <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
+                            {ChallengePage.name}
+                          </div>
+                        </div>
+
+                      ))
+                    }
+                  </div>
+              }
             </div>
-
-            <div className="challengeContainer">
-              <img src={require('../../assets/BALuxFull.jpg')} class="challContainerImg"/>
-              {/* <h1 className="subHeading2 z-[1] text-[#FFFFFF] text-[1vmax] bg-black p-[1vmax] relative">
-                Challenge Name
-              </h1> */}
-              <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
-                Challenge Prompt
-              </div>
-            </div>
-
-            <div className="challengeContainer">
-              <img src={require('../../assets/DSIreliaFull.jpg')} class="challContainerImg"/>
-              {/* <h1 className="subHeading2 z-[1] text-[#FFFFFF] text-[1vmax] bg-black p-[1vmax] relative">
-                Challenge Name
-              </h1> */}
-              <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
-                Challenge Prompt
-              </div>
-            </div>
-
-            <div className="challengeContainer">
-              <img src={require('../../assets/CosmicVarusFull.jpg')} class="challContainerImg"/>
-              {/* <h1 className="subHeading2 z-[1] text-[#FFFFFF] text-[1vmax] bg-black p-[1vmax] relative">
-                Challenge Name
-              </h1> */}
-              <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
-                Challenge Prompt
-              </div>
-            </div>
-
-            <div className="challengeContainer">
-              <img src={require('../../assets/SGSamira.jpg')} class="challContainerImg"/>
-              {/* <h1 className="subHeading2 z-[1] text-[#FFFFFF] text-[1vmax] bg-black p-[1vmax] relative">
-                Challenge Name
-              </h1> */}
-              <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
-                Challenge Prompt
-              </div>
-            </div>
-
-            <div className="challengeContainer">
-              <img src={require('../../assets/BAWukong.jpg')} class="challContainerImg"/>
-              {/* <h1 className="subHeading2 z-[1] text-[#FFFFFF] text-[1vmax] bg-black p-[1vmax] relative">
-                Challenge Name
-              </h1> */}
-              <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
-                Challenge Prompt
-              </div>
-            </div>
-
-          </div>
+          </section>
         </section>
-      </section>
 
-    </div>
+      </div>
 
     </>
   )

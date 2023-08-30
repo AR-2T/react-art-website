@@ -1,6 +1,39 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const getChallengePage = /* GraphQL */ `
+  query GetChallengePage($id: ID!) {
+    getChallengePage(id: $id) {
+      id
+      name
+      image
+      description
+      created
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listChallengePages = /* GraphQL */ `
+  query ListChallengePages(
+    $filter: ModelChallengePageFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listChallengePages(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        image
+        description
+        created
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
 export const getUserModel = /* GraphQL */ `
   query GetUserModel($id: ID!) {
     getUserModel(id: $id) {
