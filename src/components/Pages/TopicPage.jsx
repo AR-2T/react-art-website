@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { ArtIdea, FilterType } from './models';
-import { DataStore } from 'aws-amplify';
+// import { ArtIdea, FilterType } from './models';
 import { API } from "aws-amplify";
 import { listArtIdeas, getArtIdea } from "../../graphql/queries";
 
@@ -105,48 +104,48 @@ function TopicPage() {
     }
     switch(filterSubmitIdea) {
       case "Person":
-        await DataStore.save(
-          new ArtIdea({
-          "idea": submitRandomIdea,
-          "filter": FilterType.PEOPLE
-          })
-        );
+        // await DataStore.save(
+        //   new ArtIdea({
+        //   "idea": submitRandomIdea,
+        //   "filter": FilterType.PEOPLE
+        //   })
+        // );
         setSubmitIdeaMessage("Successfully submitted the idea \"" + submitRandomIdea + "\" to the " + filterSubmitIdea + " category.");
         break
       case "Place":
-        await DataStore.save(
-          new ArtIdea({
-          "idea": submitRandomIdea,
-          "filter": FilterType.PLACES
-          })
-        );
+        // await DataStore.save(
+        //   new ArtIdea({
+        //   "idea": submitRandomIdea,
+        //   "filter": FilterType.PLACES
+        //   })
+        // );
         setSubmitIdeaMessage("Successfully submitted the idea \"" + submitRandomIdea + "\" to the " + filterSubmitIdea + " category.");
         break
       case "Object":
-        await DataStore.save(
-          new ArtIdea({
-          "idea": submitRandomIdea,
-          "filter": FilterType.OBJECTS
-          })
-        );
+        // await DataStore.save(
+        //   new ArtIdea({
+        //   "idea": submitRandomIdea,
+        //   "filter": FilterType.OBJECTS
+        //   })
+        // );
         setSubmitIdeaMessage("Successfully submitted the idea \"" + submitRandomIdea + "\" to the " + filterSubmitIdea + " category.");
         break
       case "Animal":
-        await DataStore.save(
-          new ArtIdea({
-          "idea": submitRandomIdea,
-          "filter": FilterType.ANIMALS
-          })
-        );
+        // await DataStore.save(
+        //   new ArtIdea({
+        //   "idea": submitRandomIdea,
+        //   "filter": FilterType.ANIMALS
+        //   })
+        // );
         setSubmitIdeaMessage("Successfully submitted the idea \"" + submitRandomIdea + "\" to the " + filterSubmitIdea + " category.");
         break
       case "Concept":
-        await DataStore.save(
-          new ArtIdea({
-          "idea": submitRandomIdea,
-          "filter": FilterType.IDEAS
-          })
-        );
+        // await DataStore.save(
+        //   new ArtIdea({
+        //   "idea": submitRandomIdea,
+        //   "filter": FilterType.IDEAS
+        //   })
+        // );
         setSubmitIdeaMessage("Successfully submitted the idea \"" + submitRandomIdea + "\" to the " + filterSubmitIdea + " category.");
         break
       default:
