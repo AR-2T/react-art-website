@@ -16,7 +16,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Profile from './components/Pages/Profile';
 import CreatePost from './components/Pages/CreatePost';
-import CreatePost2 from './components/Pages/CreatePost2';
 import ChallengeDetailsPage from './components/Pages/ChallengeDetailsPage';
 import './App.css';
 
