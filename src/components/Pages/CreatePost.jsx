@@ -1,5 +1,5 @@
 import { Flex } from '@aws-amplify/ui-react'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { CreatePosts} from "../../ui-components"
 
 import { Storage, Auth } from "aws-amplify";
@@ -8,7 +8,7 @@ import config from '../../aws-exports'
 import { v4 as uuidv4 } from 'uuid';
 import { useRef } from 'react';
 import './createPost.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation} from "react-router-dom";
 import { useAuthenticator } from "@aws-amplify/ui-react";
 
 import { API } from "aws-amplify";
@@ -23,6 +23,8 @@ function CreatePost() {
   var [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const { route } = useAuthenticator(context => [context.route]);
+  const { state } = useLocation();
+  const [challenge, setChallenge] = useState();
 
   const {
     aws_user_files_s3_bucket_region: region,
@@ -36,7 +38,20 @@ function CreatePost() {
   if (route !== 'authenticated' ) {
     navigate("/login");
   }
-  
+
+  useEffect(() => {
+    if(state === null){
+      return
+    }
+    else{
+      setChallenge(state.challenge)
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   console.log(challenge)
+  // }, [challenge]);
+
   async function uploadImage(e){
     e.preventDefault();
     setIsLoading(true);
@@ -91,7 +106,8 @@ function CreatePost() {
             "author": user.username,
             "title": titleField.current.value,
             "description": descField.current.value,
-            "image": url
+            "image": url,
+            "challenge": challenge.id
             }
         }
       });
@@ -119,6 +135,13 @@ function CreatePost() {
               <p className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
                 Upload your work here to be published in our gallery!
               </p>
+              {
+                challenge == null ?
+                  <> </> :
+                  <p className="bodyText text-[1rem] text-[#2d2d2d] text-start mt-[0.5rem]">
+                    Challenge: {challenge.name}
+                  </p>
+              } 
             </div>
           </section>
 

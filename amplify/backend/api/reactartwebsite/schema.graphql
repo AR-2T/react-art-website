@@ -33,5 +33,6 @@ type UserPosts @model @auth(rules: [{allow: public}]) {
   title: String
   description: String
   image: String
+  challenge: String
 }
  
