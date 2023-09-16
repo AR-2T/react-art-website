@@ -9,6 +9,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Home from './components/Pages/Home';
 import TopicPage from './components/Pages/TopicPage';
 import Gallery from './components/Pages/Gallery';
+import GalleryImage from './components/GalleryImage';
 import ChallengePage from './components/Pages/ChallengePage';
 import About from './components/Pages/About';
 import Login from './components/Pages/Login';
@@ -39,7 +40,9 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="gallery" element={<Gallery/>} />
+        <Route path="gallery" element={<Gallery/>} >
+          <Route path=":postID" element={<GalleryImage />} />
+        </Route>
         <Route path="topic" element={<TopicPage/>} />
         <Route path="challenges" element={<ChallengePage/>} />
         <Route path="about" element={<About/>} />
