@@ -3,10 +3,12 @@ import './gallery.css'
 import { API } from "aws-amplify";
 import { listUserPosts } from "../../graphql/queries";
 import UserPost from '../UserPost'
+import { useNavigate, Outlet } from 'react-router-dom';
 
 function Gallery() {
   const [userPosts, setUserPosts] = useState([])
   const [query, setQuery] = useState("")
+  const navigate = useNavigate();
 
   async function fetchPosts() {
     // List all items
@@ -44,11 +46,14 @@ function Gallery() {
     // }
   }
 
+  function goToGalleryImage(id, post) {
+    navigate(id, { state: { userPost: post} });
+  }
+
   useEffect(()=> {
     fetchPosts()
     // getUserData()
   }, [])
-
 
   return (
     <>
@@ -81,41 +86,7 @@ function Gallery() {
           </div>
 
         </section>
-
-        
-
-            {/* <div class=" relative glass flex md:flex-row flex-col justify-around px-6 items-center">
-
-              <div className="flex md:flex-row flex-col md:py-12 py-6 items-center">
-                <div className="font-bold drop-shadow-xl text-black md:text-start md:leading-9">
-                  <div className='text-[2vmax] hidden md:flex md:flex-col'>
-                  The
-                  <p className='text-[3vmax]'> Gallery</p>
-                  </div>
-
-                  
-                  <p className='md:hidden text-[4vmax]'>The Gallery</p> 
-                </div>
-
-                <div className="md:pl-12 md:text-[1vmax] text-[1.5vmax] text-black italic md:text-start">
-                  A collection of user-published <br/> designs, creatvity pieces, and more.
-                </div>
-              </div>
-
-              <div className='md:my-12 md:px-6 mb-6 '>
-                  <div class="input-group md:scale-100 scale-75">
-                    <input type="text" class="form-control rounded-l-full shadow-md " placeholder="Search anything..." onChange={event => setQuery(event.target.value)}/>
-                    <div class="input-group-append">
-                      <button class="btn rounded-r-full active:!bg-black/50 shadow-md bg-[#2d2d2d] hover:!bg-[gray] " type="button" onClick={queryPosts}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-              </div>
-            </div> */}
-          </section>
+      </section>
 
          <section className="sectionBlock px-[2rem] pb-[6rem]">  
             <div class="cardContainer">
@@ -127,7 +98,11 @@ function Gallery() {
                   <div className='gridSystem w-[100%]'>
                     {
                       userPosts.map((userPost, index)=>(
-                        <UserPost author = {userPost.author} title = {userPost.title} description={userPost.description} image={userPost.image} />
+                        <div onClick={()=>{
+                          goToGalleryImage(userPost.id, userPost)
+                        }}>
+                          <UserPost author = {userPost.author} title = {userPost.title} description={userPost.description} image={userPost.image} />
+                        </div>
                       )) 
                     }
                   </div>
@@ -137,6 +112,8 @@ function Gallery() {
         </section>
             
       </div>
+
+      <Outlet />
     </>
   )
 }
