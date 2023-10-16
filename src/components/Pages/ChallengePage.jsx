@@ -73,7 +73,7 @@ function ChallengePage() {
 
                       <div className="challengeContainer">
                         <Link to={"/challenges/" + ChallengePage.id}>
-                          <img src={require('../../assets/DSIreliaFull.jpg')} class="challContainerImg" />
+                          <img src={ChallengePage.image} class="challContainerImg" />
                           <div className="labelContainer text-[#FFFFFF] pb-[0.5vmax] z-[2]">
                             {ChallengePage.name}
                           </div>
