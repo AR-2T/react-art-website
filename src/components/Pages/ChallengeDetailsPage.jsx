@@ -66,7 +66,7 @@ export default function ChallengeDetailsPage() {
             <section className="cardContainer flex flex-row items-center">
               
               {/* <div className='flex flex-row justify-center items-center align-center p-[1rem]'>   */}
-                <img className='h-[4rem] md:h-[8rem] rounded-full bg-white' src={BannerArt} alt="Avatar" /> 
+                <img className='h-[4rem] md:h-[8rem] rounded-full bg-white' src={challengePage.image} alt="Avatar" /> 
                   <div className="pl-[2rem]">
                       <div className="heading text-[1.5rem] md:text-[2.5rem] text-[#2d2d2d] text-start">
                         {challengePage.name}
