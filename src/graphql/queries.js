@@ -11,6 +11,7 @@ export const getChallengePage = /* GraphQL */ `
       created
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -29,8 +30,10 @@ export const listChallengePages = /* GraphQL */ `
         created
         createdAt
         updatedAt
+        __typename
       }
       nextToken
+      __typename
     }
   }
 `;
@@ -43,6 +46,7 @@ export const getUserModel = /* GraphQL */ `
       profilepic
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -60,8 +64,10 @@ export const listUserModels = /* GraphQL */ `
         profilepic
         createdAt
         updatedAt
+        __typename
       }
       nextToken
+      __typename
     }
   }
 `;
@@ -73,6 +79,7 @@ export const getArtIdea = /* GraphQL */ `
       filter
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -89,8 +96,10 @@ export const listArtIdeas = /* GraphQL */ `
         filter
         createdAt
         updatedAt
+        __typename
       }
       nextToken
+      __typename
     }
   }
 `;
@@ -102,8 +111,10 @@ export const getUserPosts = /* GraphQL */ `
       title
       description
       image
+      challenge
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -120,10 +131,13 @@ export const listUserPosts = /* GraphQL */ `
         title
         description
         image
+        challenge
         createdAt
         updatedAt
+        __typename
       }
       nextToken
+      __typename
     }
   }
 `;

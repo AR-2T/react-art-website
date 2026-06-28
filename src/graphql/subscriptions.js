@@ -13,6 +13,7 @@ export const onCreateChallengePage = /* GraphQL */ `
       created
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -28,6 +29,7 @@ export const onUpdateChallengePage = /* GraphQL */ `
       created
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -43,6 +45,7 @@ export const onDeleteChallengePage = /* GraphQL */ `
       created
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -57,6 +60,7 @@ export const onCreateUserModel = /* GraphQL */ `
       profilepic
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -71,6 +75,7 @@ export const onUpdateUserModel = /* GraphQL */ `
       profilepic
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -85,6 +90,7 @@ export const onDeleteUserModel = /* GraphQL */ `
       profilepic
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -96,6 +102,7 @@ export const onCreateArtIdea = /* GraphQL */ `
       filter
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -107,6 +114,7 @@ export const onUpdateArtIdea = /* GraphQL */ `
       filter
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -118,6 +126,7 @@ export const onDeleteArtIdea = /* GraphQL */ `
       filter
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -131,8 +140,10 @@ export const onCreateUserPosts = /* GraphQL */ `
       title
       description
       image
+      challenge
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -146,8 +157,10 @@ export const onUpdateUserPosts = /* GraphQL */ `
       title
       description
       image
+      challenge
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -161,8 +174,10 @@ export const onDeleteUserPosts = /* GraphQL */ `
       title
       description
       image
+      challenge
       createdAt
       updatedAt
+      __typename
     }
   }
 `;

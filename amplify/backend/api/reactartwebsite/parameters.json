@@ -2,5 +2,5 @@
   "AppSyncApiName": "reactartwebsite",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2023-08-30T00:03:25.984Z"
+  "AuthModeLastUpdated": "2026-06-28T04:54:24.786Z"
 }
